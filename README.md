@@ -1,2 +1,3 @@
-# book-2025-07
-The July 2025 draft of my book, Jumpstart Statistics
+# jump-start-book
+
+This is a Quarto project that will produce an early draft of a book, Jump Start Statistics. How to restart a stalled research project at any stage.
