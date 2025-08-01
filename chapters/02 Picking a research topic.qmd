@@ -1,6 +1,8 @@
 # Picking a research topic
 
-This chapter is based on \<<find web page>\>. Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
+This chapter is based on an email from Ronan Conroy to a statistics listserv that was [reproduced][ref-conroy-1999] on my website.
+
+[ref-conroy-1999]: http://new.pmean.com/steps-in-developing-research-ideas/
 
 For some people, picking a research topic is easy. Your boss will tell you what to work on. For a few jobs, you have enough independence that you get to choose, but even in those settings, the nature of the company that you work for will determine what the best research topics are.
 

@@ -1,6 +1,8 @@
 # Developing your pilot study
 
-This chapter is based on <<find web page>>. Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
+This chapter is based on [one of my web pages][ref-simon-2016].
+
+[ref-simon-2016]: http://blog.pmean.com/pilot-study/
 
 ## Step 1. Visualize the bigger study in the future
 

@@ -1,6 +1,6 @@
 # Selecting your research design
 
-This chapter is based on <<find web page>>. Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
+This chapter is based on several web pages I have written, which I will find the time to document here.
 
 ## Step 1. Decide if you can/should randomize
 

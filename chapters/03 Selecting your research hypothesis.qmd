@@ -1,6 +1,8 @@
 # Selecting your research hypothesis
 
-This chapter is based on <<find web page>>. Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
+This chapter is based on [one of my webpages][ref-simon-1999].
+
+[ref-simon-1999]: http://www.new.pmean.com/steps-in-developing-research-hypothesis/
 
 ## Step 1. Choose an outcome measure
 

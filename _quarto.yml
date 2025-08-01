@@ -2,9 +2,9 @@ project:
   type: book
 
 book:
-  title: "jump-start-book"
+  title: "jump-start-book, last update 2025-08-01"
   author: "Steve Simon"
-  date: "Started 2023-10-03, last major update 2025-05-21"
+  date: 2023-10-03
   chapters:
     - index.qmd
     - chapters/01 Introduction.qmd

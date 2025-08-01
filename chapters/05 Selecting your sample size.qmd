@@ -1,8 +1,8 @@
 # Selecting your sample size
 
-This chapter is based on \<<find web page>\>. Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
+This chapter is based on [one of my web pages][ref-simon-2010].
 
-The first three steps in selecting an appropriate sample size (created 2009-07-20, updated 2010-01-15) This page is moving to a new website.
+[ref-simon-2010]: http://www.new.pmean.com/chapter-sample-size/
 
 I got an email last week from a client wanting to start a new research project looking at relationships between parenting beliefs and childhood behaviors. The description of the sorts of things to examine was quite elaborate, and it ended with the question "how many families would we need to have any significant differences if they exist?" Unfortunately, all the elaborate information provided did not include the information I would need to answer this question. Justifying a sample size usually involves three steps.
 
