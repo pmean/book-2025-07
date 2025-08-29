@@ -151,11 +151,6 @@ which is still significant
 even after adjusting for the effect of mother’s age.
 Shown below is the table of estimates from the same general linear model.
 
-
-
-
-
-
 **Step 3
 
 Analyze predicted values and residuals**.

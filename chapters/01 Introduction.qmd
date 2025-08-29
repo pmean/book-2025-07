@@ -34,4 +34,16 @@ What's different about my book is that I am not trying to be a comprehensive gui
 
 Each chapter starts with an introduction and then defines the first three steps that you should take at this stage. Finally, I list some special cases that can cause special difficulties (the fly in the ointment) and which might require a more intense interaction with your statistical consultant.
 
+I do need to place some important limitations. Otherwise, this book would be impossibly long. I am going to focus on clincial research: research that focusses directly on the health care of human patients. Much of the material in this book will still be relevant if you are working with animals, either for veterinary care or as a mdoel for testing before testing in humans. But I don't want to talk about how you obtain human patients in one paragraph and then switch to how you obtain animal patients in the next paragraph. Likewise, I am going to bypass some of the special considerations for in vitro studies. 
+
+I also do not have the luxury of discussing studies outside of medicine. If your research involves education, marketing, or political science, half of the things I discuss will be relevant, but there will also be special considerations that I cannot address. I'd love to do so, because these are all such fun and interesting areas of research. But space is limited and I should focus on the clinical side because that is where most of my experience is.
+
+## Bibliography
+
+Alreck and Settle
+
+Lang and Secic
+
+Noram and Streiner
+
 Fear is often a paralyzing emotion, and it may be just fear itself that is causing your difficulties. Research is not easy, but don't fool yourself into thinking that it is beyond your capabilities. You have to be a very smart person to be in a position where you are capable of doing an independent research project, so you are more capable than you might believe. You can get your research project started, and if it is stalled, you can get a jumpstart that will help you get moving again. Just focus on what your next three steps should be.
