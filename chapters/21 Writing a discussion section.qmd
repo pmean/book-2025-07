@@ -2,18 +2,66 @@
 
 This chapter is based on <<find web page>>. Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
 
-## Step 1:
+*One of the naturalists had argued that On the Origin of Species was too theoretical, that Darwin should have just “put his facts before us and let them rest.” In response, Darwin reflected that science, to be of any service, required more than list making; it needed larger ideas that could make sense of piles of data. Otherwise, Darwin said, a geologist “might as well go into a gravel-pit and count the pebbles and describe the colours.” Data without generalizations are useless; facts without explanatory principles are meaningless.* Michael Shermer, Why Darwin Matters. The Case Against Intelligent Design. (page 1).
 
-Add text.
+The discussion section of a research paper is typically the last part of the paper that you will write, because it draws on information from the literature review, the methods section, and the results section. It is not a rehash of any of these sections, but rather a synthesis.
 
-## Step 2:
+Also keep in mind that most of your readers will know less about your research area than you do. If you leave the true significance of your research unstated out of a sense of false modesty, your readers will likely miss your point.
 
-Add text.
+If you are stuck on writing a discussion section, here are some steps you can take to get going again.
 
-## Step 3:
+1. Compare/contrast your results to previous results.
+2. List the strengths and limitations of your study.
+3. Advocate changes (or support the status quo)
+4. Suggest areas for further research.
 
-Add text.
 
-## The fly in the ointment:
+## Step 1: Compare/contrast your results to previous results.
 
-Add text.
+The literature review your wrote was your chance to lay out what was known before you started your research. Your results section was your chance to lay out what you found in your research. In the discussion section, you need to combine information from both sections.
+
+Did any of your results support what was previously done? That's great. Brag about it! We now know certain things with much greater confidence because your work supported and strengthened information and knowledge in your area of work.
+
+Did any of your results contradict what was previously done? That's great. Brag about it! Maybe your research is correct, maybe their research is correct. Maybe both are correct. 
+
+If you think your research is correct, explain what was different about what you did. Speculate a bit. Did your larger sample size find things that earlier small studies could not? Did you measure things more carefully? Did you measure things that no one else had measured before? have larger sample size that led to 
+
+
+
+The discussion section is also the section for speculation. Not wild unsupported speculation, of course, but reasonable extrapolations beyond the strict bounds of your data. If your data calls into question a proposed mechanism of action, for example, you can suggest an alternative mechanism. If your proposed intervention did not work as intended, you can speculate on what changes in your intervention might have led to a different outcome.
+
+## Step 2: List the strengths and limitations of your study.
+
+The discussion section is your chance to answer the "so what" question about your work. You need to place your work in the context of previous research and discuss the persuasiveness of your findings. Don't be shy here. If your research is a lot better than any previous work, tell your readers this. Likewise, tell your readers if you've filled an important knowledge gap or if you've produced novel insights. In other words, brag a little bit.
+
+I'm holding my breath when I tell you to brag. If there's a fault with discussion sections, it is when writers grossly overstate the significance of their research. There is no shame in conducting and reporting a "weak" research study. It only becomes a sin if you pretend that a weak study is more definitive than it deserves to be.
+
+But you're not one of these types. The writers who overstate things never get stuck. You're stuck because you're too tentative. Adopting a cautious "yes, but" tone has filled your heart with gloom and weighed you down. It is better to start off brashly so as to get something down on paper. You can always tone it down later.
+
+
+
+## Step 3: Advocate changes (or support the status quo)
+
+The discussion section is also your chance to be a little bit "bossy." If your research supports the need for changes in clinical practice, tell us what you think those changes should be. If it supports a change in regulations or laws, tell us that also. Tell us the future research directions that your current findings might suggest.
+
+
+## Step 4: Suggest areas for further research.
+
+Your study was not the last word in this research area. Maybe not, as you will find out in the next section. But if it is indeed not the last word, you should explain what comes next. Write down some suggestions about what you'd like to see done. It doesn't have to be done by you, but it needs to be done by somebody.
+
+This takes your research paper full circle. You started out in your literature review with the past, talked in the present about your own work in the results section and to some extent in this discussion section as well. The last part of the discussion section, though, is about the future. Don't hold back your best ideas because you want to reserve those ideas for you and you alone.
+
+Back in Chapter 1, I reminded you how to get your research idea. Maybe you had one already, and maybe you found it somewhere else. Maybe you found it, though, in the discussion section of one of the papers in your literature review. Even if you didn't those papers in your literature review helped shape your research. So here's your chance to pay it forward. Let someone else benefit from the wisdom that you have accumulated because much of that accumulated ion was from those who came before you. 
+
+## The fly in the ointment: When should research end?
+
+
+
+## Bibliography
+
+Höfler M, Venz J, Trautmann S et al. Writing a discussion section: how to integrate substantive and statistical expertise. BMC Med Res Methodol 18, 34 (2018). DOI:  [10.1186/s12874-018-0490-1][ref21-höfler-2018]
+
+Simon SD. How to Write a Discussion Section. The Monthly Mean newsletter, July/August 2012. Available in [html format][ref21-simon-2012]
+
+[ref21-höfler-2018]: https://doi.org/10.1186/s12874-018-0490-1
+[ref21-simon-2012]: http://www.pmean.com/news/201207.html#1

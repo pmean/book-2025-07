@@ -178,7 +178,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={jump-start-book},
+  pdftitle={jump-start-book, last update 2025-08-01},
   pdfauthor={Steve Simon},
   colorlinks=true,
   linkcolor={blue},
@@ -188,9 +188,9 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\title{jump-start-book}
+\title{jump-start-book, last update 2025-08-01}
 \author{Steve Simon}
-\date{Invalid Date}
+\date{2023-10-03}
 
 \begin{document}
 \maketitle
@@ -209,6 +209,25 @@
 
 \markboth{Preface}{Preface}
 
+While this book is in progress, I will use the section of the preface to
+track my activity (or lack of activity). When the book is complete, the
+first section drops and I revert to a normal preface.
+
+On \textbf{2025-09-05}, I moved text that was wrongly placed in chapter
+20 back in the correct chapter (19). I started work on chapter 21, but
+there is a lot left to be written. I began organizing my bibliography
+better. I now have about 11 thousand words total, with four relatively
+complete chapters and now three partially completed chapters.
+
+On \textbf{2025-08-29}, I completed a pretty good draft of chapter 20,
+writing a methods section. This adds to three other chapters that we
+already in good form (chapters 1, 5, and 11). There is also a very
+little bit written for chapters 2 and 3. The total word count is just
+around 10 thousand, which is a jump from 7 thousand that the book had
+been stuck at for many months.
+
+\textbf{The real preface starts here}
+
 This book was a long time coming. I had just finished a book Statistical
 Evidence in Medical Trials in 2006, and had a nice idea for a second
 book (this one that you are holding right now). It was more or less
@@ -225,74 +244,20 @@ than in getting any of the tasks done. That's the verb that best
 describes my life. I'm thrashing.
 
 Every year I'd show up at the Joint Statistics Meeting and look for the
-Cambridge University Press booth. I'd say hello, first to Lauren Cowles,
-and later to Arman Chowdhury. This is the year, I'd tell them, that I'll
-get the book written. I know exactly what I need to do. And every year,
-I'd write a lot less than I intended to. Too much thrashing.
+Cambridge University Press booth. I'd say hello, usually to Lauren
+Cowles, sometimes to another representative. This is the year, I'd tell
+them, that I'll get the book written. I know exactly what I need to do.
+And every year, I'd write a lot less than I intended to. Too much
+thrashing.
 
 I turned a corner (slowly) in 2023 when I converted my thin writings
 into a book project in Quarto. I really love Quarto and if you have been
 using RMarkdown for a while, you should really switch. It's an easy
 transition, and everything is so much more intuitive under Quarto.
 
+\textbf{When I really do complete the book, I will add:}
+
 So I'm finally done. It was a long time coming, but it's here. Read on!
-
-Wait, it's not done yet. Here are the page counts for each chapter.
-
-There are approximately 6981 words in the book. The word counts for
-individual chapters are
-
-\begin{itemize}
-\tightlist
-\item
-  Preface: 442
-\item
-  Chapter 1: 1389
-\item
-  Chapter 2: 516
-\item
-  Chapter 3: 147
-\item
-  Chapter 4: 91
-\item
-  Chapter 5: 1461
-\item
-  Chapter 6: 148
-\item
-  Chapter 7: 59
-\item
-  Chapter 8: 65
-\item
-  Chapter 9: 74
-\item
-  Chapter 10: 72
-\item
-  Chapter 11: 1836
-\item
-  Chapter 12: 74
-\item
-  Chapter 13: 70
-\item
-  Chapter 14: 83
-\item
-  Chapter 15: 67
-\item
-  Chapter 16: 63
-\item
-  Chapter 17: 68
-\item
-  Chapter 18: 76
-\item
-  Chapter 19: 50
-\item
-  Chapter 20: 43
-\item
-  Chapter 21: 43
-\item
-  Summary: 11
-\item
-  Bibliography: 33
-\end{itemize}
 
 \bookmarksetup{startatroot}
 
@@ -424,6 +389,32 @@ special cases that can cause special difficulties (the fly in the
 ointment) and which might require a more intense interaction with your
 statistical consultant.
 
+I do need to place some important limitations. Otherwise, this book
+would be impossibly long. I am going to focus on clincial research:
+research that focusses directly on the health care of human patients.
+Much of the material in this book will still be relevant if you are
+working with animals, either for veterinary care or as a mdoel for
+testing before testing in humans. But I don't want to talk about how you
+obtain human patients in one paragraph and then switch to how you obtain
+animal patients in the next paragraph. Likewise, I am going to bypass
+some of the special considerations for in vitro studies.
+
+I also do not have the luxury of discussing studies outside of medicine.
+If your research involves education, marketing, or political science,
+half of the things I discuss will be relevant, but there will also be
+special considerations that I cannot address. I'd love to do so, because
+these are all such fun and interesting areas of research. But space is
+limited and I should focus on the clinical side because that is where
+most of my experience is.
+
+\section{Bibliography}\label{bibliography}
+
+Alreck and Settle
+
+Lang and Secic
+
+Noram and Streiner
+
 Fear is often a paralyzing emotion, and it may be just fear itself that
 is causing your difficulties. Research is not easy, but don't fool
 yourself into thinking that it is beyond your capabilities. You have to
@@ -437,9 +428,10 @@ Just focus on what your next three steps should be.
 
 \chapter{Picking a research topic}\label{picking-a-research-topic}
 
-This chapter is based on \textless{}\textgreater. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+This chapter is based on an email from Ronan Conroy to a statistics
+listserv that was
+\href{http://new.pmean.com/steps-in-developing-research-ideas/}{reproduced}
+on my website.
 
 For some people, picking a research topic is easy. Your boss will tell
 you what to work on. For a few jobs, you have enough independence that
@@ -505,9 +497,9 @@ plan.
 \chapter{Selecting your research
 hypothesis}\label{selecting-your-research-hypothesis}
 
-This chapter is based on \textless{}\textgreater. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+This chapter is based on
+\href{http://www.new.pmean.com/steps-in-developing-research-hypothesis/}{one
+of my webpages}.
 
 \section{Step 1. Choose an outcome
 measure}\label{step-1.-choose-an-outcome-measure}
@@ -541,9 +533,8 @@ Insert text.
 \chapter{Selecting your research
 design}\label{selecting-your-research-design}
 
-This chapter is based on \textless{}\textgreater. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+This chapter is based on several web pages I have written, which I will
+find the time to document here.
 
 \section{Step 1. Decide if you can/should
 randomize}\label{step-1.-decide-if-you-canshould-randomize}
@@ -565,7 +556,7 @@ Insert text.
 
 Insert text.
 
-\section{Bibliography}\label{bibliography}
+\section{Bibliography}\label{bibliography-1}
 
 Steve Simon. So you're thinking about a retrospective chart review.
 PMean blog, 2016-05-02. Available in
@@ -575,12 +566,9 @@ PMean blog, 2016-05-02. Available in
 
 \chapter{Selecting your sample size}\label{selecting-your-sample-size}
 
-This chapter is based on \textless{}\textgreater. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
-
-The first three steps in selecting an appropriate sample size (created
-2009-07-20, updated 2010-01-15) This page is moving to a new website.
+This chapter is based on
+\href{http://www.new.pmean.com/chapter-sample-size/}{one of my web
+pages}.
 
 I got an email last week from a client wanting to start a new research
 project looking at relationships between parenting beliefs and childhood
@@ -745,9 +733,8 @@ noticeable to the average patient.
 
 \chapter{Developing your pilot study}\label{developing-your-pilot-study}
 
-This chapter is based on \textless{}\textgreater. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+This chapter is based on \href{http://blog.pmean.com/pilot-study/}{one
+of my web pages}.
 
 \section{Step 1. Visualize the bigger study in the
 future}\label{step-1.-visualize-the-bigger-study-in-the-future}
@@ -768,7 +755,7 @@ Insert text.
 
 Insert text.
 
-\section{Bibliography}\label{bibliography-1}
+\section{Bibliography}\label{bibliography-2}
 
 Steve Simon. IRB review of a pilot study. PMean blog, 2007-03-26.
 Available in \href{http://www.new.pmean.com/irb-review-pilot/}{html
@@ -790,9 +777,7 @@ Steve Simon. The best reasons to run a pilot study. PMean blog,
 \chapter{Designing your
 questionnaire}\label{designing-your-questionnaire}
 
-This chapter is based on \textless{}\textgreater. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+This chapter is based on several web pages, that I will add later.
 
 \section{Step 1. Brainstorm a long list and then prune
 back}\label{step-1.-brainstorm-a-long-list-and-then-prune-back}
@@ -940,11 +925,91 @@ represents the estimated average value of Y when X equals zero.
 I've always loved linear regression because it is so visual. You learn a
 lot before you compute any statistics by looking at graphs.
 
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/11-Running-a-linear-regression-analysis_files/figure-pdf/plot-1-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/../images/figure-11-01.png}}
 
-Plot your data and examine your assumptions.
+I added the trend line. You should try to eyeball the slope and
+intercept from your graph. You want to see if these values pass the
+``smell test.'' Do they seem reasonable or is something a bit fishy and
+warrants further investigation.
 
-Add text.
+Here is how you calculate the slope. A thousand square foot house is
+predicted to sell for about 70 thousand dollars. A three thousand square
+foot house is predicted to sell for about 190 thousand dollars. These
+are just rough estimates. Don't worry if you don't get them quite right.
+
+The slope is the change in Y (120 thousand dollars) divided by the
+change in X (2 thousand square feet), which produces a rough estimate of
+your slope, 60 dollars per square foot. That passes the smell test. It
+seems eminently reasonable, especially considering that these are 1993
+houses.
+
+To calculate the intercept, you need to redraw the graph so that you can
+read the prediction at x=0. Here's what that graph looks like. I
+extended the line beyond the range of the data, which is a something
+that you should do with great caution.
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/../images/figure-11-02.png}}
+
+The intercept appears to be just a tad above zero. Call it five thousand
+dollars. Now does it make sense to pay five thousand dollars for a house
+of zero square feet? You might argue that the five thousand dollars
+represents the estimated average price for an empty lot, perhaps.
+Perhaps not. If you are a bit skeptical of this interpretation, you are
+probably justified in that skepticism. It is quite a bit of an
+extrapolation.
+
+The importance of the eyeball estimates is that they greatly reduce the
+fear and intimidation that you might feel when you actually run your
+regression analysis. You will be looking for two friends, the slope of
+around 60 and the intercept of around five thousand. When you see those
+friends in your regression table, you will get some reassurance that you
+are doing things properly.
+
+Now if your regression model includes categorical variables, display
+them using boxplots. You might suspect that custom built houses will be
+a bit pricier, and looking at the boxplot, you'd be right!
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/../images/figure-11-03.png}}
+
+I added the means (small plus signs) and a line connecting them to this
+boxplot. The estimated average price of a regular home appears to be
+around 95 thousand dollars. The average price for a custom-built house
+is around 145 thousand dollars, about 50 thousand dollars more. When you
+run the regression model predicting price from the custom-built
+indicator, look for two friends, a slope of 50 thousand dollars and an
+intercept of 95 thousand dollars.
+
+If you plan to look at the joint effects of size and custom-built, take
+some time to evaluate how these two independent variables relate to one
+another. A boxplot works well here.
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/../images/figure-11-04.png}}
+
+This box plot shows an interesting pattern that you probably were
+expecting. Custom-built houses are also bigger houses. The two
+independent variables are positively correlated. This is not a fatal
+problem, but you should use some care when trying to disentangle the
+individual effects of each variable.
+
+Now if you have a lot of independent variables (five or more is a lot),
+you may not have the time and luxury of looking at every
+interrelationship among your independent variables. A correlation matrix
+might still be useful. Here is the correlation matrix between the two
+independent variables and the dependent variable. I am not rounding the
+values here, but you should round to two significant figures in any
+report that you prepare.
+
+Table 11-1. Correlations
+
+\begin{verbatim}
+             price      sqft  i_custom
+price    1.0000000 0.8447951 0.5552920
+sqft     0.8447951 1.0000000 0.5201016
+i_custom 0.5552920 0.5201016 1.0000000
+\end{verbatim}
+
+The correlations are all large and positive, which passes the smell
+test.
 
 \section{Step 2: Compute a simple
 model}\label{step-2-compute-a-simple-model}
@@ -1153,7 +1218,7 @@ website.
 Excluding direct quotes from outside sources, all text is in the public
 domain. Images are copyrighted unless noted
 
-\section{Bibliography}\label{bibliography-2}
+\section{Bibliography}\label{bibliography-3}
 
 UCLA Statistical Consulting Group. Regression Analysis \textbar{} SAS
 Annotated Output. Available in
@@ -1334,10 +1399,8 @@ Add text.
 
 \chapter{Running a focus group}\label{running-a-focus-group}
 
-This chapter is based on {[}Focus groups and qualitative
-research{]}{[}sim\_foc{]} published 2004-04-13. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+This chapter is based on a blog post I wrote in 2004 and slides from a
+course I have taught on Clinical Research Methodology.
 
 \section{Step 1: Select a theoretical
 framework}\label{step-1-select-a-theoretical-framework}
@@ -1359,29 +1422,26 @@ participation}\label{the-fly-in-the-ointmentuneven-participation}
 
 Add text.
 
+\section{Bibliography}\label{bibliography-4}
+
+Simon SD. Focus groups and qualitative research. Pmean blog, 2004-04-13.
+Available in \href{http://pmean.com/posts/focus-groups-are-great/}{html
+format}
+
+Simon SD. simon-5510-10-slides. PMean github repository. Available in
+\href{https://github.com/pmean/classes/blob/master/clinical-research-methodology/10/results/simon-5510-10-slides.pdf}{pdf
+format}.
+
 \bookmarksetup{startatroot}
 
 \chapter{Writing a literature review}\label{writing-a-literature-review}
 
-There are two relevant pages:
-
-\begin{itemize}
-\tightlist
-\item
-  \href{http://new.pmean.com/introduction-section/}{Writing the
-  introduction section} published 2019-03-29.
-\item
-  {[}How to write a literature review{]}{[}sim\_lit{]} published
-  2019-01-16
-\end{itemize}
-
-Also refer to \href{http://www.pmean.com/10/Contents.html}{Tentative
-table of contents}.
+This material is based loosely on a web page that I wrote in 2019 and a
 
 \section{Step 1: Organize your
 references}\label{step-1-organize-your-references}
 
-Look for interactions
+Add text
 
 \section{Step 2: Decide on an organizing
 principle}\label{step-2-decide-on-an-organizing-principle}
@@ -1397,14 +1457,367 @@ references}\label{the-fly-in-the-ointment-too-manytoo-few-references}
 
 Add text.
 
+\section{Bibliography}\label{bibliography-5}
+
+Gabriel D. How to write a literature review. Blog post 2017-08-21.
+Available in
+\href{https://deborahgabriel.com/2017/08/21/how-to-write-a-literature-review/}{html
+format}.
+
+Simon SD. Writing the introduction section of a research thesis or
+dissertation. Pmean blog, 2019-03-29. Available in
+\href{http://pmean.com/posts/introduction-section/}{html format}.
+
 \bookmarksetup{startatroot}
 
 \chapter{Writing a methods section}\label{writing-a-methods-section}
 
-This is based on {[}Writing the methods section of a research
-paper{]}{[}sim\_met{]} published 2019-04-25. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+This chapter is based on web pages I wrote in 2011 and 2019.
+
+When I write a methods section, I say that any moron can do this
+research and then prove it by doing it myself.
+
+That's a bad joke, and the methods section is not written for morons. It
+is written for two well-educated audiences: appraisers (readers who want
+to make a critical appraisal of your work) and replicators (readers who
+want to replicate your work).
+
+The appraisers want to know if your research meets acceptable standards.
+For these readers you want to brag about the things you did well. At the
+same time, be honest about any compromises that you had to make. Don't
+ask your reader to read between the lines. If you couldn't use blinding,
+say this. Trying to hide things won't work. Most critical appraisals
+will assume that no news is bad news. They will infer that only did you
+do something bad, but you were too naive to even recognize that it was a
+bad thing.That's okay, but your failure to mention the bad news will
+brand you as naive.
+
+The replicators ant to understand exactly what you did and how you did
+it because they want to do something just like you did, possibly with
+some extensions and improvements. For this audience, you need more
+details, but not every last detail. Remember that anyone who wants to do
+something like what you did is reasonably well educated. Assume that
+they can do the routine stuff, and only document things that are tricky.
+Include references, if needed.
+
+There is going to be a tension between making the appraisers happy and
+making the replicators happy. One thing that will help is that you can
+make some pretty strong assumptions about the two types of readers. If
+one of your methods is assessing a rectal temperature, skip the details.
+The replicators already know how to do this and the appraisers don't
+want to know how to do this.
+
+There's lots of guidance on how to organize your subsections inside
+methods.
+
+Richard Kallet has a nice publication in Respiratory Care.
+
+\begin{itemize}
+\tightlist
+\item
+  Subjects,
+\item
+  Ethical considerations,
+\item
+  Preparations,
+\item
+  Protocol design,
+\item
+  Measurements and calculations,
+\item
+  Data analysis
+\end{itemize}
+
+Elena Kallestinova's publication in the Yale Journal of Biology and
+Medicine provides a structure through a series of questions.
+
+\begin{itemize}
+\tightlist
+\item
+  What materials did you use?
+\item
+  Who were the subjects of your study?
+\item
+  What was the design of your research?
+\item
+  What procedure did you follow?
+\end{itemize}
+
+The International Committee of Medical Journal Editors have published a
+general guide to writing a paper with a fair amount of detail about what
+goes in the methods section.
+
+\begin{itemize}
+\tightlist
+\item
+  Selection and description of participants,
+\item
+  Technical information,
+\item
+  Statistics.
+\end{itemize}
+
+Asghar Ghasemi and others have a nice publication in the International
+Journal of Endocrinology and Metabolism with only two major sections
+(but several subsections in each).
+
+\begin{itemize}
+\tightlist
+\item
+  Materials (Chemical, Experimental materials, Experimental animals,
+  Human subjects),
+\item
+  Methods (Study design, Measurements/assessments, Statistical analyses)
+\end{itemize}
+
+Are you confused yet? Don't despair. The fact that there are so many
+different standards out there means that you have a lot of latitude in
+how to structure your methods section. The best advice I can offer is to
+read a half dozen articles or theses and take notes about what these
+writers did. Use these suggestions more to assure that you have included
+all the relevant details, but don't follow any structure mindlessly.
+Don't include a subsection on chemicals if your research didn't use any
+chemicals.
+
+My recommendation is to describe two things, the who and the how, and
+then lay out a statistical analysis plan. One important dividing line is
+that anything that you learn after you start recruiting patients belongs
+in the results section. The methods section should only include what you
+knew at the start of the study. One possible exception is a description
+of how many patients were lost along the way. This is often done as a
+flow chart, as described below.
+
+\section{Step 1: Talk about who}\label{step-1-talk-about-who}
+
+Exactly who is in your study? This description will allow appraisers to
+answer a key Evidence-Based-Medicine question: how similar are my
+patients to those in your study. A demographic profile actually belongs
+as the very first table in your results section, but there are other
+important details that you should document in your methods section.
+
+Tell us where you found your patients. Did they visit your clinic or did
+they respond to an advertisement? This is an important distinction.
+Patients who respond to an advertisement are going to have a different
+set of motives, especially if your ad includes a monetary incentive.
+This can influence the generalizability of your results.
+
+Tell us when you found your patients. A range of dates will help your
+appraisers to decide if your results are stale, meaning that they were
+treated during a time when things were different. Explain if the
+patients were recruited prospectively or from retrospective records.
+
+Not everyone gets in. Tell us, in detail, any inclusion and exclusion
+criteria. Document any special efforts that you take to insure
+representativeness. Be honest about any limitations (both here and in
+your discussion section) to representativeness that might make it more
+difficult to extrapolate your results to new patients.
+
+You are going to lose patients during the process, either through
+deliberate efforts on your end (your exclusion critieria), deliberate
+efforts on their end (withdrawal from the study), or logistical problems
+(missed apointments, broken machinery). Document these using a flow
+chart. The CONSORT (Consolidated Standards of Reporting Trials) working
+group has recommended format for this chart.
+
+Most (but not all) clinical research requires review for ethical and/or
+privacy concerns. Document any approvals (for example, from
+Institutional Review Boards) that you obtained before starting your
+research. If your protocol was published in a clinical trial registry
+(like clinicaltrials.gov), provide those details as well.
+
+\section{Step 2: Talk about how}\label{step-2-talk-about-how}
+
+How you do your research can fall into three general categories:
+materials, procedures, and measures.
+
+If you use any exotic supplies or chemicals, describe them here. List
+the company where you procured them if they are not commonly available.
+By exotic, I mean not in general use, and/or hard to find. Don't
+document materials if they are not exotic. Ringers solution is not
+exotic.
+
+Documentation of procedures is similar to documentation of materials.
+You only need to document the non-routine procedures. This might involve
+the details on running complex equipment or the steps in an extensive
+laboratory method. If these procedures are described in a peer-reviewed
+publication, you might want to include that reference here. In general,
+a basic procedure does not need documentation, but there are exceptions.
+You might take the time to document an assessment of blood pressure if
+it was done on a leg rather than an arm.
+
+Document some (but not necessarily all) of your measures Don't describe
+every single measurement, just those that are important. This, I admit,
+is a judgment call.
+
+What are the important measures? Outcome measurements are important. An
+outcome measurement is one that helps you assess safety or efficacy.
+
+Independent variables are important. These are measures that you are
+interested in examining how they influence the outcome.
+
+These variables could represent a new intervention that you give to some
+of your patients versus a standard of care or a placebo, There are, sad
+to say, more than a few interventions that were tested and found out to
+do more harm than good.
+
+Independent variables might instead represent exposures. An exposure is
+not under your control. Exposures could be helpful or could be harmful,
+but they always represent variables that you, the researcher, do not
+wish to control or variables that you cannot control.
+
+Covariates are important. Covariates are variables that you are not
+interested in examining directly but which you must account for in a
+proper study. Often, these are variables that already have a well
+established connection to the outcome and failure to account for them
+would sink the credibility of your research.
+
+No cancer study, no matter what the treatment or exposure, would fail to
+ask for information about smoking. Those cigarettes don't just cause
+lung cander. They cause kidney cancer, liver cancer, that funny thing
+hanging in the back of your throat cancer. Failure to control for or
+adjust for smoking is a fatal flaw.
+
+Likewise, any study in neonatology has to account for gestational age
+and birthweight. Babies that arrive early and arrive tiny have so many
+more problems than the later, bigger babies. Again, failure to account
+for these covariates would be a fatal flaw.
+
+Intermediate measurements are sometimes important. Intermediate
+measurements are variables which are possibly influenced by your
+independent variables and which, in turn, might possibly influence the
+outcome. Often these variables help you to understand how a treatment
+worked or why it failed.
+
+There might be other variables, such as those that you collect during
+the initial interview to see if a patient qualifies for your study.
+These probably do not need to be documented.
+
+You should present information about the validity/reliability of any
+variable that warrants it. Definitely include information about
+validity/reliability for key outcome measures, if they are available.
+This information adds credibility to your study. For other variables,
+this is a judgement call. Variables that require subject assessment,
+either by the treating physician or by the patients themselves, can
+often benefit from an assessment of validity/reliability.
+
+For all of these measures, be sure to mention anything special that you
+did to improve the quality of those measures. you might make
+measurements in a blinded fashion, take repeated measurements, or get
+measurments from two or more observers. All of these can help and are
+worth bragging about.
+
+Some studies might require you to document dozens, and sometimes even
+hundreds of measures. Consider using a table for some or all of these
+measures.
+
+\section{Step 3: Talk about your analysis
+plan}\label{step-3-talk-about-your-analysis-plan}
+
+Analysis. Describe how you plan to analyze your data. Most analyses
+start with some simple descriptive statistics: means and standard
+deviations for continuous variables and percentages for categorical
+variables.
+
+Provide your research hypothesis in this section, and state whether it
+is one-sided or two-sided. One-sided hypotheses require a brief
+justification, along with an assurance that the direction of the
+hypothesis was selected prior to data collection. Mention the
+statistical test that you plan to use. If you are running more than one
+test, explain what measures you will use to control the Type I error
+rate. In some settings, it may be acceptable to not make adjustments for
+multiple tests, but you should state this explicitly.
+
+You do not need to provide references for simple and commonly used
+statistics, like a t-test, linear or logistic regression, or analysis of
+variance. More complex procedures should include a reference. If you are
+referencing a book, remember that a page or page ranges are needed.
+
+You need to define how you will handle missing values and dropouts. If
+you plan to exclude extreme values (outliers) from your data set, give
+an objective rule here.
+
+Specify what statistical software you plan to use for your analysis
+(e.g., SPSS, SAS, or R) and be sure to include the version number. State
+any special libraries or macros that you used within your statistical
+software system. If your software is relatively uncommon, be sure to
+include a reference that explains how the software works and where you
+can obtain it.
+
+You also need to justify your sample size, and this usually fits best in
+the analysis section. If the goals of your research are qualitative,
+then the sample size justification can also be qualitative.
+
+\section{The fly in the ointment: when your who is a
+what}\label{the-fly-in-the-ointment-when-your-who-is-a-what}
+
+In clinical research, the unit of analysis is almost always an
+individual patient. Sometimes the unit of analysis might be a caregiver
+instead, but this changes very little in how you write your methods
+section. A problem occurs, however, when you are studying other than a
+patient or caregiver. The environment that you are a part of, where you
+live and where you work, can play such an important role in your health.
+How do you write a methods section when you are studying an environment,
+like a home or workplace.
+
+Certain considerations in your methods section disappear. Houses, for
+example, do not need to sign an informed consent form. You need
+permission from the home owners, of course, but this is not the same
+thing. Measurement of weather and/or pollutants do not raise privacy
+concerns.
+
+In place of these things, consider beefing up the details on materials
+and methods. Careful assessment of environments require a great deal of
+rigor. These details are critical for those replicators who want to do
+similar work.
+
+Some other details still apply. A house can meet certain inclusion and
+exclusion criteria. It has a variety of measures that you need to
+document. The analysis will often use the same statistical tests that
+you use with a study of patients.
+
+\section{Bibliography}\label{bibliography-6}
+
+About ClinicalTrials.gov. Available in
+\href{https://clinicaltrials.gov/about-site/about-ctg}{html format}.
+
+Ghasemi A, Bahadoran Z, Zadeh-Vakili A, Montazeri SA, Hosseinpanah F.
+The Principles of Biomedical Scientific Writing: Materials and Methods.
+Int J Endocrinol Metab. 2019 Jan 28;17(1):e88155. doi:
+\href{https://doi.org/10.5812/ijem.88155}{10.5812/ijem.88155}.
+
+Hopewell S, Chan AW, Collins GS, Hróbjartsson A, Moher D, Schulz KF,
+Tunn R, Aggarwal R, Berkwits M, Berlin JA, Bhandari N, Butcher NJ,
+Campbell MK, Chidebe RCW, Elbourne D, Farmer A, Fergusson DA, Golub RM,
+Goodman SN, Hoffmann TC, Ioannidis JPA, Kahan BC, Knowles RL, Lamb SE,
+Lewis S, Loder E, Offringa M, Ravaud P, Richards DP, Rockhold FW,
+Schriger DL, Siegried NL, Staniszewska S, Taylor RS, Thabane L,
+Torgerson D, Vohra S, White IR, Boutron I. CONSORT 2025 statement:
+updated guideline for reporting randomised trials. PLoS Med. 2025;
+22(4): e1004587. PMID: {[}40228477{]}{[}ref19-hoepwell-2025{]}
+
+International Committee of Medical Journal Editors. Preparing a
+Manuscript for Submission to a Medical Journal. Available in
+\href{https://icmje.org/recommendations/browse/manuscript-preparation/preparing-for-submission.html}{html
+format}
+
+Kallestinova ED. How to write your first research paper. Yale J Biol
+Med. 2011 Sep;84(3):181-90. PMID:
+{[}21966034{]}{[}ref19-kallestinova-2011{]}
+
+Kallet RH. How to write the methods section of a research paper.
+Respiratory Care. 2004 Oct;49(10):1229-32. PMID:
+\href{https://pubmed.ncbi.nlm.nih.gov/15447808/}{15447808}.
+
+Simon SD. Writing the methods section of your grant, Pmean blog,
+2011-04-26. Available in {[}html format{]}{[}ref19-simon-2011{]}.
+
+Simon SD. Writing the methods section of a research paper, Pmean blog,
+2019-04-25. Available in
+\href{http://pmean.com/posts/writing-methods-section/}{html format}
+
+\bookmarksetup{startatroot}
+
+\chapter{Writing a results section}\label{writing-a-results-section}
 
 \section{Step 1:}\label{step-1}
 
@@ -1422,29 +1835,13 @@ Add text.
 
 Add text.
 
-\bookmarksetup{startatroot}
+\section{Bibliography}\label{bibliography-7}
 
-\chapter{Writing a results section}\label{writing-a-results-section}
-
-This chapter is based on \textless{}\textgreater. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
-
-\section{Step 1:}\label{step-1-1}
-
-Add text.
-
-\section{Step 2:}\label{step-2-1}
-
-Add text.
-
-\section{Step 3:}\label{step-3-1}
-
-Add text.
-
-\section{The fly in the ointment:}\label{the-fly-in-the-ointment-6}
-
-Add text.
+Bahadoran Z, Mirmiran P, Zadeh-Vakili A, Hosseinpanah F, Ghasemi A. The
+Principles of Biomedical Scientific Writing: Results. Int J Endocrinol
+Metab. 2019 Apr 24;17(2):e92113. doi:
+{[}10.5812/ijem.92113{]}{[}ref20-bahadoran-2019{]}. PMID: 31372173;
+PMCID: PMC6635678.
 
 \bookmarksetup{startatroot}
 
@@ -1455,21 +1852,143 @@ This chapter is based on \textless{}\textgreater. Also refer to
 \href{http://www.pmean.com/10/Contents.html}{Tentative table of
 contents}.
 
-\section{Step 1:}\label{step-1-2}
+\emph{One of the naturalists had argued that On the Origin of Species
+was too theoretical, that Darwin should have just ``put his facts before
+us and let them rest.'' In response, Darwin reflected that science, to
+be of any service, required more than list making; it needed larger
+ideas that could make sense of piles of data. Otherwise, Darwin said, a
+geologist ``might as well go into a gravel-pit and count the pebbles and
+describe the colours.'' Data without generalizations are useless; facts
+without explanatory principles are meaningless.} Michael Shermer, Why
+Darwin Matters. The Case Against Intelligent Design. (page 1).
 
-Add text.
+The discussion section of a research paper is typically the last part of
+the paper that you will write, because it draws on information from the
+literature review, the methods section, and the results section. It is
+not a rehash of any of these sections, but rather a synthesis.
 
-\section{Step 2:}\label{step-2-2}
+Also keep in mind that most of your readers will know less about your
+research area than you do. If you leave the true significance of your
+research unstated out of a sense of false modesty, your readers will
+likely miss your point.
 
-Add text.
+If you are stuck on writing a discussion section, here are some steps
+you can take to get going again.
 
-\section{Step 3:}\label{step-3-2}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Compare/contrast your results to previous results.
+\item
+  List the strengths and limitations of your study.
+\item
+  Advocate changes (or support the status quo)
+\item
+  Suggest areas for further research.
+\end{enumerate}
 
-Add text.
+\section{Step 1: Compare/contrast your results to previous
+results.}\label{step-1-comparecontrast-your-results-to-previous-results.}
 
-\section{The fly in the ointment:}\label{the-fly-in-the-ointment-7}
+The literature review your wrote was your chance to lay out what was
+known before you started your research. Your results section was your
+chance to lay out what you found in your research. In the discussion
+section, you need to combine information from both sections.
 
-Add text.
+Did any of your results support what was previously done? That's great.
+Brag about it! We now know certain things with much greater confidence
+because your work supported and strengthened information and knowledge
+in your area of work.
+
+Did any of your results contradict what was previously done? That's
+great. Brag about it! Maybe your research is correct, maybe their
+research is correct. Maybe both are correct.
+
+If you think your research is correct, explain what was different about
+what you did. Speculate a bit. Did your larger sample size find things
+that earlier small studies could not? Did you measure things more
+carefully? Did you measure things that no one else had measured before?
+have larger sample size that led to
+
+The discussion section is also the section for speculation. Not wild
+unsupported speculation, of course, but reasonable extrapolations beyond
+the strict bounds of your data. If your data calls into question a
+proposed mechanism of action, for example, you can suggest an
+alternative mechanism. If your proposed intervention did not work as
+intended, you can speculate on what changes in your intervention might
+have led to a different outcome.
+
+\section{Step 2: List the strengths and limitations of your
+study.}\label{step-2-list-the-strengths-and-limitations-of-your-study.}
+
+The discussion section is your chance to answer the ``so what'' question
+about your work. You need to place your work in the context of previous
+research and discuss the persuasiveness of your findings. Don't be shy
+here. If your research is a lot better than any previous work, tell your
+readers this. Likewise, tell your readers if you've filled an important
+knowledge gap or if you've produced novel insights. In other words, brag
+a little bit.
+
+I'm holding my breath when I tell you to brag. If there's a fault with
+discussion sections, it is when writers grossly overstate the
+significance of their research. There is no shame in conducting and
+reporting a ``weak'' research study. It only becomes a sin if you
+pretend that a weak study is more definitive than it deserves to be.
+
+But you're not one of these types. The writers who overstate things
+never get stuck. You're stuck because you're too tentative. Adopting a
+cautious ``yes, but'' tone has filled your heart with gloom and weighed
+you down. It is better to start off brashly so as to get something down
+on paper. You can always tone it down later.
+
+\section{Step 3: Advocate changes (or support the status
+quo)}\label{step-3-advocate-changes-or-support-the-status-quo}
+
+The discussion section is also your chance to be a little bit ``bossy.''
+If your research supports the need for changes in clinical practice,
+tell us what you think those changes should be. If it supports a change
+in regulations or laws, tell us that also. Tell us the future research
+directions that your current findings might suggest.
+
+\section{Step 4: Suggest areas for further
+research.}\label{step-4-suggest-areas-for-further-research.}
+
+Your study was not the last word in this research area. Maybe not, as
+you will find out in the next section. But if it is indeed not the last
+word, you should explain what comes next. Write down some suggestions
+about what you'd like to see done. It doesn't have to be done by you,
+but it needs to be done by somebody.
+
+This takes your research paper full circle. You started out in your
+literature review with the past, talked in the present about your own
+work in the results section and to some extent in this discussion
+section as well. The last part of the discussion section, though, is
+about the future. Don't hold back your best ideas because you want to
+reserve those ideas for you and you alone.
+
+Back in Chapter 1, I reminded you how to get your research idea. Maybe
+you had one already, and maybe you found it somewhere else. Maybe you
+found it, though, in the discussion section of one of the papers in your
+literature review. Even if you didn't those papers in your literature
+review helped shape your research. So here's your chance to pay it
+forward. Let someone else benefit from the wisdom that you have
+accumulated because much of that accumulated ion was from those who came
+before you.
+
+\section{The fly in the ointment: When should research
+end?}\label{the-fly-in-the-ointment-when-should-research-end}
+
+\section{Bibliography}\label{bibliography-8}
+
+Höfler M, Venz J, Trautmann S et al.~Writing a discussion section: how
+to integrate substantive and statistical expertise. BMC Med Res Methodol
+18, 34 (2018). DOI:
+\href{https://doi.org/10.1186/s12874-018-0490-1}{10.1186/s12874-018-0490-1}
+
+Simon SD. How to Write a Discussion Section. The Monthly Mean
+newsletter, July/August 2012. Available in
+\href{http://www.pmean.com/news/201207.html\#1}{html format}
 
 \bookmarksetup{startatroot}
 

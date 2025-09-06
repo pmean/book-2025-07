@@ -1,19 +1,145 @@
 # Writing a methods section
 
-This is based on \[Writing the methods section of a research paper\]\[sim_met\] published 2019-04-25. Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
+This chapter is based on web pages I wrote in 2011 and 2019.
 
-## Step 1:
+When I write a methods section, I say that any moron can do this research and then prove it by doing it myself.
 
-Add text.
+That's a bad joke, and the methods section is not written for morons. It is written for two well-educated audiences: appraisers (readers who want to make a critical appraisal of your work) and replicators (readers who want to replicate your work).
 
-## Step 2:
+The appraisers want to know if your research meets acceptable standards. For these readers you want to brag about the things you did well. At the same time, be honest about any compromises that you had to make. Don't ask your reader to read between the lines. If you couldn't use blinding, say this. Trying to hide things won't work. Most critical appraisals will assume that no news is bad news. They will infer that only did you do something bad, but you were too naive to even recognize that it was a bad thing.That's okay, but your failure to mention the bad news will brand you as naive.
 
-Add text.
+The replicators ant to understand exactly what you did and how you did it because they want to do something just like you did, possibly with some extensions and improvements. For this audience, you need more details, but not every last detail. Remember that anyone who wants to do something like what you did is reasonably well educated. Assume that they can do the routine stuff, and only document things that are tricky. Include references, if needed.
 
-## Step 3:
+There is going to be a tension between making the appraisers happy and making the replicators happy. One thing that will help is that you can make some pretty strong assumptions about the two types of readers. If one of your methods is assessing a rectal temperature, skip the details. The replicators already know how to do this and the appraisers don't want to know how to do this.
 
-Add text.
+There's lots of guidance on how to organize your subsections inside methods. 
 
-## The fly in the ointment:
+Richard Kallet has a nice publication in Respiratory Care.
 
-Add text.
+-   Subjects,
+-   Ethical considerations,
+-   Preparations,
+-   Protocol design,
+-   Measurements and calculations,
+-   Data analysis
+
+Elena Kallestinova’s publication in the Yale Journal of Biology and Medicine provides a structure through a series of questions.
+
+-   What materials did you use?
+-   Who were the subjects of your study?
+-   What was the design of your research?
+-   What procedure did you follow?
+
+The International Committee of Medical Journal Editors have published a general guide to writing a paper with a fair amount of detail about what goes in the methods section.
+
+-   Selection and description of participants,
+-   Technical information,
+-   Statistics.
+
+Asghar Ghasemi and others have a nice publication in the International Journal of Endocrinology and Metabolism with only two major sections (but several subsections in each).
+
+-   Materials (Chemical, Experimental materials, Experimental animals, Human subjects),
+-   Methods (Study design, Measurements/assessments, Statistical analyses)
+
+Are you confused yet? Don’t despair. The fact that there are so many different standards out there means that you have a lot of latitude in how to structure your methods section. The best advice I can offer is to read a half dozen articles or theses and take notes about what these writers did. Use these suggestions more to assure that you have included all the relevant details, but don't follow any structure mindlessly. Don't include a subsection on chemicals if your research didn't use any chemicals.
+
+My recommendation is to describe two things, the who and the how, and then lay out a statistical analysis plan. One important dividing line is that anything that you learn after you start recruiting patients belongs in the results section. The methods section should only include what you knew at the start of the study. One possible exception is a description of how many patients were lost along the way. This is often done as a flow chart, as described below.
+
+## Step 1: Talk about who
+
+Exactly who is in your study? This description will allow appraisers to answer a key Evidence-Based-Medicine question: how similar are my patients to those in your study. A demographic profile actually belongs as the very first table in your results section, but there are other important details that you should document in your methods section.
+
+Tell us where you found your patients. Did they visit your clinic or did they respond to an advertisement? This is an important distinction. Patients who respond to an advertisement are going to have a different set of motives, especially if your ad includes a monetary incentive. This can influence the generalizability of your results.
+
+Tell us when you found your patients. A range of dates will help your appraisers to decide if your results are stale, meaning that they were treated during a time when things were different. Explain if the patients were recruited prospectively or from retrospective records.
+
+Not everyone gets in. Tell us, in detail, any inclusion and exclusion criteria. Document any special efforts that you take to insure representativeness. Be honest about any limitations (both here and in your discussion section) to representativeness that might make it more difficult to extrapolate your results to new patients.
+
+You are going to lose patients during the process, either through deliberate efforts on your end (your exclusion critieria), deliberate efforts on their end (withdrawal from the study), or logistical problems (missed apointments, broken machinery). Document these using a flow chart. The CONSORT (Consolidated Standards of Reporting Trials) working group has recommended format for this chart.
+
+Most (but not all) clinical research requires review for ethical and/or privacy concerns. Document any approvals (for example, from Institutional Review Boards) that you obtained before starting your research. If your protocol was published in a clinical trial registry (like clinicaltrials.gov), provide those details as well.
+
+## Step 2: Talk about how
+
+How you do your research can fall into three general categories: materials, procedures, and measures.
+
+If you use any exotic supplies or chemicals, describe them here. List the company where you procured them if they are not commonly available. By exotic, I mean not in general use, and/or hard to find. Don't document materials if they are not exotic. Ringers solution is not exotic. 
+
+Documentation of procedures is similar to documentation of materials. You only need to document the non-routine procedures. This might involve the details on running complex equipment or the steps in an extensive laboratory method. If these procedures are described in a peer-reviewed publication, you might want to include that reference here. In general, a basic procedure does not need documentation, but there are exceptions. You might take the time to document an assessment of blood pressure if it was done on a leg rather than an arm.
+
+Document some (but not necessarily all) of your measures Don't describe every single measurement, just those that are important. This, I admit, is a judgment call.
+
+What are the important measures? Outcome measurements are important. An outcome measurement is one that helps you assess safety or efficacy. 
+
+Independent variables are important. These are measures that you are interested in examining how they influence the outcome. 
+
+These variables could represent a new intervention that you give to some of your patients versus a standard of care or a placebo, There are, sad to say, more than a few interventions that were tested and found out to do more harm than good. 
+
+Independent variables might instead represent exposures. An exposure is not under your control. Exposures could be helpful or could be harmful, but they always represent variables that you, the researcher, do not wish to control or variables that you cannot control.
+
+Covariates are important. Covariates are variables that you are not interested in examining directly but which you must account for in a proper study. Often, these are variables that already have a well established connection to the outcome and failure to account for them would sink the credibility of your research. 
+
+No cancer study, no matter what the treatment or exposure, would fail to ask for information about smoking. Those cigarettes don't just cause lung cander. They cause kidney cancer, liver cancer, that funny thing hanging in the back of your throat cancer. Failure to control for or adjust for smoking is a fatal flaw.
+
+Likewise, any study in neonatology has to account for gestational age and birthweight. Babies that arrive early and arrive tiny have so many more problems than the later, bigger babies. Again, failure to account for these covariates would be a fatal flaw.
+
+Intermediate measurements are sometimes important. Intermediate measurements are variables which are possibly influenced by your independent variables and which, in turn, might possibly influence the outcome. Often these variables help you to understand how a treatment worked or why it failed.
+
+There might be other variables, such as those that you collect during the initial interview to see if a patient qualifies for your study. These probably do not need to be documented.
+
+You should present information about the validity/reliability of any variable that warrants it. Definitely include information about validity/reliability for key outcome measures, if they are available. This information adds credibility to your study. For other variables, this is a judgement call. Variables that require subject assessment, either by the treating physician or by the patients themselves, can often benefit from an assessment of validity/reliability.
+
+For all of these measures, be sure to mention anything special that you did to improve the quality of those measures. you might make measurements in a blinded fashion, take repeated measurements, or get measurments from two or more observers. All of these can help and are worth bragging about.
+
+Some studies might require you to document dozens, and sometimes even hundreds of measures. Consider using a table for some or all of these measures.
+
+## Step 3: Talk about your analysis plan
+
+Analysis. Describe how you plan to analyze your data. Most analyses start with some simple descriptive statistics: means and standard deviations for continuous variables and percentages for categorical variables.
+
+Provide your research hypothesis in this section, and state whether it is one-sided or two-sided. One-sided hypotheses require a brief justification, along with an assurance that the direction of the hypothesis was selected prior to data collection. Mention the statistical test that you plan to use. If you are running more than one test, explain what measures you will use to control the Type I error rate. In some settings, it may be acceptable to not make adjustments for multiple tests, but you should state this explicitly.
+
+You do not need to provide references for simple and commonly used statistics, like a t-test, linear or logistic regression, or analysis of variance. More complex procedures should include a reference. If you are referencing a book, remember that a page or page ranges are needed.
+
+You need to define how you will handle missing values and dropouts. If you plan to exclude extreme values (outliers) from your data set, give an objective rule here.
+
+Specify what statistical software you plan to use for your analysis (e.g., SPSS, SAS, or R) and be sure to include the version number. State any special libraries or macros that you used within your statistical software system. If your software is relatively uncommon, be sure to include a reference that explains how the software works and where you can obtain it.
+
+You also need to justify your sample size, and this usually fits best in the analysis section. If the goals of your research are qualitative, then the sample size justification can also be qualitative.
+
+## The fly in the ointment: when your who is a what
+
+In clinical research, the unit of analysis is almost always an individual patient. Sometimes the unit of analysis might be a caregiver instead, but this changes very little in how you write your methods section. A problem occurs, however, when you are studying other than a patient or caregiver. The environment that you are a part of, where you live and where you work, can play such an important role in your health. How do you write a methods section when you are studying an environment, like a home or workplace.
+
+Certain considerations in your methods section disappear. Houses, for example, do not need to sign an informed consent form. You need permission from the home owners, of course, but this is not the same thing. Measurement of weather and/or pollutants do not raise privacy concerns.
+
+In place of these things, consider beefing up the details on materials and methods. Careful assessment of environments require a great deal of rigor. These details are critical for those replicators who want to do similar work.
+
+Some other details still apply. A house can meet certain inclusion and exclusion criteria. It has a variety of measures that you need to document. The analysis will often use the same statistical tests that you use with a study of patients.
+
+## Bibliography
+
+About ClinicalTrials.gov. Available in [html format][ref19-clinicaltrials-nodate].
+
+Ghasemi A, Bahadoran Z, Zadeh-Vakili A, Montazeri SA, Hosseinpanah F. The Principles of Biomedical Scientific Writing: Materials and Methods. Int J Endocrinol Metab. 2019 Jan 28;17(1):e88155. doi: [10.5812/ijem.88155][ref19-ghasemi-2019].
+
+Hopewell S, Chan AW, Collins GS, Hróbjartsson A, Moher D, Schulz KF, Tunn R, Aggarwal R, Berkwits M, Berlin JA, Bhandari N, Butcher NJ, Campbell MK, Chidebe RCW, Elbourne D, Farmer A, Fergusson DA, Golub RM, Goodman SN, Hoffmann TC, Ioannidis JPA, Kahan BC, Knowles RL, Lamb SE, Lewis S, Loder E, Offringa M, Ravaud P, Richards DP, Rockhold FW, Schriger DL, Siegried NL, Staniszewska S, Taylor RS, Thabane L, Torgerson D, Vohra S, White IR, Boutron I. CONSORT 2025 statement: updated guideline for reporting randomised trials. PLoS Med. 2025; 22(4): e1004587. PMID: [40228477][ref19-hoepwell-2025]
+
+International Committee of Medical Journal Editors. Preparing a Manuscript for Submission to a Medical Journal. Available in [html format][ref19-icmje-nodate]
+
+Kallestinova ED. How to write your first research paper. Yale J Biol Med. 2011 Sep;84(3):181-90. PMID: [21966034][ref19-kallestinova-2011]
+
+Kallet RH. How to write the methods section of a research paper. Respiratory Care. 2004 Oct;49(10):1229-32. PMID: [15447808][ref19-kallet-2004].
+
+Simon SD. Writing the methods section of your grant, Pmean blog, 2011-04-26. Available in [html format][ref19-simon-2011].
+
+Simon SD. Writing the methods section of a research paper, Pmean blog, 2019-04-25. Available in [html format][ref19-simon-2019]
+
+[ref19-clinicaltrials-nodate]: https://clinicaltrials.gov/about-site/about-ctg
+[ref19-ghasemi-2019]: https://doi.org/10.5812/ijem.88155
+[ref19-hopewll-2025]: https://pubmed.ncbi.nlm.nih.gov/40228477/
+[ref19-icmje-nodate]: https://icmje.org/recommendations/browse/manuscript-preparation/preparing-for-submission.html
+[ref19-lallestinova-2011]: https://pubmed.ncbi.nlm.nih.gov/15447808/
+[ref19-kallet-2004]: https://pubmed.ncbi.nlm.nih.gov/15447808/
+[ref19-simon-2019]: http://pmean.com/posts/writing-methods-section/
+[ref19-simon-2001]: http://new.pmean.com/steps-in-writing-methods-section/

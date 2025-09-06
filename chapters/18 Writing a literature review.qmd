@@ -1,15 +1,10 @@
 # Writing a literature review
 
-There are two relevant pages:
-
--   [Writing the introduction section](http://new.pmean.com/introduction-section/) published 2019-03-29.
--   \[How to write a literature review\]\[sim_lit\] published 2019-01-16
-
-Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
+This material is based loosely on a web page that I wrote in 2019 and a 
 
 ## Step 1: Organize your references
 
-Look for interactions
+Add text
 
 ## Step 2: Decide on an organizing principle
 
@@ -22,3 +17,12 @@ Add text.
 ## The fly in the ointment: too many/too few references
 
 Add text.
+
+## Bibliography
+
+Gabriel D. How to write a literature review. Blog post 2017-08-21. Available in [html format][ref18-gabriel-2018].
+
+Simon SD. Writing the introduction section of a research thesis or dissertation. Pmean blog, 2019-03-29. Available in [html format][ref18-simon-2019].
+
+[ref18-gabriel-2018]: https://deborahgabriel.com/2017/08/21/how-to-write-a-literature-review/
+[ref18-simon-2019]: http://pmean.com/posts/introduction-section/

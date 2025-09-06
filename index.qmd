@@ -1,5 +1,13 @@
 # Preface {.unnumbered}
 
+While this book is in progress, I will use the section of the preface to track my activity (or lack of activity). When the book is complete, the first section drops and I revert to a normal preface.
+
+On **2025-09-05**, I moved text that was wrongly placed in chapter 20 back in the correct chapter (19).  I started work on chapter 21, but there is a lot left to be written. I began organizing my bibliography better. I now have about 11 thousand words total, with four relatively complete chapters and now three partially completed chapters.
+
+On **2025-08-29**, I completed a pretty good draft of chapter 20, writing a methods section. This adds to three other chapters that we already in good form (chapters 1, 5, and 11). There is also a very little bit written for chapters 2 and 3. The total word count is just around 10 thousand, which is a jump from 7 thousand that the book had been stuck at for many months.
+
+**The real preface starts here**
+
 This book was a long time coming. I had just finished a book Statistical Evidence in Medical Trials in 2006, and had a nice idea for a second book (this one that you are holding right now). It was more or less written, spread across a few dozen web pages that I had written over the past eight years. Surely, it would drop right into my lap.
 
 Well, it was just like the John Lennon lyric in "Beautiful Boy" about how life is what happens while you're making other plans. Actually, that makes it sound like I had a bunch of unexpected (and maybe tragic) things happed over the past couple of decades. It is actually simpler than that. There's a computer term, thrashing, that refers to a multi-tasking computer that spends more time switching from task to task than in getting any of the tasks done. That's the verb that best describes my life. I'm thrashing.

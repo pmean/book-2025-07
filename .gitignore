@@ -12,3 +12,6 @@
 /_book/site_libs/quarto-nav/*.*
 /_book/site_libs/quarto-search/*.*
 /.quarto/
+/papers/*.*
+*.html
+site_libs/

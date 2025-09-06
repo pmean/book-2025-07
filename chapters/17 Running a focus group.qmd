@@ -1,6 +1,6 @@
 # Running a focus group
 
-This chapter is based on \[Focus groups and qualitative research\]\[sim_foc\] published 2004-04-13. Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
+This chapter is based on a blog post I wrote in 2004 and slides from a course I have taught on Clinical Research Methodology.
 
 ## Step 1: Select a theoretical framework
 
@@ -17,3 +17,13 @@ Add text.
 ## The fly in the ointment:uneven participation
 
 Add text.
+
+## Bibliography
+
+Simon SD. Focus groups and qualitative research. Pmean blog, 2004-04-13. Available in [html format][ref17-simon-2004]
+
+Simon SD. simon-5510-10-slides. PMean github repository. Available in [pdf format][ref17-simon-nodate].
+
+[ref17-simon-2004]: http://pmean.com/posts/focus-groups-are-great/
+
+[ref17-simon-nodate]: https://github.com/pmean/classes/blob/master/clinical-research-methodology/10/results/simon-5510-10-slides.pdf
