@@ -1,6 +1,6 @@
 # Setting up your data entry process
 
-This chapter is based on [General guide to data entry](http://www.pmean.com/99/entry.html) published 1999-09-03. Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
+This chapter is based on a webpage I wrote in 1999.
 
 ## Step 1: Arrange your data in a rectangular format
 
@@ -17,3 +17,9 @@ Add text.
 ## The fly in the ointment: longitudinal and repeated measures data
 
 Add text.
+
+## Bibliography
+
+Simon SD. General guide to data entry. PMean blog, 1999-09-03. Available in [html format][ref09-simon-1999].
+
+[ref09-simon-1999]: http://pmean.com/posts/steps-in-data-entry/

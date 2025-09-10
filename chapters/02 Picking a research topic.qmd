@@ -28,3 +28,8 @@ So if you are doing something that can change the world, get the world to change
 
 The flip side of the irritation coin is when you yourself are doing something that you know isn't working and you'd like to fix it. Think about what you might change. But don't just change right away. Develop a plan.
 
+## Bibliography
+
+Conroy R. Where do research ideas come from? PMean blog, 1999-09-20. Available in [html format][ref02-conroy-1999].
+
+[ref02-conroy-1999]: http://pmean.com/posts/steps-in-developing-research-ideas/

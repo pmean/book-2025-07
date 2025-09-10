@@ -1,10 +1,12 @@
 # Running a linear regression analysis
 
+This chapter is based on webpages I wrote in 1999, 2002, and 2003.
+
 There are two quotes worth mentioning here.
 
-Let no man ignorant of geometry enter - Sign over Plato’s Academy in Athens
+*Let no man ignorant of geometry enter* - Sign over Plato’s Academy in Athens
 
-Peggy Sue: Well, Mr Snelgrove, I happen to know that in the future I will not have the slightest use for algebra, and I speak from experience.
+*Well, Mr Snelgrove, I happen to know that in the future I will not have the slightest use for algebra, and I speak from experience.* - Peggy Sue Got Married.
 
 In my talks, I often ask the question, did you like High School Algebra. I get a mix of responses: some people loved it, some hated it, but most were indifferent. Fair enough, but if you want to run a linear regression analysis, you can't be indifferent. If nothing else, you have to remember the formula you learned in algebra for a straight line.
 

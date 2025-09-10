@@ -1,8 +1,6 @@
 # Developing your pilot study
 
-This chapter is based on [one of my web pages][ref-simon-2016].
-
-[ref-simon-2016]: http://blog.pmean.com/pilot-study/
+This chapter is based on a webpages I wrote in 2007, 2016, 2019, and 2023.
 
 ## Step 1. Visualize the bigger study in the future
 
@@ -22,10 +20,16 @@ Insert text.
 
 ## Bibliography
 
-Steve Simon. IRB review of a pilot study. PMean blog, 2007-03-26. Available in [html format](http://www.new.pmean.com/irb-review-pilot/).
+Steve Simon. IRB review of a pilot study. PMean blog, 2007-03-26. Available in [html format][ref06-simon-2007].
 
-Steve Simon. So you're thinking about a pilot study. PMean blog, 2016-06-16. Available in [html format](http://blog.pmean.com/pilot-study/).
+Steve Simon. So you're thinking about a pilot study. PMean blog, 2016-06-16. Available in [html format][ref06-simon-2016].
 
-Steve Simon. Slapping the word pilot on a failed study. PMean blog, 2019-03-03. Available in \[html format\]\[simon-2019\].
+Steve Simon. Slapping the word pilot on a failed study. PMean blog, 2019-03-03. Available in [html format][ref06-simon-2019].
 
-Steve Simon. The best reasons to run a pilot study. PMean blog, 2023-12-06. Available in [html format](http://new.pmean.com/reasons-to-run-a-pilot/).
+Steve Simon. The best reasons to run a pilot study. PMean blog, 2023-12-06. Available in [html format][ref06-simon-2023].
+
+[ref06-simon-2007]: http://www.new.pmean.com/irb-review-pilot/
+[ref06-simon-2016]: http://blog.pmean.com/pilot-study/
+[ref06-simon-2019]: http://pmean.com/posts/failed-study/
+[ref06-simon-2023]: http://pmean.com/posts/reasons-to-run-a-pilot/
+

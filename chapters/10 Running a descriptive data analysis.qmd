@@ -1,6 +1,6 @@
 # Running a descriptive data analysis
 
-This chapter is based on [Steps in a descriptive model](http://new.pmean.com/steps-in-descriptive-model/) published 2001-10-11. Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
+This chapter is based on a webpage I wrote in 2001.
 
 ## Step 1: Know your count
 
@@ -17,3 +17,9 @@ Add text.
 ## The fly in the ointment: ordinal data
 
 Add text.
+
+## Bibliography
+
+Steps in a descriptive model. 2001-10-11. Available in [html format][ref10-simon-2001].
+
+[ref10-simon-2001]: http://pmean.com/posts/steps-in-descriptive-model/

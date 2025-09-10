@@ -1,6 +1,6 @@
 # Running a non-linear regression analysis
 
-This chapter is based on [S-shaped curves](http://new.pmean.com/fitting-s-shaped-curves/) published 2004-02-12. Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
+This chapter is based on a web page I wrote in 2004.
 
 ## Step 1: Plot your data
 
@@ -17,3 +17,9 @@ Add text.
 ## The fly in the ointment: ill-conditioned models
 
 Add text.
+
+## Bibliography
+
+Simon SD. S-shaped curves. PMean blog, 2004-02-12. Available in [html format][ref15-simon-2004].
+
+[ref15-simon-2004]: http://pmean.com/posts/fitting-s-shaped-curves/
