@@ -2,7 +2,9 @@
 
 While this book is in progress, I will use the section of the preface to track my activity (or lack of activity). When the book is complete, the first section drops and I revert to a normal preface.
 
-ON **2025-09-10**, I standardized the bibliographies at the end of each chapter.
+On **2025-10-03**, I started work on Chapter 9, Setting up a data entry process. I added ten internal and five external references and a few introductory paragraphs. I know have about 13 thousand words total, with four relatively complete chapters and now four partially completed chapters.
+
+On **2025-09-10**, I standardized the bibliographies at the end of each chapter.
 
 On **2025-09-05**, I moved text that was wrongly placed in chapter 20 back in the correct chapter (19).  I started work on chapter 21, but there is a lot left to be written. I began organizing my bibliography better. I now have about 11 thousand words total, with four relatively complete chapters and now three partially completed chapters.
 

@@ -1,6 +1,14 @@
 # Setting up your data entry process
 
-This chapter is based on a webpage I wrote in 1999.
+So you have data. It is on paper. Or maybe it is computer-readable, but the data has no obvious structure. You have to put in a computer-readable format before you can do any data analysis. You have three choices: database, spreadsheet, or text file.
+
+If you are ambitious, setting up a database might be your best option. There are systems like REDCap (Garcia 2021) that have been adopted by many research organizations. If you are flying solo or if your organization does not have REDCap, lobby hard for this. You and everyone you work with will save time and produce better quality data sets. If you can't convince your boss or if you are flying solo, then still look at a database solution. Microsoft Access for Windows PCs or Claris Filemaker for the Macintosh are not free, but well worth the investment. 
+
+Designing a database for your data entry slows you down at first, and this is a good thing. The setup requires you to think about your data and plan intelligently. This time you invest early in a database will be rewarded richly once you start actually entering your data.
+
+You might consider using a spreadsheet, like Microsoft Excel or Apple Numbers. Don't do it! There are a million reasons to avoid spreadsheets (Cite EUSPRIG, genome problems, row limitations). Some are specific to a particular spreadsheet, but many are endemic in all spreadsheets. 
+
+Sometimes the data is given to you. There is lots of guidance on how to handle things. The first section of Wilson 2017 is an excellent resource. If you have a text file, watch out for special characters, like the non-breaking space (Simon 2020), the smart or curly quotes (Simon 202a), leading and trailing blanks (Simon 2007) and especially the tab character (Simon)
 
 ## Step 1: Arrange your data in a rectangular format
 
@@ -20,6 +28,51 @@ Add text.
 
 ## Bibliography
 
-Simon SD. General guide to data entry. PMean blog, 1999-09-03. Available in [html format][ref09-simon-1999].
+Kristin Briney. Data dictionaries. Data Ab Initio blog, August 5, 2014. Available in [html format][ref-briney-2014].
 
-[ref09-simon-1999]: http://pmean.com/posts/steps-in-data-entry/
+Broman KW, Woo KH. (2018). Data Organization in Spreadsheets. The American Statistician, 72(1), 2–10. doi: [10.1080/00031305.2017.1375989][ref-broman-2018]. 
+
+Garcia KKS, Abrahão AA. Research Development Using REDCap Software. Healthc Inform Res. 2021 Oct;27(4):341-349. doi: [10.4258/hir.2021.27.4.341][ref-garcia-2021].
+
+REDCap consortium. REDCap: Research Electronic Data Capture. Available in [html format][ref-redcap=nodate].
+
+Neil Saunders. When life gives you coloured cells, make categories. What You’re Doing is Rather Desperate blog, 2014-08-04. Available in [html format][ref-saunders-2014].
+
+Simon SD. General guide to data entry. PMean blog, 1999-09-03. Available in [html format][ref-simon-1999].
+
+Simon SD. Inputting a two-by-two table into SPSS. PMean blog, 1999-09-18. Available in [html format][ref-simon-1999a].
+
+Simon SD. Spreadsheet or Database? PMean blog, 2000-01-28. Available in [html format][ref-simon-2000].
+
+Simon SD. Watch out for ambiguous data. PMean blog, 2007-02-14. Available in [html format][ref-simon-2007].
+
+Simon SD. Naming conventions for variables. PMean blog, 2008-07-30. Available in [html format][ref-simon-2008].
+
+Simon SD. A false sense of frugality. PMean blog, 2008-12-17. Available in [html format][ref-simon-2008a].
+
+Simon SD. Those pesky tab characters. PMean blog, 2012-03-21. Available in [html format][ref-simon-2012].
+
+Simon SD. Identifying and manipulating non-breaking spaces. PMean blog, 2020-01-07. Available in [html format][ref-simon-2020].
+
+Simon SD. Smart quotes, em dashes, and en dashes. PMean blog, 2020-03-02. Available in [html format][ref-simon-2020a].
+
+Simon SD. Reading text files. PMean blog, 2020-04-30. Available in [html format][ref-simon-2020b].
+
+Wilson G, Bryan J, Cranston K, Kitzes J, Nederbragt L, Teal TK (2017) Good enough practices in scientific computing. PLoS Comput Biol 13(6):e1005510. Available in [html format][ref-wilson-2017].
+
+[ref-briney-2014]: http://dataabinitio.com/?p=454%C2%A0.
+[ref-broman-2018]: https://doi.org/10.1080/00031305.2017.1375989
+[ref-garcia-2021]: https://doi.org/10.4258/hir.2021.27.4.341
+[ref-redcap-nodate]: https://project-redcap.org/
+[ref-saunders-2014]: https://nsaunders.wordpress.com/2014/08/06/when-life-gives-you-coloured-cells-make-categories/
+[ref-simon-1999]: http://pmean.com/posts/steps-in-data-entry/
+[ref-simon-1999a]: http://pmean.com/posts/two-by-two-table-in-spss/
+[ref-simon-2000]: http://pmean.com/posts/spreadsheet-or-database/
+[ref-simon-2007]: http://pmean.com/posts/ambiguous-data/
+[ref-simon-2008]: http://www.pmean.com/08/NamingConventions.html
+[ref-simon-2008a]: http://www.pmean.com/08/FalseFrugality.html
+[ref-simon-2012]: http://pmean.com/posts/pesky-tabs/
+[ref-simon-2020]: http://pmean.com/posts/smart-quotes/
+[ref-simon-2020a]: http://pmean.com/posts/non-breaking-spaces/
+[ref-simon-2020b]: http://pmean.com/posts/reading-text-files/
+[ref-wilson-2017]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510
