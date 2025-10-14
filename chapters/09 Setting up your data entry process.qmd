@@ -125,7 +125,7 @@ Broman KW, Woo KH. (2018). Data Organization in Spreadsheets. The American Stati
 
 Garcia KKS, Abrahão AA. Research Development Using REDCap Software. Healthc Inform Res. 2021 Oct;27(4):341-349. doi: [10.4258/hir.2021.27.4.341][ref-garcia-2021].
 
-REDCap consortium. REDCap: Research Electronic Data Capture. Available in [html format][ref-redcap-nodate].
+REDCap consortium. REDCap: Research Electronic Data Capture. Available in [html format][ref-redcap-                                                                                                                                                                             nodate].
 
 Neil Saunders. When life gives you coloured cells, make categories. What You’re Doing is Rather Desperate blog, 2014-08-04. Available in [html format][ref-saunders-2014].
 
