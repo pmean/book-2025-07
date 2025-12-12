@@ -4,7 +4,9 @@ While this book is in progress, I will use the section of the preface to track m
 
 On **2025-09-05**, I moved text that was wrongly placed in chapter 20 back in the correct chapter (19).  I started work on chapter 21, but there is a lot left to be written. I began organizing my bibliography better. I now have about 11 thousand words total, with four relatively complete chapters and now three partially completed chapters.
 
-On **2025-08-29**, I completed a pretty good draft of chapter 20, writing a methods section. This adds to three other chapters that we already in good form (chapters 1, 5, and 11). There is also a very little bit written for chapters 2 and 3. The total word count is just around 10 thousand, which is a jump from 7 thousand that the book had been stuck at for many months.
+On **2025-08-29**, I completed a pretty good draft of chapter 19, writing a methods section. This adds to three other chapters that we already in good form (chapters 1, 5, and 11). There is also a very little bit written for chapters 2 and 3. The total word count is just around 10 thousand, which is a jump from 7 thousand that the book had been stuck at for many months.
+
+On **2025-12-12**, I started work on Chapter 18 (How to write a literature review). This is going to be one of the hardest chapters to write. Partly because the topic is so broad and partly because there is so much to summarize. I got a nice introduction, revised some of the section headings and got a bit of material in the first and second section headings. I now have 12 thousand words, four fairly complete chapters (1, 5, 11, and 19), and three partially complete chapters (2, 18, and 21). Chapter 3 really isn't as far along as I had implied earlier. Still, this is good progress and I hope to have more done over Christmas break.
 
 **The real preface starts here**
 

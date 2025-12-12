@@ -1,12 +1,55 @@
 # Writing a literature review
 
-This material is based loosely on a web page that I wrote in 2019 and a 
+This material is based loosely on my week 3 lectures in Clinical Research Methodology. Also look at my blog post on an introduction section. An introduction is not quite the same thing as a literature review, but the guidance might still be helpful.
 
-## Step 1: Organize your references
+Let's start by defining what a literature review and what it is not. A nice definition appears in Gliner 2016.
 
-Add text
+*"An interpretation of a selection of documents (published or unpublished) on a specific topic that involves summarization, analysis, evaluation, and synthesis of the documents."*
 
-## Step 2: Decide on an organizing principle
+Let's parse some of those words. It is a **summarization**. You take a group of research article that are often five or ten pages long and convert each one into a sentence or two.
+
+It requires **analysis**. You have to gain an understanding of the true meaning hiding inside each paper. 
+
+It needs **evaluation**. To what extent are the claims in each paper valid.
+
+It involves **synthesis**. You have to combine these studies into a cohesive structure.
+
+What all of this means is that you have to live and breath these studies. You can't summarize, analyze, evaluate, or synthesize with only a superficial understanding of these papers.
+
+Don't confuse a literature review with an **annotated bibliography**. An annotated bibliography involves summarization, analysis, and evaluation, but it lacks synthesis. Each study stands alone with no sense of structure or flow. Make sure when you write your literature review that it isn't a laundry list of studies.
+
+Also don't confuse a literature review with a **systematic overview**. A systematic overview conducts an exhaustive search of all papers that address a narrowly focused clinical question, and combines the results (sometimes quantitatively through a meta-analytic approach) to produce the best answer to that clinical question. A literature provides a more general overview and does not need to cite every available source.
+
+You can produce a literature review as a stand-alone paper, but this chapter will focus on writing a literature review that is part of a larger research paper. In this setting it provides the background that any reader needs to know before reviewing the details of your research. You will summarize the details of your research as in a methods section (our next chapter). Keep in mind as you write your literature review that it will need to lead in to your methods section.
+
+There is a fairly universal demand that your literature review rely only on primary sources. Primary sources are the sources that actually produced the findings. Do not, the advice goes, rely on secondary sources, sources that synthesize the work of others.
+
+The epitome of secondary sources is Wikipedia. I know that a lot of people hate Wikipedia. Just for the record, I think that Wikipedia, is a great starting point. The language is pretty accessible and they try to list a few key references. Don't cite that Wikipedia page, but you can peek at it during the early phases of writing your literature review.
+
+## Step 1: Document your search
+
+Finding resources for your literature review is a challenge. If you can find a librarian who is willing to help, great! Librarians are experts in finding things. 
+You might start your hunt with an Internet search engine like Google, a bibliographic database like Pubmed, or some other approach.
+
+The challenge will be producing a sensitive and specific set of results. 
+
+A sensitive search is one that has very few false negatives. It captures all of the relevant resources, leaving no stone unturned. That sounds good but a sensitive search comes at a price. In order to capture everything, you may produce a list that is too long to process effectively.
+
+A specific search is one that has very few false positive. Almost everything you see is golden. Again, this sounds good. A specific search produces a short list and a short list means less work. Yes, but maybe you left out something that is really really good.
+
+First, write down the keywords that you used in every search engine and in every bibliographic database. Note which searches were too sensitive. You won't be able to tell which searches were too specific, but do consider a broader search if you find a list that just seems **too** short. 
+
+Review the list before each new search and try to make sure that you are addressing any major gaps in your literature review.
+
+## Step 2: Stash your results 
+
+But finding is only the first step. You have to organize what you find so you don't lose it. You don't want to find an interesting resource through a search engine or a bibliographic database, say to yourself, "Oooh! That is an interesting resource!" and then file it away in the back of your brain. A week or a month later, you will want to go to the back of your brain and it won't be there. Your memory may be good, but your forgetery is even better.
+
+Librarians excel in storing information so that you can easily retrieve it later. So lean on the help you can get, if you have a librarian you can work with.
+
+Where do you write down your "Oooh!" articles. The old school way is with index cards. I know, I know. This is the digital era and everything lives on computerized devices. But for some of you, the 
+
+## Step 3: Decide on an organizing principle
 
 Add text.
 
@@ -22,7 +65,14 @@ Add text.
 
 Gabriel D. How to write a literature review. Blog post 2017-08-21. Available in [html format][ref18-gabriel-2018].
 
+Gliner JA, Morgan GA, Leech NL.  Research Methods in Applied Settings: An Integrated Approach to Design and Analysis, Third Edition. Routledge 2016.
+
 Simon SD. Writing the introduction section of a research thesis or dissertation. Pmean blog, 2019-03-29. Available in [html format][ref18-simon-2019].
 
+Simon SD. What is a literature review. Github repository. Available in [html format][ref18-simon-nodate].
+
 [ref18-gabriel-2018]: https://deborahgabriel.com/2017/08/21/how-to-write-a-literature-review/
+
 [ref18-simon-2019]: http://pmean.com/posts/introduction-section/
+
+[ref18-simon-nodate]: https://github.com/pmean/classes/blob/master/clinical-research-methodology/03/results/simon-5510-03-slides.html
