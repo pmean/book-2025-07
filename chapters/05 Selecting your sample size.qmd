@@ -1,8 +1,6 @@
 # Selecting your sample size
 
-This chapter is based on [one of my web pages][ref-simon-2010].
-
-[ref-simon-2010]: http://www.new.pmean.com/chapter-sample-size/
+This chapter is based on a webpage I wrote in 2010.
 
 I got an email last week from a client wanting to start a new research project looking at relationships between parenting beliefs and childhood behaviors. The description of the sorts of things to examine was quite elaborate, and it ended with the question "how many families would we need to have any significant differences if they exist?" Unfortunately, all the elaborate information provided did not include the information I would need to answer this question. Justifying a sample size usually involves three steps.
 
@@ -53,3 +51,9 @@ If there are side effects associated with the treatment that only occur in a fra
 For continuous variables, the minimum clinically significant difference could be defined as above. Define a threshold that represents "better" versus "not better" and then try to shift the entire distribution so that the fraction "better" under the new treatment is at least 1/k.
 
 There have also been efforts to elucidate, through experiments, interviews, and other approaches, what the average person considers an important shift to be. For the visual analog scale of pain, for example, a shift of at least 15 mm is considered the smallest value that is noticeable to the average patient.
+
+## Bibliography
+
+Simon SD. Sample chapter, the first three steps in selecting an appropriate sample size. PMean blog, 2010-07-24. Available in [html format][ref05-simon-2010].
+
+[ref05-simon-2010]: http://www.new.pmean.com/chapter-sample-size/

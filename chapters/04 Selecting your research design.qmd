@@ -1,6 +1,6 @@
 # Selecting your research design
 
-This chapter is based on several web pages I have written, which I will find the time to document here.
+This chapter is based on a webpage I wrote in 2016.
 
 ## Step 1. Decide if you can/should randomize
 
@@ -20,4 +20,6 @@ Insert text.
 
 ## Bibliography
 
-Steve Simon. So you’re thinking about a retrospective chart review. PMean blog, 2016-05-02. Available in [html format](http://blog.pmean.com/chart-review/).
+Steve Simon. So you’re thinking about a retrospective chart review. PMean blog, 2016-05-02. Available in [html format][ref04-simon-2004].
+
+[ref04-simon-2004]: http://blog.pmean.com/chart-review/

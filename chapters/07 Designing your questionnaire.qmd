@@ -1,6 +1,6 @@
 # Designing your questionnaire
 
-This chapter is based on several web pages, that I will add later.
+This chapter is based on webpages I wrote in 2002, 2005, and 2008.
 
 ## Step 1. Brainstorm a long list and then prune back
 
@@ -16,4 +16,20 @@ Insert text.
 
 ## The fly in the ointment
 
-Insert text.
+Open ended questions. 
+
+## Bibliography
+
+Boynton PM, Greenhalgh T. Selecting, designing, and developing your questionnaire. Bmj 2004: 328(7451); 1312-5. doi: [10.1136/bmj.328.7451.1312][ref07-boynton-2004]
+
+Simon SD. So you want to write a questionnaire. PMean blog, 2002-07-12. Available in [html format][ref07-simon-2002].
+
+Simon SD. Open-ended questions on a survey. PMean blog, 2005-03-25. Available in [html format][ref07-simon-2005].
+
+Simon SD. How to design a new survey. PMean blog, 2008-10-28. Available in [html format][ref07-simon-2008].
+
+[ref07-boynton-2004]:  https://doi.org/10.1136/bmj.328.7451.1312
+
+[ref07-simon-2002]: http://pmean.com/posts/steps-in-writing-questionnaire/
+[ref07-simon-2005]: http://pmean.com/posts/open-ended-questions/
+[ref07-simon-2008]: http://pmean.com/posts/plan-survey/

@@ -1,6 +1,6 @@
 # Obtaining ethical approval for your study
 
-This chapter is based on \<<find web page>\>. Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
+This chapter is based on a webpage that I wrote in 2002.
 
 ## Step 1. Establish your credentials as a researcher
 
@@ -17,3 +17,9 @@ Insert text.
 ## The fly in the ointment
 
 Insert text.
+
+## Bibliography
+
+Simon SD. Getting IRB approval for your research. PMean blog, 2002-01-01. Available in [html format][ref08-simon-2002].
+
+[ref08-simon-2002]: http://pmean.com/posts/getting-irb-approval/

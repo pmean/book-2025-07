@@ -1,10 +1,109 @@
 # Setting up your data entry process
 
-This chapter is based on [General guide to data entry](http://www.pmean.com/99/entry.html) published 1999-09-03. Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
+So you have data. It is on paper. Or maybe it is computer-readable, but the data has no obvious structure. You have to put in a computer-readable format before you can do any data analysis. You have three choices: database, spreadsheet, or text file.
+
+If you are ambitious, setting up a database might be your best option. There are systems like REDCap (Garcia 2021) that have been adopted by many research organizations. If you are flying solo or if your organization does not have REDCap, lobby hard for this. You and everyone you work with will save time and produce better quality data sets. If you can't convince your boss or if you are flying solo, then still look at a database solution. Microsoft Access for Windows PCs or Claris Filemaker for the Macintosh are not free, but well worth the investment. 
+
+Designing a database for your data entry slows you down at first, and this is a good thing. The setup requires you to think about your data and plan intelligently. This time you invest early in a database will be rewarded richly once you start actually entering your data.
+
+You might consider using a spreadsheet, like Microsoft Excel or Apple Numbers. Don't do it! There are a million reasons to avoid spreadsheets (Cite EUSPRIG, genome problems, row limitations). Some are specific to a particular spreadsheet, but many are endemic in all spreadsheets. 
+
+Sometimes the data is given to you. There is lots of guidance on how to handle things. The first section of Wilson 2017 is an excellent resource. If you have a text file, watch out for special characters, like the non-breaking space (Simon 2020), the smart or curly quotes (Simon 2020a), leading and trailing blanks (Simon 2007) and especially the tab character (Simon)
 
 ## Step 1: Arrange your data in a rectangular format
 
-Add text.
+Arrange your data in a rectangular format. **The intersection of each row and column should contain a single number**. Here's an example of data which does not fit into a rectangular format. These data are loosely based on a study of breast feeding in pre-term infants. The data have been shortened and modified to serve as a simple example of data entry.
+
+```{}
+    Breast feeding status at six months
+
+    No                   Yes                  Lost to follow-up
+
+    Mom's Marital Birth  Mom's Marital Birth  Mom's Marital Birth
+    Age   Status  Weight Age   Status  Weight Age   Status  Weight
+
+     18   Married 1.550   28   Single  2.381   28   Married 1.685
+     33   Single  1.990                1.130                2.435
+     34   Married         26   Married 2.060
+     36   Married 1.640
+```
+
+Notice the jagged shape of the data. There is a 4 by 3 block of data (the No group), and then a 3 by 3 block of data (the Yes group), and then a 2 by 3 block of data (the Lost to follow-up group). If we stack these blocks one beneath another rather than one beside another, we will get a rectangular shape. When we re-arrange the data, however, we need to include an extra column of information to designate the specific block/group.
+
+Here is what the data looks like after we re-arrange it into a rectangular format.
+
+```{}
+    Breast
+    Feeding  Mom's Marital Birth
+    Status   Age   Status  Weight
+
+     No       18   Married 1.550
+     No       33   Single  1.990
+     No       34   Married      
+     No       36   Married 1.640
+     Yes      28   Single  2.381
+     Yes                   1.130
+     Yes      26   Married 2.060
+     Lost     28   Married 1.685
+     Lost                  2.435
+```
+
+Now you still have some problems here. There are some parts of the rectangle that are empty. These represents missing data. **Never let a empty field represent missing data**. Explicitly create a code for missing, and be sure to explain why the data are missing to anyone involved with analysis of your data. In this example, let -1 represent a missing value for Mom's Age and Birth Weight. Let 9 represent a missing value for Marital Status.
+
+Here's what the data looks like when we plug up the missing value holes.
+
+```{}
+    Breast
+    Feeding  Mom's Marital Birth
+    Status   Age   Status  Weight
+
+     No       18   Married 1.550
+     No       33   Single  1.990
+     No       34   Married    -1
+     No       36   Married 1.640
+     Yes      28   Single  2.381
+     Yes      -1      9    1.130
+     Yes      26   Married 2.060
+     Lost     28   Married 1.685
+     Lost     -1      9    2.435
+```
+
+One more change is needed. Your variable names take up three rows of data. You need to shorten this to one line and get rid of the blank line.
+
+Picking names is a bit tricky. Short names are okay, but not too short. If your variable name includes two or more words, you have several choices. I used an underscore between breast and feeding and status. You could also use a dot (breast.feeding.status), but be careful with dots. Some software (Python and SQL are two examples) reserve the dot for something else.
+
+A dash (minus sign) will not work because breast-feeding-status will look like a mathematical sequence of subtractions. Spaces don't work either because "breast feeding status" will be interpreted some some software as three variables: breast, feeding, and status.
+
+You can also just run the words together, but this can cause confusion. I remember in the early data of the web a group called Writer's Exchange decided to create a website, www.writersexchange.com. Then someone noticed that this address could be misinterpreted as "writer sex change". 
+
+If you don't use an underscore or dot to separate you can use initial capitalization, such as BreastFeedingStatus or breastFeedingStatus. You may want to use the techie word "CamelCase" for this approach. And underscores are "snake case". Now don't you sound smart!
+
+Here are the choices I made, but other choices are okay as well.
+
+```{}
+breast_feeding_status age_mother marital_status birth_weight
+                   No        18         Married        1.550
+                   No        33          Single        1.990
+                   No        34         Married           -1
+                   No        36         Married        1.640
+                  Yes        28          Single        2.381
+                  Yes        -1               9        1.130
+                  Yes        26         Married        2.060
+                 Lost        28         Married        1.685
+                 Lost        -1               9        2.435
+```
+
+Why not use abbreviations like "bf" for breast feeding status and "bw" for birth weight? Well you could. You'll save a bit of typing later. I used to abbreviate a lot, but I don't do it as much, partly because of the advice in Wilson 2017 and partly because I kept forgetting if the abbreviation was "bw" for birth weight or "bwt". If you always spell things out, you will never have to remember which abbreviation you used. Now there are some abbreviatios, like bmi for body mass index, that are in such common use that you can use them safely.
+
+Consistency is also important. Don' combine age_mother with marital.status and BirthWeight.
+
+There you have it. A nice rectangular grid with the intersection of every row and column containing one and only one number. 
+
+Now, the "only one" is also very important. You might be tempted to save a bit of space by combining two pieces of data into one. This is an example of the old adage "penny wise and pound foolish". Whatever savings you achieve by combining two pieces of data together is lost ten times over during your data analysis.
+
+As an example, suppose you create a clever number and letter code where 44M represents a 44 year old male and 50F represents a 50 year old female. Don't do it. When you important that composite column into any statistical software program, you will find that you can't compute even simple statistics like the average age or the proportion of females without taking the time to split apart that data that you have squished together.
+
+Another example of "penny wise but pound foolish" is representing blood pressure as systolic/diastolic. if you feed in values like 120/90 and 150/100, your software will not know what to do. If it did do something, it would be a disasterous conversion of 120/90 to 1.25 and 150/100 to 1.5. Put systolic blood pressure in one column and diastolic blood pressure in a separate column.
 
 ## Step 2: Create codes for categorical data
 
@@ -17,3 +116,57 @@ Add text.
 ## The fly in the ointment: longitudinal and repeated measures data
 
 Add text.
+
+## Bibliography
+
+Kristin Briney. Data dictionaries. Data Ab Initio blog, August 5, 2014. Available in [html format][ref-briney-2014].
+
+Broman KW, Woo KH. (2018). Data Organization in Spreadsheets. The American Statistician, 72(1), 2–10. doi: [10.1080/00031305.2017.1375989][ref-broman-2018]. 
+
+Garcia KKS, Abrahão AA. Research Development Using REDCap Software. Healthc Inform Res. 2021 Oct;27(4):341-349. doi: [10.4258/hir.2021.27.4.341][ref-garcia-2021].
+
+REDCap consortium. REDCap: Research Electronic Data Capture. Available in [html format][ref-redcap-                                                                                                                                                                             nodate].
+
+Neil Saunders. When life gives you coloured cells, make categories. What You’re Doing is Rather Desperate blog, 2014-08-04. Available in [html format][ref-saunders-2014].
+
+Simon SD. General guide to data entry. PMean blog, 1999-09-03. Available in [html format][ref-simon-1999].
+
+Simon SD. Inputting a two-by-two table into SPSS. PMean blog, 1999-09-18. Available in [html format][ref-simon-1999a].
+
+Simon SD. Spreadsheet or Database? PMean blog, 2000-01-28. Available in [html format][ref-simon-2000].
+
+Simon SD. Watch out for ambiguous data. PMean blog, 2007-02-14. Available in [html format][ref-simon-2007].
+
+Simon SD. Naming conventions for variables. PMean blog, 2008-07-30. Available in [html format][ref-simon-2008].
+
+Simon SD. A false sense of frugality. PMean blog, 2008-12-17. Available in [html format][ref-simon-2008a].
+
+Simon SD. Those pesky tab characters. PMean blog, 2012-03-21. Available in [html format][ref-simon-2012].
+
+Simon SD. Identifying and manipulating non-breaking spaces. PMean blog, 2020-01-07. Available in [html format][ref-simon-2020].
+
+Simon SD. Smart quotes, em dashes, and en dashes. PMean blog, 2020-03-02. Available in [html format][ref-simon-2020a].
+
+Simon SD. Reading text files. PMean blog, 2020-04-30. Available in [html format][ref-simon-2020b].
+
+Wagner L. Snake Case or Camel Case? A Guide to Programming Naming Conventions. Boot.Dev blog, 2024-10-31. Available in [html format][ref-wagner-2024].
+
+Wilson G, Bryan J, Cranston K, Kitzes J, Nederbragt L, Teal TK (2017) Good enough practices in scientific computing. PLoS Comput Biol 13(6):e1005510. Available in [html format][ref-wilson-2017].
+
+[ref-briney-2014]: http://dataabinitio.com/?p=454%C2%A0.
+[ref-broman-2018]: https://doi.org/10.1080/00031305.2017.1375989
+[ref-garcia-2021]: https://doi.org/10.4258/hir.2021.27.4.341
+[ref-redcap-nodate]: https://project-redcap.org/
+[ref-saunders-2014]: https://nsaunders.wordpress.com/2014/08/06/when-life-gives-you-coloured-cells-make-categories/
+[ref-simon-1999]: http://pmean.com/posts/steps-in-data-entry/
+[ref-simon-1999a]: http://pmean.com/posts/two-by-two-table-in-spss/
+[ref-simon-2000]: http://pmean.com/posts/spreadsheet-or-database/
+[ref-simon-2007]: http://pmean.com/posts/ambiguous-data/
+[ref-simon-2008]: http://www.pmean.com/08/NamingConventions.html
+[ref-simon-2008a]: http://www.pmean.com/08/FalseFrugality.html
+[ref-simon-2012]: http://pmean.com/posts/pesky-tabs/
+[ref-simon-2020]: http://pmean.com/posts/smart-quotes/
+[ref-simon-2020a]: http://pmean.com/posts/non-breaking-spaces/
+[ref-simon-2020b]: http://pmean.com/posts/reading-text-files/
+[ref-wagner-2024]: https://blog.boot.dev/clean-code/casings-in-coding/
+[ref-wilson-2017]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510

@@ -1,8 +1,6 @@
 # Selecting your research hypothesis
 
-This chapter is based on [one of my webpages][ref-simon-1999].
-
-[ref-simon-1999]: http://www.new.pmean.com/steps-in-developing-research-hypothesis/
+This chapter is based on a webpage I wrote in 1999.
 
 ## Step 1. Choose an outcome measure
 
@@ -21,3 +19,9 @@ Insert text.
 ## The fly in the ointment
 
 Insert text.
+
+## Bibliography
+
+Simon SD. Developing a research hypothesis. PMean blog, 1999-08-18. Available in [html format][ref03-simon-1999].
+
+[ref03-simon-1999]: http://pmean.com/posts/steps-in-developing-research-hypothesis/

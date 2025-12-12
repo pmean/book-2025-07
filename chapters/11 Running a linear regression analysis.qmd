@@ -1,10 +1,12 @@
 # Running a linear regression analysis
 
+This chapter is based on webpages I wrote in 1999, 2002, and 2003.
+
 There are two quotes worth mentioning here.
 
-Let no man ignorant of geometry enter - Sign over Plato’s Academy in Athens
+*Let no man ignorant of geometry enter* - Sign over Plato’s Academy in Athens
 
-Peggy Sue: Well, Mr Snelgrove, I happen to know that in the future I will not have the slightest use for algebra, and I speak from experience.
+*Well, Mr Snelgrove, I happen to know that in the future I will not have the slightest use for algebra, and I speak from experience.* - Peggy Sue Got Married.
 
 In my talks, I often ask the question, did you like High School Algebra. I get a mix of responses: some people loved it, some hated it, but most were indifferent. Fair enough, but if you want to run a linear regression analysis, you can't be indifferent. If nothing else, you have to remember the formula you learned in algebra for a straight line.
 
@@ -92,7 +94,9 @@ Shown below is a table of means from the general linear model.
 
 We see that the difference between the two means is roughly 7 weeks, which confirms the results shown previously.
 
-## Step 3: Compute an adjusted model
+## Step 3: Examine residuals
+
+## Step 4: Compute an adjusted model
 
 but could some of all of this difference be due to the fact that the NG tube group had older mothers? To answer this
 we need to fit an adjusted model.
@@ -120,36 +124,6 @@ that this presentation gives you a general idea of what crude and adjusted model
 
 ## The fly in the ointment: clustered data
 
-Add text.
-
-Linear regression models provide a good way to examine how various factors influence a continuous outcome measure. There are three steps in a typical linear regression analysis.
-
-Fit a crude model
-Fit an adjusted model
-Analyze predicted values and residuals
-These steps may not be appropriate for every linear regression analysis, but they do serve as a general guideline. In this presentation
-
-you will see these steps applied to data from a breast feeding study
-using SPSS software.
-This presentation can only give the briefest introduction to this area. When I have time
-
-I hope to add additional web pages to provide a more thorough approach to this topic.
-**Step 1
-
-Fit a crude model**
-**Step 2
-
-Fit an adjusted model**
-The previous model was a crude model. We see a seven week difference between the two groups
-
-
-
-
-The p-value for feeding group is .009
-
-which is still significant
-even after adjusting for the effect of mother’s age.
-Shown below is the table of estimates from the same general linear model.
 
 **Step 3
 

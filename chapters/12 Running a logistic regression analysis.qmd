@@ -1,6 +1,6 @@
 # Running a logistic regression analysis
 
-This chapter is based on [Steps in a linear regression analysis](http://new.pmean.com/steps-in-linear-regression/) published 2001-10-11. Also refer to [Tentative table of contents](http://www.pmean.com/10/Contents.html).
+This chapter is based on web pages I wrote in 1999 and 2002.
 
 ## Step 1: Examine raw probabilities
 
@@ -19,3 +19,12 @@ Add text.
 ## The fly in the ointment: clustered data
 
 Add text.
+
+## Bibliography
+
+Simon SD. Guidleins for logistic regression models. PMean blog, 1999-09-27. Available in [html format][ref12-simon-1999].
+
+Simon SD. The concepts behind the logistic regression model. PMean blog, 2002-07-23. Available in [html format][ref12-simon-2002].
+
+[ref12-simon-1999]: http://pmean.com/posts/steps-in-logistic-regression/index.html
+[ref12-simon-2002]: http://pmean.com/posts/logistic-regression-concepts/

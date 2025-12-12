@@ -1,4 +1,5 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
@@ -7,21 +8,22 @@
   letterpaper,
   DIV=11,
   numbers=noendperiod]{scrreprt}
-
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -39,9 +41,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
 \makeatletter
 \ifx\paragraph\undefined\else
@@ -67,8 +66,7 @@
 \makeatother
 
 
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -93,39 +91,20 @@
 % Set default figure placement to htbp
 \def\fps@figure{htbp}
 \makeatother
-% definitions for citeproc citations
-\NewDocumentCommand\citeproctext{}{}
-\NewDocumentCommand\citeproc{mm}{%
-  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
-\makeatletter
- % allow citations to break across lines
- \let\@cite@ofmt\@firstofone
- % avoid brackets around text for \cite:
- \def\@biblabel#1{}
- \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
-\makeatother
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
- {\begin{list}{}{%
-  \setlength{\itemindent}{0pt}
-  \setlength{\leftmargin}{0pt}
-  \setlength{\parsep}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-   \setlength{\leftmargin}{\cslhangindent}
-   \setlength{\itemindent}{-1\cslhangindent}
-  \fi
-  % set entry spacing
-  \setlength{\itemsep}{#2\baselineskip}}}
- {\end{list}}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
 
 \KOMAoption{captions}{tableheading}
 \makeatletter
@@ -172,13 +151,11 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-
 \usepackage{bookmark}
-
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
-  pdftitle={jump-start-book, last update 2025-08-01},
+  pdftitle={jump-start-book, last major update 2025-09-10},
   pdfauthor={Steve Simon},
   colorlinks=true,
   linkcolor={blue},
@@ -188,10 +165,9 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\title{jump-start-book, last update 2025-08-01}
+\title{jump-start-book, last major update 2025-09-10}
 \author{Steve Simon}
 \date{2023-10-03}
-
 \begin{document}
 \maketitle
 
@@ -213,6 +189,20 @@ While this book is in progress, I will use the section of the preface to
 track my activity (or lack of activity). When the book is complete, the
 first section drops and I revert to a normal preface.
 
+On \textbf{2025-10-10}, I continued work on Chapter 9. I have a pretty
+complete narrative for section 9.1. I now have about 14 thousand words
+total, with four relatively complete chapters and four partially
+completed chapters.
+
+On \textbf{2025-10-03}, I started work on Chapter 9, Setting up a data
+entry process. I added ten internal and five external references and a
+few introductory paragraphs. I now have about 13 thousand words total,
+with four relatively complete chapters and now four partially completed
+chapters.
+
+On \textbf{2025-09-10}, I standardized the bibliographies at the end of
+each chapter.
+
 On \textbf{2025-09-05}, I moved text that was wrongly placed in chapter
 20 back in the correct chapter (19). I started work on chapter 21, but
 there is a lot left to be written. I began organizing my bibliography
@@ -220,7 +210,7 @@ better. I now have about 11 thousand words total, with four relatively
 complete chapters and now three partially completed chapters.
 
 On \textbf{2025-08-29}, I completed a pretty good draft of chapter 20,
-writing a methods section. This adds to three other chapters that we
+writing a methods section. This adds to three other chapters that I
 already in good form (chapters 1, 5, and 11). There is also a very
 little bit written for chapters 2 and 3. The total word count is just
 around 10 thousand, which is a jump from 7 thousand that the book had
@@ -413,7 +403,7 @@ Alreck and Settle
 
 Lang and Secic
 
-Noram and Streiner
+Norman and Streiner
 
 Fear is often a paralyzing emotion, and it may be just fear itself that
 is causing your difficulties. Research is not easy, but don't fool
@@ -492,14 +482,19 @@ something that you know isn't working and you'd like to fix it. Think
 about what you might change. But don't just change right away. Develop a
 plan.
 
+\section{Bibliography}\label{bibliography-1}
+
+Conroy R. Where do research ideas come from? PMean blog, 1999-09-20.
+Available in
+\href{http://pmean.com/posts/steps-in-developing-research-ideas/}{html
+format}.
+
 \bookmarksetup{startatroot}
 
 \chapter{Selecting your research
 hypothesis}\label{selecting-your-research-hypothesis}
 
-This chapter is based on
-\href{http://www.new.pmean.com/steps-in-developing-research-hypothesis/}{one
-of my webpages}.
+This chapter is based on a webpage I wrote in 1999.
 
 \section{Step 1. Choose an outcome
 measure}\label{step-1.-choose-an-outcome-measure}
@@ -528,13 +523,19 @@ Insert text.
 
 Insert text.
 
+\section{Bibliography}\label{bibliography-2}
+
+Simon SD. Developing a research hypothesis. PMean blog, 1999-08-18.
+Available in
+\href{http://pmean.com/posts/steps-in-developing-research-hypothesis/}{html
+format}.
+
 \bookmarksetup{startatroot}
 
 \chapter{Selecting your research
 design}\label{selecting-your-research-design}
 
-This chapter is based on several web pages I have written, which I will
-find the time to document here.
+This chapter is based on a webpage I wrote in 2016.
 
 \section{Step 1. Decide if you can/should
 randomize}\label{step-1.-decide-if-you-canshould-randomize}
@@ -556,7 +557,7 @@ Insert text.
 
 Insert text.
 
-\section{Bibliography}\label{bibliography-1}
+\section{Bibliography}\label{bibliography-3}
 
 Steve Simon. So you're thinking about a retrospective chart review.
 PMean blog, 2016-05-02. Available in
@@ -566,9 +567,7 @@ PMean blog, 2016-05-02. Available in
 
 \chapter{Selecting your sample size}\label{selecting-your-sample-size}
 
-This chapter is based on
-\href{http://www.new.pmean.com/chapter-sample-size/}{one of my web
-pages}.
+This chapter is based on a webpage I wrote in 2010.
 
 I got an email last week from a client wanting to start a new research
 project looking at relationships between parenting beliefs and childhood
@@ -729,12 +728,18 @@ important shift to be. For the visual analog scale of pain, for example,
 a shift of at least 15 mm is considered the smallest value that is
 noticeable to the average patient.
 
+\section{Bibliography}\label{bibliography-4}
+
+Simon SD. Sample chapter, the first three steps in selecting an
+appropriate sample size. PMean blog, 2010-07-24. Available in
+\href{http://www.new.pmean.com/chapter-sample-size/}{html format}.
+
 \bookmarksetup{startatroot}
 
 \chapter{Developing your pilot study}\label{developing-your-pilot-study}
 
-This chapter is based on \href{http://blog.pmean.com/pilot-study/}{one
-of my web pages}.
+This chapter is based on a webpages I wrote in 2007, 2016, 2019, and
+2023.
 
 \section{Step 1. Visualize the bigger study in the
 future}\label{step-1.-visualize-the-bigger-study-in-the-future}
@@ -755,7 +760,7 @@ Insert text.
 
 Insert text.
 
-\section{Bibliography}\label{bibliography-2}
+\section{Bibliography}\label{bibliography-5}
 
 Steve Simon. IRB review of a pilot study. PMean blog, 2007-03-26.
 Available in \href{http://www.new.pmean.com/irb-review-pilot/}{html
@@ -766,18 +771,19 @@ Steve Simon. So you're thinking about a pilot study. PMean blog,
 format}.
 
 Steve Simon. Slapping the word pilot on a failed study. PMean blog,
-2019-03-03. Available in {[}html format{]}{[}simon-2019{]}.
+2019-03-03. Available in
+\href{http://pmean.com/posts/failed-study/}{html format}.
 
 Steve Simon. The best reasons to run a pilot study. PMean blog,
 2023-12-06. Available in
-\href{http://new.pmean.com/reasons-to-run-a-pilot/}{html format}.
+\href{http://pmean.com/posts/reasons-to-run-a-pilot/}{html format}.
 
 \bookmarksetup{startatroot}
 
 \chapter{Designing your
 questionnaire}\label{designing-your-questionnaire}
 
-This chapter is based on several web pages, that I will add later.
+This chapter is based on webpages I wrote in 2002, 2005, and 2008.
 
 \section{Step 1. Brainstorm a long list and then prune
 back}\label{step-1.-brainstorm-a-long-list-and-then-prune-back}
@@ -796,16 +802,32 @@ Insert text.
 
 \section{The fly in the ointment}\label{the-fly-in-the-ointment-3}
 
-Insert text.
+Open ended questions.
+
+\section{Bibliography}\label{bibliography-6}
+
+Boynton PM, Greenhalgh T. Selecting, designing, and developing your
+questionnaire. Bmj 2004: 328(7451); 1312-5. doi:
+\href{https://doi.org/10.1136/bmj.328.7451.1312}{10.1136/bmj.328.7451.1312}
+
+Simon SD. So you want to write a questionnaire. PMean blog, 2002-07-12.
+Available in
+\href{http://pmean.com/posts/steps-in-writing-questionnaire/}{html
+format}.
+
+Simon SD. Open-ended questions on a survey. PMean blog, 2005-03-25.
+Available in \href{http://pmean.com/posts/open-ended-questions/}{html
+format}.
+
+Simon SD. How to design a new survey. PMean blog, 2008-10-28. Available
+in \href{http://pmean.com/posts/plan-survey/}{html format}.
 
 \bookmarksetup{startatroot}
 
 \chapter{Obtaining ethical approval for your
 study}\label{obtaining-ethical-approval-for-your-study}
 
-This chapter is based on \textless{}\textgreater. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+This chapter is based on a webpage that I wrote in 2002.
 
 \section{Step 1. Establish your credentials as a
 researcher}\label{step-1.-establish-your-credentials-as-a-researcher}
@@ -826,21 +848,203 @@ Insert text.
 
 Insert text.
 
+\section{Bibliography}\label{bibliography-7}
+
+Simon SD. Getting IRB approval for your research. PMean blog,
+2002-01-01. Available in
+\href{http://pmean.com/posts/getting-irb-approval/}{html format}.
+
 \bookmarksetup{startatroot}
 
 \chapter{Setting up your data entry
 process}\label{setting-up-your-data-entry-process}
 
-This chapter is based on
-\href{http://www.pmean.com/99/entry.html}{General guide to data entry}
-published 1999-09-03. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+So you have data. It is on paper. Or maybe it is computer-readable, but
+the data has no obvious structure. You have to put in a
+computer-readable format before you can do any data analysis. You have
+three choices: database, spreadsheet, or text file.
+
+If you are ambitious, setting up a database might be your best option.
+There are systems like REDCap (Garcia 2021) that have been adopted by
+many research organizations. If you are flying solo or if your
+organization does not have REDCap, lobby hard for this. You and everyone
+you work with will save time and produce better quality data sets. If
+you can't convince your boss or if you are flying solo, then still look
+at a database solution. Microsoft Access for Windows PCs or Claris
+Filemaker for the Macintosh are not free, but well worth the investment.
+
+Designing a database for your data entry slows you down at first, and
+this is a good thing. The setup requires you to think about your data
+and plan intelligently. This time you invest early in a database will be
+rewarded richly once you start actually entering your data.
+
+You might consider using a spreadsheet, like Microsoft Excel or Apple
+Numbers. Don't do it! There are a million reasons to avoid spreadsheets
+(Cite EUSPRIG, genome problems, row limitations). Some are specific to a
+particular spreadsheet, but many are endemic in all spreadsheets.
+
+Sometimes the data is given to you. There is lots of guidance on how to
+handle things. The first section of Wilson 2017 is an excellent
+resource. If you have a text file, watch out for special characters,
+like the non-breaking space (Simon 2020), the smart or curly quotes
+(Simon 2020a), leading and trailing blanks (Simon 2007) and especially
+the tab character (Simon)
 
 \section{Step 1: Arrange your data in a rectangular
 format}\label{step-1-arrange-your-data-in-a-rectangular-format}
 
-Add text.
+Arrange your data in a rectangular format. \textbf{The intersection of
+each row and column should contain a single number}. Here's an example
+of data which does not fit into a rectangular format. These data are
+loosely based on a study of breast feeding in pre-term infants. The data
+have been shortened and modified to serve as a simple example of data
+entry.
+
+\begin{verbatim}
+    Breast feeding status at six months
+
+    No                   Yes                  Lost to follow-up
+
+    Mom's Marital Birth  Mom's Marital Birth  Mom's Marital Birth
+    Age   Status  Weight Age   Status  Weight Age   Status  Weight
+
+     18   Married 1.550   28   Single  2.381   28   Married 1.685
+     33   Single  1.990                1.130                2.435
+     34   Married         26   Married 2.060
+     36   Married 1.640
+\end{verbatim}
+
+Notice the jagged shape of the data. There is a 4 by 3 block of data
+(the No group), and then a 3 by 3 block of data (the Yes group), and
+then a 2 by 3 block of data (the Lost to follow-up group). If we stack
+these blocks one beneath another rather than one beside another, we will
+get a rectangular shape. When we re-arrange the data, however, we need
+to include an extra column of information to designate the specific
+block/group.
+
+Here is what the data looks like after we re-arrange it into a
+rectangular format.
+
+\begin{verbatim}
+    Breast
+    Feeding  Mom's Marital Birth
+    Status   Age   Status  Weight
+
+     No       18   Married 1.550
+     No       33   Single  1.990
+     No       34   Married      
+     No       36   Married 1.640
+     Yes      28   Single  2.381
+     Yes                   1.130
+     Yes      26   Married 2.060
+     Lost     28   Married 1.685
+     Lost                  2.435
+\end{verbatim}
+
+Now you still have some problems here. There are some parts of the
+rectangle that are empty. These represents missing data. \textbf{Never
+let a empty field represent missing data}. Explicitly create a code for
+missing, and be sure to explain why the data are missing to anyone
+involved with analysis of your data. In this example, let -1 represent a
+missing value for Mom's Age and Birth Weight. Let 9 represent a missing
+value for Marital Status.
+
+Here's what the data looks like when we plug up the missing value holes.
+
+\begin{verbatim}
+    Breast
+    Feeding  Mom's Marital Birth
+    Status   Age   Status  Weight
+
+     No       18   Married 1.550
+     No       33   Single  1.990
+     No       34   Married    -1
+     No       36   Married 1.640
+     Yes      28   Single  2.381
+     Yes      -1      9    1.130
+     Yes      26   Married 2.060
+     Lost     28   Married 1.685
+     Lost     -1      9    2.435
+\end{verbatim}
+
+One more change is needed. Your variable names take up three rows of
+data. You need to shorten this to one line and get rid of the blank
+line.
+
+Picking names is a bit tricky. Short names are okay, but not too short.
+If your variable name includes two or more words, you have several
+choices. I used an underscore between breast and feeding and status. You
+could also use a dot (breast.feeding.status), but be careful with dots.
+Some software (Python and SQL are two examples) reserve the dot for
+something else.
+
+A dash (minus sign) will not work because breast-feeding-status will
+look like a mathematical sequence of subtractions. Spaces don't work
+either because ``breast feeding status'' will be interpreted some some
+software as three variables: breast, feeding, and status.
+
+You can also just run the words together, but this can cause confusion.
+I remember in the early data of the web a group called Writer's Exchange
+decided to create a website, www.writersexchange.com. Then someone
+noticed that this address could be misinterpreted as ``writer sex
+change''.
+
+If you don't use an underscore or dot to separate you can use initial
+capitalization, such as BreastFeedingStatus or breastFeedingStatus. You
+may want to use the techie word ``CamelCase'' for this approach. And
+underscores are ``snake case''. Now don't you sound smart!
+
+Here are the choices I made, but other choices are okay as well.
+
+\begin{verbatim}
+breast_feeding_status age_mother marital_status birth_weight
+                   No        18         Married        1.550
+                   No        33          Single        1.990
+                   No        34         Married           -1
+                   No        36         Married        1.640
+                  Yes        28          Single        2.381
+                  Yes        -1               9        1.130
+                  Yes        26         Married        2.060
+                 Lost        28         Married        1.685
+                 Lost        -1               9        2.435
+\end{verbatim}
+
+Why not use abbreviations like ``bf'' for breast feeding status and
+``bw'' for birth weight? Well you could. You'll save a bit of typing
+later. I used to abbreviate a lot, but I don't do it as much, partly
+because of the advice in Wilson 2017 and partly because I kept
+forgetting if the abbreviation was ``bw'' for birth weight or ``bwt''.
+If you always spell things out, you will never have to remember which
+abbreviation you used. Now there are some abbreviatios, like bmi for
+body mass index, that are in such common use that you can use them
+safely.
+
+Consistency is also important. Don' combine age\_mother with
+marital.status and BirthWeight.
+
+There you have it. A nice rectangular grid with the intersection of
+every row and column containing one and only one number.
+
+Now, the ``only one'' is also very important. You might be tempted to
+save a bit of space by combining two pieces of data into one. This is an
+example of the old adage ``penny wise and pound foolish''. Whatever
+savings you achieve by combining two pieces of data together is lost ten
+times over during your data analysis.
+
+As an example, suppose you create a clever number and letter code where
+44M represents a 44 year old male and 50F represents a 50 year old
+female. Don't do it. When you important that composite column into any
+statistical software program, you will find that you can't compute even
+simple statistics like the average age or the proportion of females
+without taking the time to split apart that data that you have squished
+together.
+
+Another example of ``penny wise but pound foolish'' is representing
+blood pressure as systolic/diastolic. if you feed in values like 120/90
+and 150/100, your software will not know what to do. If it did do
+something, it would be a disasterous conversion of 120/90 to 1.25 and
+150/100 to 1.5. Put systolic blood pressure in one column and diastolic
+blood pressure in a separate column.
 
 \section{Step 2: Create codes for categorical
 data}\label{step-2-create-codes-for-categorical-data}
@@ -857,16 +1061,78 @@ data}\label{the-fly-in-the-ointment-longitudinal-and-repeated-measures-data}
 
 Add text.
 
+\section{Bibliography}\label{bibliography-8}
+
+Kristin Briney. Data dictionaries. Data Ab Initio blog, August 5, 2014.
+Available in \href{http://dataabinitio.com/?p=454\%C2\%A0.}{html
+format}.
+
+Broman KW, Woo KH. (2018). Data Organization in Spreadsheets. The
+American Statistician, 72(1), 2--10. doi:
+\href{https://doi.org/10.1080/00031305.2017.1375989}{10.1080/00031305.2017.1375989}.
+
+Garcia KKS, Abrahão AA. Research Development Using REDCap Software.
+Healthc Inform Res. 2021 Oct;27(4):341-349. doi:
+\href{https://doi.org/10.4258/hir.2021.27.4.341}{10.4258/hir.2021.27.4.341}.
+
+REDCap consortium. REDCap: Research Electronic Data Capture. Available
+in {[}html format{]}{[}ref-redcap=nodate{]}.
+
+Neil Saunders. When life gives you coloured cells, make categories. What
+You're Doing is Rather Desperate blog, 2014-08-04. Available in
+\href{https://nsaunders.wordpress.com/2014/08/06/when-life-gives-you-coloured-cells-make-categories/}{html
+format}.
+
+Simon SD. General guide to data entry. PMean blog, 1999-09-03. Available
+in \href{http://pmean.com/posts/steps-in-data-entry/}{html format}.
+
+Simon SD. Inputting a two-by-two table into SPSS. PMean blog,
+1999-09-18. Available in
+\href{http://pmean.com/posts/two-by-two-table-in-spss/}{html format}.
+
+Simon SD. Spreadsheet or Database? PMean blog, 2000-01-28. Available in
+\href{http://pmean.com/posts/spreadsheet-or-database/}{html format}.
+
+Simon SD. Watch out for ambiguous data. PMean blog, 2007-02-14.
+Available in \href{http://pmean.com/posts/ambiguous-data/}{html format}.
+
+Simon SD. Naming conventions for variables. PMean blog, 2008-07-30.
+Available in \href{http://www.pmean.com/08/NamingConventions.html}{html
+format}.
+
+Simon SD. A false sense of frugality. PMean blog, 2008-12-17. Available
+in \href{http://www.pmean.com/08/FalseFrugality.html}{html format}.
+
+Simon SD. Those pesky tab characters. PMean blog, 2012-03-21. Available
+in \href{http://pmean.com/posts/pesky-tabs/}{html format}.
+
+Simon SD. Identifying and manipulating non-breaking spaces. PMean blog,
+2020-01-07. Available in
+\href{http://pmean.com/posts/smart-quotes/}{html format}.
+
+Simon SD. Smart quotes, em dashes, and en dashes. PMean blog,
+2020-03-02. Available in
+\href{http://pmean.com/posts/non-breaking-spaces/}{html format}.
+
+Simon SD. Reading text files. PMean blog, 2020-04-30. Available in
+\href{http://pmean.com/posts/reading-text-files/}{html format}.
+
+Wagner L. Snake Case or Camel Case? A Guide to Programming Naming
+Conventions. Boot.Dev blog, 2024-10-31. Available in
+\href{https://blog.boot.dev/clean-code/casings-in-coding/}{html format}.
+
+Wilson G, Bryan J, Cranston K, Kitzes J, Nederbragt L, Teal TK (2017)
+Good enough practices in scientific computing. PLoS Comput Biol
+13(6):e1005510. Available in
+\href{https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510}{html
+format}.
+
 \bookmarksetup{startatroot}
 
 \chapter{Running a descriptive data
 analysis}\label{running-a-descriptive-data-analysis}
 
-This chapter is based on
-\href{http://new.pmean.com/steps-in-descriptive-model/}{Steps in a
-descriptive model} published 2001-10-11. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+This chapter is based on a webpage I wrote in 2001.
 
 \section{Step 1: Know your count}\label{step-1-know-your-count}
 
@@ -887,19 +1153,26 @@ data}\label{the-fly-in-the-ointment-ordinal-data}
 
 Add text.
 
+\section{Bibliography}\label{bibliography-9}
+
+Steps in a descriptive model. 2001-10-11. Available in
+\href{http://pmean.com/posts/steps-in-descriptive-model/}{html format}.
+
 \bookmarksetup{startatroot}
 
 \chapter{Running a linear regression
 analysis}\label{running-a-linear-regression-analysis}
 
+This chapter is based on webpages I wrote in 1999, 2002, and 2003.
+
 There are two quotes worth mentioning here.
 
-Let no man ignorant of geometry enter - Sign over Plato's Academy in
-Athens
+\emph{Let no man ignorant of geometry enter} - Sign over Plato's Academy
+in Athens
 
-Peggy Sue: Well, Mr Snelgrove, I happen to know that in the future I
-will not have the slightest use for algebra, and I speak from
-experience.
+\emph{Well, Mr Snelgrove, I happen to know that in the future I will not
+have the slightest use for algebra, and I speak from experience.} -
+Peggy Sue Got Married.
 
 In my talks, I often ask the question, did you like High School Algebra.
 I get a mix of responses: some people loved it, some hated it, but most
@@ -1218,7 +1491,7 @@ website.
 Excluding direct quotes from outside sources, all text is in the public
 domain. Images are copyrighted unless noted
 
-\section{Bibliography}\label{bibliography-3}
+\section{Bibliography}\label{bibliography-10}
 
 UCLA Statistical Consulting Group. Regression Analysis \textbar{} SAS
 Annotated Output. Available in
@@ -1246,11 +1519,7 @@ Steve Simon. Joke about the dangers of extrapolation. Pmean blog,
 \chapter{Running a logistic regression
 analysis}\label{running-a-logistic-regression-analysis}
 
-This chapter is based on
-\href{http://new.pmean.com/steps-in-linear-regression/}{Steps in a
-linear regression analysis} published 2001-10-11. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+This chapter is based on web pages I wrote in 1999 and 2002.
 
 \section{Step 1: Examine raw
 probabilities}\label{step-1-examine-raw-probabilities}
@@ -1274,15 +1543,24 @@ data}\label{the-fly-in-the-ointment-clustered-data-1}
 
 Add text.
 
+\section{Bibliography}\label{bibliography-11}
+
+Simon SD. Guidleins for logistic regression models. PMean blog,
+1999-09-27. Available in
+\href{http://pmean.com/posts/steps-in-logistic-regression/index.html}{html
+format}.
+
+Simon SD. The concepts behind the logistic regression model. PMean blog,
+2002-07-23. Available in
+\href{http://pmean.com/posts/logistic-regression-concepts/}{html
+format}.
+
 \bookmarksetup{startatroot}
 
 \chapter{Running a multi-factor analysis of variance
 model}\label{running-a-multi-factor-analysis-of-variance-model}
 
-This chapter is based on \href{http://www.pmean.com/posts/anova/}{Steps
-in a typical ANOVA model} published 2002-10-11. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+This chapter is based on a webpage that I wrote in 2003.
 
 \section{Step 1: Plot clustered
 boxplots}\label{step-1-plot-clustered-boxplots}
@@ -1304,16 +1582,17 @@ data}\label{the-fly-in-the-ointment-unbalanced-data}
 
 Add text.
 
+\section{Bibliography}\label{bibliography-12}
+
+Simon SD. Steps in a typical ANOVA model. PMean blog, 2003-06-20.
+Available in \href{http://pmean.com/posts/steps-in-anova/}{html format}.
+
 \bookmarksetup{startatroot}
 
 \chapter{Running a survival data
 analysis}\label{running-a-survival-data-analysis}
 
-This chapter is based on
-\href{http://www.new.pmean.com/steps-in-survival-analysis/}{Steps in a
-typical survival data analysis} published 2002-10-11. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+This chapter is based on a web page I wrote in 2002.
 
 \section{Step 1: Plot Kaplan-Meier curves for each
 group}\label{step-1-plot-kaplan-meier-curves-for-each-group}
@@ -1337,16 +1616,18 @@ covariates}\label{the-fly-in-the-ointment-time-varying-covariates}
 
 Add text.
 
+\section{Bibliography}\label{bibliography-13}
+
+Simon SD. Steps in a typical survival data analysis. PMean blog,
+2002-10-11. Available in
+\href{http://pmean.com/posts/steps-in-survival-analysis/}{html format}.
+
 \bookmarksetup{startatroot}
 
 \chapter{Running a non-linear regression
 analysis}\label{running-a-non-linear-regression-analysis}
 
-This chapter is based on
-\href{http://new.pmean.com/fitting-s-shaped-curves/}{S-shaped curves}
-published 2004-02-12. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+This chapter is based on a web page I wrote in 2004.
 
 \section{Step 1: Plot your data}\label{step-1-plot-your-data-1}
 
@@ -1366,15 +1647,17 @@ models}\label{the-fly-in-the-ointment-ill-conditioned-models}
 
 Add text.
 
+\section{Bibliography}\label{bibliography-14}
+
+Simon SD. S-shaped curves. PMean blog, 2004-02-12. Available in
+\href{http://pmean.com/posts/fitting-s-shaped-curves/}{html format}.
+
 \bookmarksetup{startatroot}
 
 \chapter{Running a systematic
 overview}\label{running-a-systematic-overview}
 
-This chapter is based on {[}So you're thinking about a systematic
-overview{]}{[}sim\_sys{]} published 2016-06-17. Also refer to
-\href{http://www.pmean.com/10/Contents.html}{Tentative table of
-contents}.
+This chapter is based on a webpage I wrote in 2016.
 
 \section{Step 1: Write a protocol}\label{step-1-write-a-protocol}
 
@@ -1393,17 +1676,32 @@ heterogeneity}\label{the-fly-in-the-ointment-extreme-heterogeneity}
 
 Add text.
 
-{[}sim-sys{]}
+\section{Bibliography}\label{bibliography-15}
+
+Simon SD. So you're thinking about a systematic overview. PMean blog,
+2016-06-17. Available in
+\href{http://pmean.com/posts/systematic-overview/}{html format}
 
 \bookmarksetup{startatroot}
 
 \chapter{Running a focus group}\label{running-a-focus-group}
 
+\emph{It's really hard to design products by focus groups. A lot of
+times, people don't know what they want until you show it to them.}
+Steve Jobs as quoted in
+
 This chapter is based on a blog post I wrote in 2004 and slides from a
 course I have taught on Clinical Research Methodology.
 
+\section{Step 1: Plan your logistics}\label{step-1-plan-your-logistics}
+
+Logistics sounds so mundane .
+
 \section{Step 1: Select a theoretical
 framework}\label{step-1-select-a-theoretical-framework}
+
+phenomenology topic\_10: ``Grounded theory'' topic\_11: ``Ethnography''
+topic\_12: ``The case sudy'' topic\_13: ``Narrative''
 
 Look for interactions
 
@@ -1422,7 +1720,7 @@ participation}\label{the-fly-in-the-ointmentuneven-participation}
 
 Add text.
 
-\section{Bibliography}\label{bibliography-4}
+\section{Bibliography}\label{bibliography-16}
 
 Simon SD. Focus groups and qualitative research. Pmean blog, 2004-04-13.
 Available in \href{http://pmean.com/posts/focus-groups-are-great/}{html
@@ -1431,6 +1729,233 @@ format}
 Simon SD. simon-5510-10-slides. PMean github repository. Available in
 \href{https://github.com/pmean/classes/blob/master/clinical-research-methodology/10/results/simon-5510-10-slides.pdf}{pdf
 format}.
+
+Tausch AP, Menold N. Methodological Aspects of Focus Groups in Health
+Research: Results of Qualitative Interviews With Focus Group Moderators.
+Glob Qual Nurs Res. 2016 Mar 14;3:2333393616630466. doi:
+{[}10.1177/2333393616630466{]}{[}ref17-tausch-2016{]}.
+
+Wong LP. Focus group discussion: a tool for health and medical research.
+Singapore Med J. 2008 Mar;49(3):256-60; quiz 261. PMID: 18363011.
+https://smj.sma.org.sg/4903/4903me1.pdf
+
+Lander, J., Wallraf, S., Pieper, D. et al.~Recruiting participants for
+focus groups in health research: a meta-research study. BMC Med Res
+Methodol 25, 9 (2025). doi: {[}10.1186/s12874-025-02464-x{]}{[}ref17{]}
+https://doi.org/10.1186/s12874-025-02464-x
+
+\section{Material from Clinical Research Methodology
+class}\label{material-from-clinical-research-methodology-class}
+
+\section{\texorpdfstring{\texttt{r\ section}, Running focus
+groups}{r section, Running focus groups}}\label{r-section-running-focus-groups}
+
+\begin{itemize}
+\tightlist
+\item
+  Two person job
+\item
+  Facilitator
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Asks questions
+  \item
+    Guide discussion, but stays neutral
+  \end{itemize}
+\item
+  Recorder
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Runs the tape recorder
+  \item
+    Keeps written notes
+  \end{itemize}
+\item
+  Debriefing session
+\end{itemize}
+
+If you decide to collect data in a focus group, you need a second
+person. You could do it by yourself, but you are asking for trouble. One
+of you takes the role of the facilitator and one takes the role of the
+recorder.
+
+The facilitator asks a series of prepared questions. Your role is to
+guide the discussion while still keeping neutral. This means that you
+intervene if the group is getting off target or if one person is
+dominating the discussion. You should prepare some brief prompts to get
+your participants to elaborate or to draw in other participants.
+
+The recorder doesn't say anything after the introductions, but runs the
+recording device and take notes. The notes serve several purposes.
+First, they serve as a backup if your recording fails. Second, they note
+any significant non-verbal information such as gestures and body
+language. Third, the notes help to identify who is speaking when. A
+seating diagram is helpful for this. Note that not all focus groups
+track who is speaking.
+
+After the session is complete, the two of you sit down and talk about
+how things went.
+
+\section{\texorpdfstring{\texttt{r\ section}, Structure of a focus
+group}{r section, Structure of a focus group}}\label{r-section-structure-of-a-focus-group}
+
+\begin{itemize}
+\tightlist
+\item
+  Six to ten participants
+\item
+  Multiple groups
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Stop when you achieve saturation
+  \end{itemize}
+\item
+  Sixty to ninety minutes
+\item
+  Ten questions, semi-structured interview
+\end{itemize}
+
+The size of a focus group can vary, but I've seen recommendations of six
+to ten people.
+
+What the research community does agree on is that you need to plan for
+more than one group. The consistency of responses from one group to the
+next will tell you if you have reached saturation.
+
+Saturation is evidence that no new themes or ideas have emerged from
+your groups. Almost all assessments of whether saturation has been
+achieved are qualitative and subjective.
+
+The concept of saturation makes it difficult for you to plan a budget,
+but keep in mind that you cannot even begin to assess saturation until
+you've run your second focus group.
+
+Other common recommendations are to keep each session short, 60 to 90
+minutes, and to have no more than ten questions. Your questions should
+follow a semi-structured format, which I'll talk about in the context of
+interviewing.
+
+Getting information from a group is a double-edged sword. Often in a
+focus group, one participant will build on the comments of another and
+provide a perspective that you may have missed in a single person
+interview. At other times, however, one person may stifle the feedback
+from another. A good focus group leader will recognize this and work to
+insure that everyone participates fully. It's easy to say this in
+theory, but in practice, it can be difficult.
+
+\section{\texorpdfstring{\texttt{r\ section},
+Interview}{r section, Interview}}\label{r-section-interview}
+
+\begin{itemize}
+\tightlist
+\item
+  Administration
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Telephone
+  \item
+    Face-to-face
+  \end{itemize}
+\item
+  Format
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Unstructured
+  \item
+    Semi-structured
+  \item
+    Structured
+  \end{itemize}
+\end{itemize}
+
+An interview is direct communication between the researcher and the
+subject. You can set up the interview on the telephone or conduct a
+face-to-face interview. The obvious advantage of a telephone interview
+is that it is fast and does not involve travel of either party.
+
+A face-to-face interview takes more effort, but can sometimes help with
+building a sense of rapport and trust.
+
+Interviews have three formats, unstructured, semi-structured, or
+structured.
+
+In an unstructured interview, you go in with a general idea of what to
+discuss, but no specific questions. The general direction of the
+interview will determine what questions to ask next. An unstructured
+format is rarely used in research because it makes you work impossible
+to replicate.
+
+A semi-structured interview has a planned structure that includes a list
+of questions to ask. These questions are typically open ended, to allow
+the patient to bring up issues that the researcher may not have been
+aware of. Most semi-structured interviews have a series of probe
+questions that are intended to prompt the research subject to elaborate
+further on a topic of interest.
+
+A structured interview has a fixed set of questions that are asked in a
+consistent order with no major deviations. There are no prompts to get
+your patients to elaborate, but the interviewer can try to clarify any
+ambiguous or clearly invalid responses.
+
+\section{\texorpdfstring{\texttt{r\ section}, Example of structured and
+unstructured
+interviews}{r section, Example of structured and unstructured interviews}}\label{r-section-example-of-structured-and-unstructured-interviews}
+
+\pandocbounded{\includegraphics[keepaspectratio]{chapters/../images/interview-questions.png}}
+
+Here's an example of two interviews. The first is a structured interview
+with four yes/no questions.
+
+``Before you were 17 years of age (Each question had answer choices of
+``Yes'' or ``No)''
+
+a parent or guardian ever do something to you on purpose (for example,
+hit or punch or cut you, or push you down) that made you bleed or gave
+you bruises or scratches.
+
+Did, or that broke bones or teeth?''
+
+Did either of your parents or guardians get so mad at you that they hurt
+you physically?
+
+Did either of your parents or guardians use physical punishment for
+discipline?
+
+The second interview is described as unstructured. I would call it
+semi-structured, but that is a nitpick. The questions were
+
+How do your parents or guardians discipline you?
+
+Do they ever physically hit you?
+
+How do they punish you?
+
+Further probing was done depending on the responses to the questions:
+having been hit, punched, kicked, or otherwise struck or pushed down;
+cut, bruised, made to bleed, scratched, having broken bones, broken
+teeth, or having been hurt physically
+
+The questions in this structured interview are close ended. This is
+quite common, but you can also have a structured interview with open
+ended questions. For the semi-structured or unstructured interview,
+however, the questions must be open ended so that you can probe for more
+information.
+
+The article that these interview questions came from noted that the
+unstructured interview was far more likely to uncover reports of abuse
+than the structured interview.
+
+Image source: Diaz 2017 (see the reading list for full details).
 
 \bookmarksetup{startatroot}
 
@@ -1457,7 +1982,7 @@ references}\label{the-fly-in-the-ointment-too-manytoo-few-references}
 
 Add text.
 
-\section{Bibliography}\label{bibliography-5}
+\section{Bibliography}\label{bibliography-17}
 
 Gabriel D. How to write a literature review. Blog post 2017-08-21.
 Available in
@@ -1775,7 +2300,7 @@ exclusion criteria. It has a variety of measures that you need to
 document. The analysis will often use the same statistical tests that
 you use with a study of patients.
 
-\section{Bibliography}\label{bibliography-6}
+\section{Bibliography}\label{bibliography-18}
 
 About ClinicalTrials.gov. Available in
 \href{https://clinicaltrials.gov/about-site/about-ctg}{html format}.
@@ -1835,7 +2360,7 @@ Add text.
 
 Add text.
 
-\section{Bibliography}\label{bibliography-7}
+\section{Bibliography}\label{bibliography-19}
 
 Bahadoran Z, Mirmiran P, Zadeh-Vakili A, Hosseinpanah F, Ghasemi A. The
 Principles of Biomedical Scientific Writing: Results. Int J Endocrinol
@@ -1979,7 +2504,7 @@ before you.
 \section{The fly in the ointment: When should research
 end?}\label{the-fly-in-the-ointment-when-should-research-end}
 
-\section{Bibliography}\label{bibliography-8}
+\section{Bibliography}\label{bibliography-20}
 
 Höfler M, Venz J, Trautmann S et al.~Writing a discussion section: how
 to integrate substantive and statistical expertise. BMC Med Res Methodol
@@ -2004,8 +2529,6 @@ In summary, this book has no content whatsoever.
 \markboth{References}{References}
 
 \phantomsection\label{refs}
-\begin{CSLReferences}{0}{1}
-\end{CSLReferences}
 
 I'm thinking that maybe it makes more sense to put a bibliography at the
 end of each chapter, but I haven't decided for sure just yet.

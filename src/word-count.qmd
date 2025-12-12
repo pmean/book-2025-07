@@ -51,7 +51,7 @@ paste0("-   Chapter ", 0:length(file_list), ": ", n) |>
 write_lines(c(n_total, n), paste0(Sys.Date(), ".txt"))
 ```
 
-There are approximately `r n_total` words in the book. The word counts for individual chapters are
+There are approximately `r format(n_total, big.mark=",")` words in the book. I use the word "approximate" because it is easy to count something that isn't a word. The word counts for individual chapters are
 
 `r chapter_count`
 

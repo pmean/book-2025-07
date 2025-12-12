@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "jump-start-book, last update 2025-08-01"
+  title: "jump-start-book, last major update 2025-09-10"
   author: "Steve Simon"
   date: 2023-10-03
   chapters:
