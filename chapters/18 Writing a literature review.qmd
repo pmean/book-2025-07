@@ -20,22 +20,23 @@ Don't confuse a literature review with an **annotated bibliography**. An annotat
 
 Also don't confuse a literature review with a **systematic overview**. A systematic overview conducts an exhaustive search of all papers that address a narrowly focused clinical question, and combines the results (sometimes quantitatively through a meta-analytic approach) to produce the best answer to that clinical question. A literature provides a more general overview and does not need to cite every available source.
 
-You can produce a literature review as a stand-alone paper, but this chapter will focus on writing a literature review that is part of a larger research paper. In this setting it provides the background that any reader needs to know before reviewing the details of your research. You will summarize the details of your research as in a methods section (our next chapter). Keep in mind as you write your literature review that it will need to lead in to your methods section.
+You can produce a literature review as a stand-alone paper, but this chapter will focus on writing a literature review that is part of a larger research paper. In this setting the literature review provides the background that any reader needs to know before examining the rest of your research. You will summarize the details of your research as in a methods section (our next chapter). Keep in mind as you write your literature review that it will need to lead in to the next section of your paper, the methods section. Writing the methods section is a topic for the next chapter.
 
-There is a fairly universal demand that your literature review rely only on primary sources. Primary sources are the sources that actually produced the findings. Do not, the advice goes, rely on secondary sources, sources that synthesize the work of others.
+There is a fairly universal demand that your literature review rely only on **primary sources**. Primary sources are the sources that actually produced the findings. Do not, the advice goes, rely on secondary sources, sources that synthesize the work of others.
 
-The epitome of secondary sources is Wikipedia. I know that a lot of people hate Wikipedia. Just for the record, I think that Wikipedia, is a great starting point. The language is pretty accessible and they try to list a few key references. Don't cite that Wikipedia page, but you can peek at it during the early phases of writing your literature review.
+The epitome of secondary sources is Wikipedia. I know that a lot of people hate Wikipedia. Just for the record, I think that Wikipedia is a great starting point. The language is accessible and they try to list a few key references. Don't cite that Wikipedia page, but you can peek at it during the early phases of writing your literature review.
 
-## Step 1: Document your search
+## Step 1: Document your searches
 
 Finding resources for your literature review is a challenge. If you can find a librarian who is willing to help, great! Librarians are experts in finding things. 
+
 You might start your hunt with an Internet search engine like Google, a bibliographic database like Pubmed, or some other approach.
 
 The challenge will be producing a sensitive and specific set of results. 
 
 A sensitive search is one that has very few false negatives. It captures all of the relevant resources, leaving no stone unturned. That sounds good but a sensitive search comes at a price. In order to capture everything, you may produce a list that is too long to process effectively.
 
-A specific search is one that has very few false positive. Almost everything you see is golden. Again, this sounds good. A specific search produces a short list and a short list means less work. Yes, but maybe you left out something that is really really good.
+A specific search is one that has very few false positive. Almost everything you see is golden. Again, this sounds good. A specific search produces a short list and a short list means less work. Yes, but maybe you left out something that is really really good. Finding the right balance is tricky, but it makes sense to have a short specific list, especially when you are just getting started.
 
 First, write down the keywords that you used in every search engine and in every bibliographic database. Note which searches were too sensitive. You won't be able to tell which searches were too specific, but do consider a broader search if you find a list that just seems **too** short. 
 
@@ -43,25 +44,77 @@ Review the list before each new search and try to make sure that you are address
 
 ## Step 2: Stash your results 
 
-But finding is only the first step. You have to organize what you find so you don't lose it. You don't want to find an interesting resource through a search engine or a bibliographic database, say to yourself, "Oooh! That is an interesting resource!" and then file it away in the back of your brain. A week or a month later, you will want to go to the back of your brain and it won't be there. Your memory may be good, but your forgetery is even better.
+Librarians excel in stashing information in places that are easy to retrieve. So lean on the help you can get, if you have a librarian you can work with.
 
-Librarians excel in storing information so that you can easily retrieve it later. So lean on the help you can get, if you have a librarian you can work with.
+Stashing is important, but easily neglected. You don't want to find an interesting resource through a search engine or a bibliographic database, say to yourself, "Oooh! That is an interesting resource!" and then file it away in the back of your brain. A week or a month later, you will want to go to the back of your brain and it won't be there. Your memory may be good, but your forgetery is even better.
 
-Where do you write down your "Oooh!" articles. The old school way is with index cards. I know, I know. This is the digital era and everything lives on computerized devices. But for some of you, the 
+Where do you write down your "Oooh!" articles? The old school way is with index cards. I know, I know. This is the digital era and everything lives on computerized devices. But for some of you, the old ways are just fine.
+
+Index cards allow you to flip through references, classifying them into related piles and sorting them in different orders. Write a note on your cards about which searches produced which references. This will allow you to re-visit the searches that can fill in the thinner parts of your literature review.
+
+Another popular approach is to store your references in a spreadsheet. Attach tags that identify where you expect each reference to sit in your literature review. Sorting by the tags will place your references into the correct piles. Again, take note of which searches produced which references.
+
+A third approach is to invest in a bibliographic software. Some of it is free, but you still have an investment in time learning the software. There are many good choices for bibliographic software and they have many time saving features. When you find an interesting paper, the bibliographic software imports the reference, complete with the authors, journal, year of publication, and even the abstract.
+
+In your software, note the source of your search and add tags. With good tags, the bibliographic software can arrange your references in piles.
+
+While the index cards and spreadsheets are fine choices, you may find that investing the time in a full-featured bibliographic system will save you time in the long run. Perhaps not in the stashing of results, but you will really see a good payoff when your prepare citations and a bibliography.
 
 ## Step 3: Decide on an organizing principle
 
-Add text.
+A literature review is not a random, unordered jumble of papers. It has to flow. To get this flow, you need an organizing principle. The principle will help you decide what papers do you cite early and what papers do you cite late. 
 
-## Step 3: Build transitions
+There are several approaches that you sould consider. The first and simplest is a chronological approach. Talk about the earliest references first and the latest references last. The chronological approach may make sense if diagnosis and treatments of a particular medical condition have changed dramatically over time. Do be careful, though. A literature review that goes "First..., Next..., Then..." can sometime come across as dull.
 
-Add text.
+Another approach is thematic. identify themese and present all the references that are associated with the first theme, then those associated with the second theme, and so forth.
+
+The possible themes that you might consider are too many to mention and most themes may not fit the body of research that you are trying to summarize in your literature review. But try some of these themes if they look like they might fit.
+
+Start with consensus (questions where everyone agrees on the correct answer), then list disagreements (questions with debates among competing answers), and end with the unknown (questions with no answers yet).
+
+Or say what the problem is, say what has already been done, and say what needs to be done.
+
+Or offer a thesis and group your references into two sections, articles that are supportive of your thesis and articles that are not supportive.
+
+You might organize your articles into groups sharing common methodologies. In a study of mitigation of home exposures that might exacerbate asthma, the studies might be grouped by those that study a physical intervention (like improved ventilation) and by those that study a chemical intervention (spraying for dust mites). 
+
+In a review of behavioral change, you might organize articles by the different theories of change (Lewin, Rogers, or Spradley) that they rely on. 
+
+Some studies of child welfare management might utilize the attachment theory while others might use crisis intervention theory or social construction theory.
+
+It's really hard to give examples here because there are so many different thematic organizations that you can choose from.
+
+The approach I like best is to move from the general to the specific. There are several directions you can go, but one way would be talking about the disease, talking about a particular treatment of the disease, and then talking about that treatment in a particular subpopulation. Of course, talking about the disease, then a subpopulation and then a treatment within that subpopulation also works.
+
+You start with the general because that is what your reader is most likely to be familiar with. As you make things more specific, you draw them in to the need for your research.
+
+Here's an example of moving from general to specific in a publication I am a co-author on. I can't take credit for the excellent organization. The first author, Janette Berkley-Patton, is the one who did such a fine job.
+
+Her first paragraph in the literature review starts out with a very broad perspective.
+
+> "African Americans represent nearly 45% of new HIV cases each year (1–2)."
+
+Here second paragraph narrows things down.
+
+> "The Black Church is a powerful institution with a history of mobilizing African American communities for social change (5)..."
+
+The third paragraph tightens things up even more.
+
+> "Studies suggest many African American faith leaders are willing to provide HIV education and testing for their church/community members (14–17)..."
+
+Berkley-Patton et al 2016. 
+
+You can also help the flow by using transitional words. A long list, study after study can easily lead the reader to feel lost in all the details. Place each study in context relative to the previously mentioned. If the study is providing further support to the results of the previous study, emphasize this with words like "also" or "in addition". If the study contrasts or contradicts the previous study, emphasize this using words like "in contrast" or "on the other hand". This is a little thing, but it does help.
+
+THe final transition should be a summary of your work. All the previous references should build to a climax, a climax that asserts how your research is the next logical step in the series of references that you have summarized.
 
 ## The fly in the ointment: too many/too few references
 
 Add text.
 
 ## Bibliography
+
+Berkley-Patton J, Thompson CB, Moore E, Hawes S, Simon S, Goggin K, Martinez D, Berman M, Booker A. An HIV Testing Intervention in African American Churches: Pilot Study Findings. Annals of Behavioral Medicine. 2016; 50(3):480-5.
 
 Gabriel D. How to write a literature review. Blog post 2017-08-21. Available in [html format][ref18-gabriel-2018].
 
