@@ -20,9 +20,11 @@ Don't confuse a literature review with an **annotated bibliography**. An annotat
 
 Also don't confuse a literature review with a **systematic overview**. A systematic overview conducts an exhaustive search of all papers that address a narrowly focused clinical question, and combines the results (sometimes quantitatively through a meta-analytic approach) to produce the best answer to that clinical question. A literature provides a more general overview and does not need to cite every available source.
 
-You can produce a literature review as a stand-alone paper, but this chapter will focus on writing a literature review that is part of a larger research paper. In this setting the literature review provides the background that any reader needs to know before examining the rest of your research. You will summarize the details of your research as in a methods section (our next chapter). Keep in mind as you write your literature review that it will need to lead in to the next section of your paper, the methods section. Writing the methods section is a topic for the next chapter.
+You can produce a literature review as a stand-alone paper, but this chapter will focus on writing a literature review that is part of a larger research paper. In this setting the literature review provides the background that any reader needs to know before examining the rest of your research. Keep in mind as you write your literature review that it will need to lead in to the next section of your paper, the methods section. Writing the methods section is a topic for the next chapter.
 
 There is a fairly universal demand that your literature review rely only on **primary sources**. Primary sources are the sources that actually produced the findings. Do not, the advice goes, rely on secondary sources, sources that synthesize the work of others.
+
+A minor technical point here is that a systematic overview is still a primary source, even though it is, strictly speaking, a synthesis. it is the non-systematic overviews, such as invited editorials, that are considered secondary sources.
 
 The epitome of secondary sources is Wikipedia. I know that a lot of people hate Wikipedia. Just for the record, I think that Wikipedia is a great starting point. The language is accessible and they try to list a few key references. Don't cite that Wikipedia page, but you can peek at it during the early phases of writing your literature review.
 
@@ -66,7 +68,7 @@ A literature review is not a random, unordered jumble of papers. It has to flow.
 
 There are several approaches that you sould consider. The first and simplest is a chronological approach. Talk about the earliest references first and the latest references last. The chronological approach may make sense if diagnosis and treatments of a particular medical condition have changed dramatically over time. Do be careful, though. A literature review that goes "First..., Next..., Then..." can sometime come across as dull.
 
-Another approach is thematic. identify themese and present all the references that are associated with the first theme, then those associated with the second theme, and so forth.
+Another approach is thematic. identify themes and present all the references that are associated with the first theme, then those associated with the second theme, and so forth.
 
 The possible themes that you might consider are too many to mention and most themes may not fit the body of research that you are trying to summarize in your literature review. But try some of these themes if they look like they might fit.
 
@@ -106,11 +108,21 @@ Berkley-Patton et al 2016.
 
 You can also help the flow by using transitional words. A long list, study after study can easily lead the reader to feel lost in all the details. Place each study in context relative to the previously mentioned. If the study is providing further support to the results of the previous study, emphasize this with words like "also" or "in addition". If the study contrasts or contradicts the previous study, emphasize this using words like "in contrast" or "on the other hand". This is a little thing, but it does help.
 
-THe final transition should be a summary of your work. All the previous references should build to a climax, a climax that asserts how your research is the next logical step in the series of references that you have summarized.
+THe final transition should be a summary of your upcoming work. All the previous references should build to a climax, a climax that asserts how your research is the next logical step in the series of references that you have summarized.
 
 ## The fly in the ointment: too many/too few references
 
-Add text.
+You might think that too many references is a problem. Well, maybe. You do have a page limit. Even if you don't an excessively long literature review makes your whole paper less appealing to read. What should you do with too many references?
+
+Organize your references into groups where each reference in that group makes pretty much the same point. Select one reference in each group and discuss that reference in detail. You want to make sure that the literature flows nicely. Leaving out references that create gaps in your narrative is bad, but removing redundancies is good.
+
+What should you do if you have too few references, even after an exhausting series of searches?
+
+Maybe you're being too fussy. It may not be reasonable to rely on studies in different populations. You may be forced to look at studies in different countries, different age groups, different race/ethnicity groups, to name a few examples. Yes, this may be a difficult extrapolation and you should say so. Still a difficult extrapolation can still help your readers understand the context in which your research fits.
+
+The other possibility is that the too few references is not because of your poor searching skills. It is because you can't find something that doesn't exist. Make a bold assertion about a knowledge gap. Don't be tentative here. Don't say that you couldn't find any randomized controlled trials examining X. Instead assert that no randomized controlled trials have examined X.
+
+Knowledge gaps make it easier for you to argue why your research is important. So a fruitless search, if you trust your searching skills, is actually a good thing.
 
 ## Bibliography
 
