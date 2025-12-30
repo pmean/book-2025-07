@@ -52,6 +52,10 @@ For continuous variables, the minimum clinically significant difference could be
 
 There have also been efforts to elucidate, through experiments, interviews, and other approaches, what the average person considers an important shift to be. For the visual analog scale of pain, for example, a shift of at least 15 mm is considered the smallest value that is noticeable to the average patient.
 
+## The fly in the ointment.
+
+Longitudinal studies
+
 ## Bibliography
 
 Simon SD. Sample chapter, the first three steps in selecting an appropriate sample size. PMean blog, 2010-07-24. Available in [html format][ref05-simon-2010].

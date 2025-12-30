@@ -2,24 +2,54 @@
 
 This chapter is based on a webpage that I wrote in 2002.
 
-## Step 1. Establish your credentials as a researcher
+## Step 1. Demonstrate that you care about the people who will be participating in your study.
 
-Insert text.
+Okay, you may be doing research to pad your resume or because your boss demands it or just for fun. There's nothing wrong with that, but always keep in mind that you owe a debt to the people who will be participating in your study. They are making **sacrifices** to help you with your research.
 
-## Step 2. Demonstrate your concern for privacy rights
+In a randomized study, your patients will be sacrificing a degree of **autonomy**. They will allow the choice of therapy to be selected not by them, not by their trusted physician, but by the flip of a coin.
 
-Insert text.
+Even without randomization, volunteers in  a prospective study will be asked to give something. Maybe some of their **blood or tissue**. For most studies, they will donate some of their time. They could be at home watching their favorite cartoon, that Square Sponge Bob Something.
 
-## Step 3. Prepare a defensible strategy for your data analysis
+In a retrospective study, there may be a different sacrifice, but it is still important: a **privacy risk**. You will be looking at information about your patients and some of it may be very private: information about pregnancy outcomes, about legal and illegal drug use, about sexually transmitted diseases. 
+
+Even if the information is not that sensitive, you still need to tread carefully. It's like you are an uninvited guest in their house and you're peeking into their attic, their closets, their refrigerator, and their medicine cabinet.
+
+So respect the fact that patients are sacrificing on your behalf and treat them well. Show the IRB that if there is some risk associated with your research, that you will **minimize risk** to the greatest extent possible. If there is some pain associated with your research, you will **minimize pain** to the greatest extent possible. If you are asking your patients to cede choices about therapies, make sure that **both therapies are good**--at least as good as what they might get outside of the study. If your patients are sacrificing time, make sure that you provide **compensation for their loss of time**. If you are collecting and storing private information, make sure that you **store private information safely and securely**.
+
+Talk about justice
+
+## Step 2. Demonstrate the value of your work to your patients
+
+Your research must provide value either to the patients, to society as a whole, or both.
+
+Document the benefits, if any, that you can offer to your patients during the study.
+
+An overlooked benefit to patients is the sharing of information that you learn during the study. This could be information about the patients themselves: things that you learned during all the poking and prodding that your research needs demanded. Also share information that you learned Giving them a free medical exam is not a benefit. But sharing information with them about what the exam reveals could be a benefit. 
+
+## Step 3 Demonstrate the benefits of your research to society.
+
+Be very careful in studies where there is no direct benefit to the patients other than a possible monetary compensation for their time. First, make sure that patients know that their participation in the study will not provide them with any direct benefits. They might still volunteer. There is a sense of altruism in many people. They want to help patients that have the same disease that they have, for example. 
+
+But when there is no benefit, there will still be personal sacrifices, enduing some level of risk, pain, or inconvenience. Demonstrate to them that the benefit of your research to society as a whole is worth the sacrifices you are asking of them. This leads into the next section, demonstrating the value of your research.
+
+## Step 2a (Justice)
+
+The principle of justice means that subjects are selected fairly and that the risks and benefits of research are distributed equitably. Investigators should take precautions not to systematically select subjects simply because of the subjects’ easy availability, their compromised position, or because of racial, sexual, economic, or cultural biases in society. Investigators should base inclusion and exclusion criteria on those factors that most effectively and soundly address the research problem.
+
+## Step 2a. Prepare a defensible strategy for your data analysis
 
 Insert text.
 
 ## The fly in the ointment
 
-Insert text.
+Studies that don't need IRB approval.
 
 ## Bibliography
 
 Simon SD. Getting IRB approval for your research. PMean blog, 2002-01-01. Available in [html format][ref08-simon-2002].
 
 [ref08-simon-2002]: http://pmean.com/posts/getting-irb-approval/
+
+Nagai H, Nakazawa E, Akira Akabayashi A. The creation of the Belmont Report and its effect on ethical principles: a historical study. Monash Bioeth Rev. 2022 Nov 10;40(2):157–170. doi: [10.1007/s40592-022-00165-5][ref-nagai-2022]
+
+[ref-nagai-2022]: https://doi.org/10.1007/s40592-022-00165-5
