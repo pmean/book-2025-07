@@ -43,15 +43,64 @@ for (fn in file_list) {
   n <- append(n, ni)
 }
 n_total <- sum(n)
-paste0("-   Chapter ", 0:length(file_list), ": ", n) |>
-  str_replace_all("Chapter 0", "Preface") |>
-  str_replace_all("Chapter 22", "Summary") |>
-  str_replace_all("Chapter 23", "Bibliography") |>
+paste0("-   ", file_list, ": ", n) |>
   paste0(collapse="\n") -> chapter_count
-write_lines(c(n_total, n), paste0(Sys.Date(), ".txt"))
+write_lines(
+  c(n_total, n), 
+  file=paste0(Sys.Date(), ".txt"))
 ```
 
 There are approximately `r format(n_total, big.mark=",")` words in the book. I use the word "approximate" because it is easy to count something that isn't a word. The word counts for individual chapters are
 
 `r chapter_count`
 
+## Changes in word count
+
+```{r}
+#| label: show changes
+
+progress_files <- list.files(pattern="*.txt")
+
+historical_counts <- tibble(
+  section=c(
+    "Entire book",
+    "Preface", 
+    file_list))
+
+for (progress_file in progress_files) {
+  historical_count <- read_table(
+    file=progress_file,
+    col_names=progress_file,
+    col_types="n")
+  historical_counts |>
+    bind_cols(historical_count) -> historical_counts
+}
+```
+
+```{r}
+#| label: changes
+
+n_dates <- length(progress_files)
+
+for (i in n_dates:n_dates) {
+  delta_counts <- historical_counts[i+1] - historical_counts[i]
+  historical_counts[ , c(1, i)] |>
+    bind_cols(tibble(delta_counts)) -> improvement
+  print(improvement, n=25)
+}
+```
+
+## Sections within chapters
+
+```{r}
+#| label: sections
+
+for (file_name in file_list) {
+  cat("\n\n")
+  cat(file_name)
+  read_lines(file=glue("../chapters/{file_name}")) |>
+    str_subset(pattern="##") |>
+    str_replace("## ", "\n- ") -> sections
+  cat(sections)
+}
+```

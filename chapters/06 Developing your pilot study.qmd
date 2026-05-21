@@ -2,23 +2,159 @@
 
 This chapter is based on a webpages I wrote in 2007, 2016, 2019, and 2023.
 
+You want to run a pilot study? That reminds me of a cute joke. How many statisticians does it take to light a gas stove? I don’t know because we haven’t run the pilot study yet.
+
+You should start by carefully defining what you are doing. You will often see the terms “pilot study” and “exploratory study” used interchangeably. There is an important differene. An exploratory study is designed to generate interesting hypotheses. A pilot study is a study that offers no direct benefits of its own, but only indirect benefits through helping the planning of a larger scale study. Some people might quibble with that definition, but it is a good starting point for discussion.
+
+If you are planning a pilot study, you should describe a few details about the larger scale study and why that larger scale study could not proceed effectively without information from the pilot study. An economic argument would not fly (we’re running a pilot because we don’t have enough money to run a large study), because no large scale study will occur and no benefit will therefore accrue from the pilot study.
+
 ## Step 1. Visualize the bigger study in the future
 
-Insert text.
+The value of your pilot study only occurs when you start planning the larger study. It may seem premature, but do try your best to anticipate what that larger study would look like. You may end up missing the mark on this. Who knows, maybe the results of the pilot study will end up with a total abandonment of the large scale study. That's okay. A pilot study is successful even if it guides you away from what you really wanted to do.
 
-## Step 2. Identify planning gaps
+Now think about your pilot study not as a scaled down version of your larger study but as an effort to examine those aspects of the larger study that you are most nervous about. You might want to skip running a control group if most of your concern is with getting the intervention details nailed down.
 
-Insert text.
+The two areas that probably make you the most nervous fall into two categories: estimating the resource needs and identifying unanticipated problems.
+
+## Step 2. Estimating resource needs
+
+Resource needs are important. A study that requires lots of resources will require a larger budget. And if the budget is too large for you to handle, it's better to find it out quicky through your pilot study. 
+
+The most obvious resource need is the number of patients that you neeed to recruit soe your larger study will have adequate power and precision. The power and precision calculations are the topic of the previous chapter. In that chapter you saw that a key piece of information is the standard deviation of your outcome meaasure (if your outcome is continuous) or the event rate in the control group (if your outcome is categorical). A really large standard deviation or a really small event rate is going to require a really large sample size.
+
+The standard deviation and the event rate are statistics which are often found in the peer reviewed literature. They might be hiding in that thick stack of research papers sitting on your desk. This great if you can find it, but sometimes there isn't a study out there that will help. It is ofen caused by your desire to measure your outcome using something that has not been handled before by other researchers. It's okay to have different set of patients or a different intervention, as long as they are not too different. But a different outcome measure might force you to use a pilot study with that new outcome.
+
+There are other resources that you need to account for beyond the sample size of the larger study. How much time do you spend per subject? How much money do you spend per subject? Both pieces of information are critical for preparing the budget for your full study.
+
+You might need an estimate of the proportion of volunteers who fail to meet the entry criteria or the proportion who run away in horror when you describe all the risks in your study. A large proportion in either case will require a larger budget.
 
 ## Step 3. Think about where "Murphy's Law" might strike
 
-Insert text.
+Murphy's Law states that if something can go wrong, it will go wrong. You want to find out about all the things that can go wrong during the pilot study, because if they pop up during the larger study, you won't be able to fix things.
+
+Trying to anticipate what can go wrong is not easy.  You may not have the foresight to anticipate everything that might go wrong. But here is a list of a few things you need to worry about.
+
+Murphy’s Law says that anything that can go wrong, will go wrong. The reason you run a pilot study is to ensure that the things that do go wrong, go wrong during the pilot study so you can fix them before you start the full study.
+
+It’s impossible to list all ways that a study could go wrong, but here are some areas that you should focus on.
+
+Recruitment and retention problems
+
+-   Do you get the types of subjects that you think you will get?
+-   Are important segments of your population being left out?
+-   Do a lot of people turn down the opportunity to participate in your study?
+-   Do a lot of people fail to finish your study?
+-   Do a lot of people fail to comply with your protocol requirements?
+
+Ambiguous situations.
+
+-   Is it obvious who meets and who does not meet the eligibility requirements?
+-   Do your subjects provide no answer, multiple answers, qualified answers, or unanticipated answers to your survey?
+
+Time and resource problems
+
+-   Does it take too long for your subjects to fill out all the survey forms?
+-   Will the study participants overload your phone lines or overflow your waiting room?
+-   How much time does it take to mail out a thousand surveys, and can your tongue lick that many stamps in one day?
+
+Machinery problems.
+
+-   Is the equipment readily available when and where you need it?
+-   What happens when it breaks down or gets stolen?
+-   If the machine produces a stream of electronic data, can your computer software read and understand this data?
+
+Data management problems.
+
+-   Is there enough room on the data collection form for all of the data you receive?
+-   Do you have any problems entering your data into the computer?
+-   Can you match data that comes in from different sources?
+-   Were any important data values forgotten about?
+-   Does your data show too much or too little variability?
+
+Uninformative data
+
+-   Are most of your lab results are below the limit of detection?
+-   Does everybody gives the identical answer to a survey question?
+
+Blind spots and oversights. 
+
+Something will happen during your pilot study and you’ll say “I never thought about that!” Better to have this oversight now than during the full study. Although you can and should show ask your colleagues whether there is there anything you overlooked in your protocol, it’s still a good idea to run a pilot study. After all, your colleagues may have the same blind spots that you do.
 
 ## The fly in the ointment
 
-Insert text.
+So how a pilot study is smaller than the larger study that it is helping to plan. But how much smaller can you get? That's an open question and one with conflicting answers.
+
+Now, you can always defer to a higher authority and cite the sample size needed in a peer-reviewed article.
+
+Cooks et al 2014 suggests that the sample size be at least 9% of the sample size for the larger study. Hertzog et al 2008 says 10 to 40 per group. Julious 2005 says 12 per group.
+
+Now each paper uses a different criteria to justify their number, and you should read each paper and see which one matches the criteria that you consider most important. But you won't do this. You'll just pick the article that matches the pilot study sample size that you wanted for budgetary and time constraints. That's fine. I won't judge.
+
+If you wanted to use your own criteria, here are some suggestions.
+
+It's easiest if some of the goals of your pilot study are quantitative. You might, for example, want to estimate the average amount of time that someone needs to fill out your survey. Or maybe you want to find out what the dropout rate would be like. Maybe you want that standard deviation of your outcome measure that will help you estimate the sample size needed for your larger study.
+
+This is easy. Just look at a confidence interval for your quantitative estimate and select a sample size large enough to make the interval reasonably narrow.
+
+If the goals of your pilot study are qualitative, then you will use a qualitative approach to judging the sample size. Will there be confusion over deciding who is or is not eligible to participate in the study? You need enough patients in your pilot study to reflect the overall diversity of volunteers. Will the emergency department abandon your protocol when things get busy? Run the pilot over enough shifts so that you are sure to capture both quiet and busy days.
 
 ## Bibliography
+
+The Lancaster et al publication is an excellent resource. Wittes et al is an argument in favor of including pilot data in the full research study.
+
+Blatch-Jones AJ, Pek W, Kirkpatrick E, Ashton-Key M. Role of feasibility and pilot studies in randomised controlled trials: a cross-sectional study. BMJ Open. 2018 Sep 25;8(9):e022233. doi: 10.1136/bmjopen-2018-022233.
+
+Cocks K, Torgerson DJ. Sample size calculations for pilot randomized trials: a confidence interval approach. J Clin Epidemiol. 2013 Feb;66(2):197-201. doi: 10.1016/j.jclinepi.2012.09.002. Epub 2012 Nov 27. PMID: 23195919.
+
+Feeley N, Cossette S, Côté J, Héon M, Stremler R, Martorella G, Purden M. The importance of piloting an RCT intervention. Can J Nurs Res. 2009 Jun;41(2):85-99. PMID: 19650515.
+
+Flight L, Julious S, Brennan A, Todd S. Expected Value of Sample Information to Guide the Design of Group Sequential Clinical Trials. Med Decis Making. 2022 May;42(4):461-473. doi: [10.1177/0272989X211045036][ref06-flight-2022].
+
+[ref06-flight-2022]: https://doi.org/10.1177/0272989X211045036
+
+Hertzog MA. Considerations in determining sample size for pilot studies. Res Nurs Health. 2008 Apr;31(2):180-91. doi: 10.1002/nur.20247. PMID: 18183564.
+
+Steven A. Julious. Sample size of 12 per group rule of thumb for a pilot study. Pharmaceut. Statist. 2005; 4: 287–291. Full article is [behind a paywall][ref06-julious-2005].
+
+[ref06-julious-2005]: https://doi.org/10.1002/ps
+
+Julious SA. Pilot Studies in clinical research. Stat Methods Med Res. 2016 Jun;25(3):995-6. doi: [10.1177/0962280216651022][ref06-julious-2016].
+
+https://doi.org/10.1177/0962280216651022
+
+Gillian. A. Lancaster, Susanna Dodd, Paula R. Williamson. Design and analysis of pilot studies: recommendations for good practice. J Eval Clin Pract 2004: 10(2); 307-12. Article is [behind a paywall][ref06-lancaster-2004].
+
+[ref-lancaster-2004]: https://doi.org/10.1111/j..2002.384.doc.x
+
+Whitehead AL, Sully BG, Campbell MJ. Pilot and feasibility studies: is there a difference from each other and from a randomised controlled trial? Contemp Clin Trials. 2014 May;38(1):130-3. doi: [10.1016/j.cct.2014.04.001][ref06-whitehead-2014].
+
+https://doi.org/10.1016/j.cct.2014.04.001
+
+Wittes J and Brittain E. The role of internal pilot studies in increasing the efficiency of clinical trials. Stat Med 1990:9(1-2);65-71; discussion 71-2. [Medline]
+
+https://pubmed.ncbi.nlm.nih.gov/26092476/
+
+https://pubmed.ncbi.nlm.nih.gov/27207088/
+
+https://pubmed.ncbi.nlm.nih.gov/37990337/
+
+https://pubmed.ncbi.nlm.nih.gov/28606102/
+
+https://pubmed.ncbi.nlm.nih.gov/29403314/
+
+https://pubmed.ncbi.nlm.nih.gov/29403314/
+
+https://pubmed.ncbi.nlm.nih.gov/41840651/
+
+https://pubmed.ncbi.nlm.nih.gov/31399148/
+
+https://pubmed.ncbi.nlm.nih.gov/29361833/
+
+https://pubmed.ncbi.nlm.nih.gov/23961782/
+
+https://pubmed.ncbi.nlm.nih.gov/34477455/
+
+
 
 Steve Simon. IRB review of a pilot study. PMean blog, 2007-03-26. Available in [html format][ref06-simon-2007].
 
@@ -28,7 +164,7 @@ Steve Simon. Slapping the word pilot on a failed study. PMean blog, 2019-03-03. 
 
 Steve Simon. The best reasons to run a pilot study. PMean blog, 2023-12-06. Available in [html format][ref06-simon-2023].
 
-[ref06-simon-2007]: http://www.new.pmean.com/irb-review-pilot/
+[ref06-simon-2007]: http://pmean.com/posts/irb-review-pilot/
 [ref06-simon-2016]: http://blog.pmean.com/pilot-study/
 [ref06-simon-2019]: http://pmean.com/posts/failed-study/
 [ref06-simon-2023]: http://pmean.com/posts/reasons-to-run-a-pilot/

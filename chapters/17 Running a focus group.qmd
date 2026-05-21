@@ -4,29 +4,45 @@
 
 This chapter is based on a blog post I wrote in 2004 and slides from a course I have taught on Clinical Research Methodology.
 
+https://pubmed.ncbi.nlm.nih.gov/24660275/
+
+Olawade DB, Omeni D, Gore MN, Hadi M. Enhancing qualitative research through virtual focus groups and artificial intelligence: A review. Int J Med Inform. 2025 Nov;203:106004. doi: 10.1016/j.ijmedinf.2025.106004. Epub 2025 Jun 3. PMID: 40482393.
+
 ## Step 1: Plan your logistics
 
 Logistics sounds so mundane .
 
 ## Step 1: Select a theoretical framework
 
-phenomenology
-  topic_10: "Grounded theory"
-  topic_11: "Ethnography"
-  topic_12: "The case sudy"
-  topic_13: "Narrative"
+If you are running a focus group, you have implicitly acknowledged your use of qualitative research. Good for you. Qualitative data is great stuff. It can put right at the doorstep of profound insights; insights that quantitative data can only wave at from a distance.
 
-Look for interactions
+Once you are inside the qualitative data camp, your expectations are different. One thing you will have to face early is the theoretical framework that will guide your work. There are five general frameworks for qualitative research. You may decide to use a different framework or to not adopt any framework at all. Fine. Go ahead and travel to the beat of a different drum. Just recognize that those who might review your work will be looking for one these five approaches and will be disappointed when they don't see it.
 
-## Step 2: Write probe questions
+The five theoretical frameworks are phenomenology, grounded theory, ethnography, the case study, and narrative.
+
+https://measuringu.com/qual-methods/
+
+An alternative:
+
+-   Content analysis
+-   Thematic analysis
+-   Narrative analysis
+-   Grounded theory analysis
+-   Discourse analysis
+
+https://getthematic.com/insights/methods-of-qualitative-data-analysis
+
+https://contentsquare.com/guides/qualitative-data-analysis/methods/
+
+## Step 2: Set the stage
 
 Add text.
 
-## Step 3: Revise your questions as you learn from each focus group
+## Step 3: Write and rewrite probe questions
 
 Add text.
 
-## The fly in the ointment:uneven participation
+## The fly in the ointment: uneven participation
 
 Add text.
 

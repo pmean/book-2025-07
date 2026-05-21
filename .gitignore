@@ -15,3 +15,5 @@
 /papers/*.*
 *.html
 .positai
+
+**/*.quarto_ipynb
