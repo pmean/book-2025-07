@@ -26,7 +26,7 @@ library(tidyverse)
 #| label: page-counts
 
 count_words <- function(fn) {
-  read_lines(fn) |>
+  fn |>
     paste0(collapse=" ") |>
     str_replace_all("[^a-z A-Z]", " ") |>
     str_replace_all(" +", "~") |> 
@@ -35,11 +35,13 @@ count_words <- function(fn) {
     length()
 }
 
-n <- count_words("../index.qmd")
+read_lines(file="../index.qmd") |>
+  count_words() -> n
 
 file_list <- list.files(path="../chapters")
 for (fn in file_list) {
-  ni <- count_words(glue("../chapters/{fn}"))
+  read_lines(glue("../chapters/{fn}")) |>
+    count_words() -> ni
   n <- append(n, ni)
 }
 n_total <- sum(n)
@@ -98,9 +100,27 @@ for (i in n_dates:n_dates) {
 for (file_name in file_list) {
   cat("\n\n")
   cat(file_name)
-  read_lines(file=glue("../chapters/{file_name}")) |>
+  
+  file_text <- read_lines(file=glue("../chapters/{file_name}")) 
+  
+  file_text |>
     str_subset(pattern="##") |>
     str_replace("## ", "\n- ") -> sections
-  cat(sections)
+  
+  sections <- c("\n- Introduction", sections)
+  
+  file_text |>
+    str_which("##") -> borders
+  
+  start <- c(1, borders-1)
+  stop <- c(borders, length(file_text))
+  
+  section_counts <- NULL
+  for (i in 1:length(start)) {
+    file_text[start[i]:stop[i]] |>
+      count_words() |>
+      append(section_counts) -> section_counts
+  }
+  cat(paste0(sections, ", ", section_counts))
 }
 ```

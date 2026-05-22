@@ -2234,7 +2234,7 @@ vertical-align: -.125em;
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>count_words <span class="ot">&lt;-</span> <span class="cf">function</span>(fn) {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_lines</span>(fn) <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  fn <span class="sc">|&gt;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste0</span>(<span class="at">collapse=</span><span class="st">&quot; &quot;</span>) <span class="sc">|&gt;</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_replace_all</span>(<span class="st">&quot;[^a-z A-Z]&quot;</span>, <span class="st">&quot; &quot;</span>) <span class="sc">|&gt;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_replace_all</span>(<span class="st">&quot; +&quot;</span>, <span class="st">&quot;~&quot;</span>) <span class="sc">|&gt;</span> </span>
@@ -2243,21 +2243,23 @@ vertical-align: -.125em;
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">length</span>()</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">count_words</span>(<span class="st">&quot;../index.qmd&quot;</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>file_list <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">path=</span><span class="st">&quot;../chapters&quot;</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (fn <span class="cf">in</span> file_list) {</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  ni <span class="ot">&lt;-</span> <span class="fu">count_words</span>(<span class="fu">glue</span>(<span class="st">&quot;../chapters/{fn}&quot;</span>))</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">append</span>(n, ni)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>n_total <span class="ot">&lt;-</span> <span class="fu">sum</span>(n)</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">&quot;-   &quot;</span>, file_list, <span class="st">&quot;: &quot;</span>, n) <span class="sc">|&gt;</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(<span class="at">collapse=</span><span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>) <span class="ot">-&gt;</span> chapter_count</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">write_lines</span>(</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(n_total, n), </span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">file=</span><span class="fu">paste0</span>(<span class="fu">Sys.Date</span>(), <span class="st">&quot;.txt&quot;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">read_lines</span>(<span class="at">file=</span><span class="st">&quot;../index.qmd&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count_words</span>() <span class="ot">-&gt;</span> n</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>file_list <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">path=</span><span class="st">&quot;../chapters&quot;</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (fn <span class="cf">in</span> file_list) {</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_lines</span>(<span class="fu">glue</span>(<span class="st">&quot;../chapters/{fn}&quot;</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count_words</span>() <span class="ot">-&gt;</span> ni</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">append</span>(n, ni)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>n_total <span class="ot">&lt;-</span> <span class="fu">sum</span>(n)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">&quot;-   &quot;</span>, file_list, <span class="st">&quot;: &quot;</span>, n) <span class="sc">|&gt;</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(<span class="at">collapse=</span><span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>) <span class="ot">-&gt;</span> chapter_count</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">write_lines</span>(</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(n_total, n), </span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">file=</span><span class="fu">paste0</span>(<span class="fu">Sys.Date</span>(), <span class="st">&quot;.txt&quot;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>There are approximately 28,531 words in the book. I use the word “approximate” because it is easy to count something that isn’t a word. The word counts for individual chapters are</p>
+<p>There are approximately 28,625 words in the book. I use the word “approximate” because it is easy to count something that isn’t a word. The word counts for individual chapters are</p>
 <ul>
 <li>01 Introduction.qmd: 736</li>
 <li>02 Picking a research topic.qmd: 1588</li>
@@ -2276,13 +2278,13 @@ vertical-align: -.125em;
 <li>15 Running a non-linear regression analysis.qmd: 87</li>
 <li>16 Running a systematic overview.qmd: 72</li>
 <li>17 Running a focus group.qmd: 3237</li>
-<li>18 Writing a literature review.qmd: 1484</li>
+<li>18 Writing a literature review.qmd: 1575</li>
 <li>19 Writing a methods section.qmd: 2359</li>
 <li>20 Writing a results section.qmd: 2486</li>
 <li>21 Writing a discussion section.qmd: 60</li>
 <li>98 summary.qmd: 1098</li>
-<li>99 references.qmd: 11</li>
-<li>01 Introduction.qmd: 33</li>
+<li>99 references.qmd: 13</li>
+<li>01 Introduction.qmd: 34</li>
 </ul>
 </section>
 <section id="changes-in-word-count" class="level2">
@@ -2318,7 +2320,7 @@ vertical-align: -.125em;
 <pre><code># A tibble: 25 × 3
    section                                     `2026-05-20.txt` `2026-05-21.txt`
    &lt;chr&gt;                                                  &lt;dbl&gt;            &lt;dbl&gt;
- 1 Entire book                                            27759              772
+ 1 Entire book                                            27759              866
  2 Preface                                                  715               21
  3 01 Introduction.qmd                                     1588                0
  4 02 Picking a research topic.qmd                          556                0
@@ -2336,13 +2338,13 @@ vertical-align: -.125em;
 16 14 Running a survival data analysis.qmd                   87                0
 17 15 Running a non-linear regression analysi…               72                0
 18 16 Running a systematic overview.qmd                    3237                0
-19 17 Running a focus group.qmd                            1281              203
+19 17 Running a focus group.qmd                            1281              294
 20 18 Writing a literature review.qmd                      2359                0
 21 19 Writing a methods section.qmd                        2486                0
 22 20 Writing a results section.qmd                          60                0
 23 21 Writing a discussion section.qmd                     1098                0
-24 98 summary.qmd                                            11                0
-25 99 references.qmd                                         33                0</code></pre>
+24 98 summary.qmd                                            11                2
+25 99 references.qmd                                         33                1</code></pre>
 </div>
 </div>
 </section>
@@ -2352,176 +2354,219 @@ vertical-align: -.125em;
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (file_name <span class="cf">in</span> file_list) {</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;</span><span class="sc">\n\n</span><span class="st">&quot;</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(file_name)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_lines</span>(<span class="at">file=</span><span class="fu">glue</span>(<span class="st">&quot;../chapters/{file_name}&quot;</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_subset</span>(<span class="at">pattern=</span><span class="st">&quot;##&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_replace</span>(<span class="st">&quot;## &quot;</span>, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">- &quot;</span>) <span class="ot">-&gt;</span> sections</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(sections)</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  file_text <span class="ot">&lt;-</span> <span class="fu">read_lines</span>(<span class="at">file=</span><span class="fu">glue</span>(<span class="st">&quot;../chapters/{file_name}&quot;</span>)) </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  file_text <span class="sc">|&gt;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_subset</span>(<span class="at">pattern=</span><span class="st">&quot;##&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_replace</span>(<span class="st">&quot;## &quot;</span>, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">- &quot;</span>) <span class="ot">-&gt;</span> sections</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  sections <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">- Introduction&quot;</span>, sections)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  file_text <span class="sc">|&gt;</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_which</span>(<span class="st">&quot;##&quot;</span>) <span class="ot">-&gt;</span> borders</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  start <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, borders<span class="dv">-1</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  stop <span class="ot">&lt;-</span> <span class="fu">c</span>(borders, <span class="fu">length</span>(file_text))</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  section_counts <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(start)) {</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    file_text[start[i]<span class="sc">:</span>stop[i]] <span class="sc">|&gt;</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>      <span class="fu">count_words</span>() <span class="sc">|&gt;</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">append</span>(section_counts) <span class="ot">-&gt;</span> section_counts</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">paste0</span>(sections, <span class="st">&quot;, &quot;</span>, section_counts))</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 
 01 Introduction.qmd
-- Bibliography
+- Introduction, 113 
+- Bibliography, 1477
 
 02 Picking a research topic.qmd
-- Step 1. Describe what bothers you 
-- Bibliography
+- Introduction, 30 
+- Step 1. Describe what bothers you, 349 
+- Bibliography, 185
 
 03 Selecting your research hypothesis.qmd
-- Step 1. Choose an outcome measure 
-- Step 2. Define your patient population 
-- Step 3. Select your control group 
-- The fly in the ointment 
-- Bibliography
+- Introduction, 28 
+- Step 1. Choose an outcome measure, 9 
+- Step 2. Define your patient population, 13 
+- Step 3. Select your control group, 13 
+- The fly in the ointment, 105 
+- Bibliography, 20
 
 04 Selecting your research design.qmd
-- Step 1. Decide if you can/should randomize 
-- Step 2. Consider the advantages/disadvantages of retrospective versus prospective research 
-- Step 3. Think about the most efficient way to select subjects 
-- The fly in the ointment 
-- Bibliography
+- Introduction, 30 
+- Step 1. Decide if you can/should randomize, 9 
+- Step 2. Consider the advantages/disadvantages of retrospective versus prospective research, 18 
+- Step 3. Think about the most efficient way to select subjects, 23 
+- The fly in the ointment, 20 
+- Bibliography, 22
 
 05 Selecting your sample size.qmd
-- Step 1: Define your research hypothesis. #
-- What do you do if you don&#39;t have a research hypothesis? 
-- Step 2: Find an estimate of the variability of your outcome measure. 
-- Step 3: define the minimum clinically important difference. 
-- The fly in the ointment. 
-- Bibliography
+- Introduction, 35 
+- Step 1: Define your research hypothesis., 9 #
+- What do you do if you don&#39;t have a research hypothesis?, 582 
+- Step 2: Find an estimate of the variability of your outcome measure., 467 
+- Step 3: define the minimum clinically important difference., 100 
+- The fly in the ointment., 225 
+- Bibliography, 104
 
 06 Developing your pilot study.qmd
-- Step 1. Visualize the bigger study in the future 
-- Step 2. Estimating resource needs 
-- Step 3. Think about where &quot;Murphy&#39;s Law&quot; might strike 
-- The fly in the ointment 
-- Bibliography
+- Introduction, 483 
+- Step 1. Visualize the bigger study in the future, 345 
+- Step 2. Estimating resource needs, 513 
+- Step 3. Think about where &quot;Murphy&#39;s Law&quot; might strike, 352 
+- The fly in the ointment, 175 
+- Bibliography, 216
 
 07 Designing your questionnaire.qmd
-- Step 1. Brainstorm a long list and then prune back 
-- Step 2. Get opinions from content experts 
-- Step 3. Pilot test your questionnaire 
-- The fly in the ointment 
-- Bibliography
+- Introduction, 100 
+- Step 1. Brainstorm a long list and then prune back, 10 
+- Step 2. Get opinions from content experts, 13 
+- Step 3. Pilot test your questionnaire, 14 
+- The fly in the ointment, 18 
+- Bibliography, 23
 
 08 Obtaining ethical approval for your study.qmd
-- Step 1. Demonstrate that you care about the people who will be participating in your study. 
-- Step 2. Demonstrate the value of your work to your patients 
-- Step 3 Demonstrate the benefits of your research to society. 
-- Step 2a (Justice) 
-- Step 2a. Prepare a defensible strategy for your data analysis 
-- The fly in the ointment 
-- Bibliography
+- Introduction, 64 
+- Step 1. Demonstrate that you care about the people who will be participating in your study., 14 
+- Step 2. Demonstrate the value of your work to your patients, 18 
+- Step 3 Demonstrate the benefits of your research to society., 84 
+- Step 2a (Justice), 140 
+- Step 2a. Prepare a defensible strategy for your data analysis, 121 
+- The fly in the ointment, 379 
+- Bibliography, 34
 
 09 Setting up your data entry process.qmd
-- Step 1: Arrange your data in a rectangular format 
-- Step 2: Create codes for categorical data 
-- Step 3: Document missing values 
-- The fly in the ointment: longitudinal and repeated measures data 
-- Bibliography
+- Introduction, 447 
+- Step 1: Arrange your data in a rectangular format, 14 
+- Step 2: Create codes for categorical data, 17 
+- Step 3: Document missing values, 13 
+- The fly in the ointment: longitudinal and repeated measures data, 956 
+- Bibliography, 313
 
 10 Running a descriptive data analysis.qmd
-- Step 1: Know your count 
-- Step 2: Compute ranges and frequencies 
-- Step 3: Examine relationships using crosstabs, boxplots, and/or scatterplots 
-- The fly in the ointment: ordinal data 
-- Bibliography
+- Introduction, 24 
+- Step 1: Know your count, 11 
+- Step 2: Compute ranges and frequencies, 19 
+- Step 3: Examine relationships using crosstabs, boxplots, and/or scatterplots, 17 
+- The fly in the ointment: ordinal data, 12 
+- Bibliography, 20
 
 11 Running a linear regression analysis.qmd
-- Step 1: Plot your data 
-- Step 2: Compute a simple model 
-- Step 3: Examine residuals 
-- Step 4: Compute an adjusted model 
-- The fly in the ointment: clustered data 
-- Bibliography
+- Introduction, 122 
+- Step 1: Plot your data, 546 
+- Step 2: Compute a simple model, 408 
+- Step 3: Examine residuals, 9 
+- Step 4: Compute an adjusted model, 291 
+- The fly in the ointment: clustered data, 655 
+- Bibliography, 214
 
 12 Running a logistic regression analysis.qmd
-- Step 1: Examine raw probabilities 
-- Step 2: Compute a simple model 
-- Step 3: Compute an adjusted model 
-- The fly in the ointment: clustered data 
-- Bibliography
+- Introduction, 56 
+- Step 1: Examine raw probabilities, 11 
+- Step 2: Compute a simple model, 15 
+- Step 3: Compute an adjusted model, 13 
+- The fly in the ointment: clustered data, 17 
+- Bibliography, 21
 
 13 Running a multi-factor analysis of variance model.qmd
-- Step 1: Plot your data 
-- Step 2: Fit individual models 
-- Step 3: Fit multi-factor models 
-- The fly in the ointment: unbalanced data 
-- Bibliography ##
-- Dear Professor Mean, ##
-- Dear Anastasia ##
-- Degrees of freedom and mean squares ##
-- Estimating mean differences ##
-- Confidence interval ##
-- Analysis of multiple factors ##
-- Sequential versus partial SS ##
-- Analysis of interactions
+- Introduction, 399 
+- Step 1: Plot your data, 734 
+- Step 2: Fit individual models, 531 
+- Step 3: Fit multi-factor models, 553 
+- The fly in the ointment: unbalanced data, 731 
+- Bibliography, 588 ##
+- Dear Professor Mean,, 1702 ##
+- Dear Anastasia, 68 ##
+- Degrees of freedom and mean squares, 31 ##
+- Estimating mean differences, 11 ##
+- Confidence interval, 15 ##
+- Analysis of multiple factors, 12 ##
+- Sequential versus partial SS, 12 ##
+- Analysis of interactions, 575
 
 14 Running a survival data analysis.qmd
-- Step 1: Plot Kaplan-Meier curves for each group 
-- Step 2: Compute a simple surivival model 
-- Step 3: Compute an adjusted survival model 
-- The fly in the ointment: time-varying covariates 
-- Bibliography
+- Introduction, 30 
+- Step 1: Plot Kaplan-Meier curves for each group, 12 
+- Step 2: Compute a simple surivival model, 17 
+- Step 3: Compute an adjusted survival model, 15 
+- The fly in the ointment: time-varying covariates, 22 
+- Bibliography, 25
 
 15 Running a non-linear regression analysis.qmd
-- Step 1: Plot your data 
-- Step 2: Explore your function 
-- Step 3: Fit your model 
-- The fly in the ointment: ill-conditioned models 
-- Bibliography
+- Introduction, 26 
+- Step 1: Plot your data, 12 
+- Step 2: Explore your function, 15 
+- Step 3: Fit your model, 11 
+- The fly in the ointment: ill-conditioned models, 12 
+- Bibliography, 22
 
 16 Running a systematic overview.qmd
-- Step 1: Write a protocol 
-- Step 2: Collect references 
-- Step 3: Extract information 
-- The fly in the ointment: extreme heterogeneity 
-- Bibliography
+- Introduction, 29 
+- Step 1: Write a protocol, 41 
+- Step 2: Collect references, 1019 
+- Step 3: Extract information, 1412 
+- The fly in the ointment: extreme heterogeneity, 408 
+- Bibliography, 351
 
 17 Running a focus group.qmd
-- Step 1: Plan your logistics 
-- Step 1: Select a theoretical framework 
-- Step 2: Set the stage 
-- Step 3: Write and rewrite probe questions 
-- The fly in the ointment: uneven participation 
-- Bibliography 
-- Material from Clinical Research Methodology class 
-- `r section`, Running focus groups 
-- `r section`, Structure of a focus group 
-- `r section`, Interview 
-- `r section`, Example of structured and unstructured interviews
+- Introduction, 287 
+- Step 1: Plan your logistics, 255 
+- Step 1: Select a theoretical framework, 9 
+- Step 2: Set the stage, 12 
+- `r section`, Structure of a focus group, 156 
+- Step 3: Write and rewrite probe questions, 11 
+- The fly in the ointment: uneven participation, 16 
+- Bibliography, 267 
+- Material from Clinical Research Methodology class, 318 
+- `r section`, Running focus groups, 196 
+- `r section`, Interview, 14 
+- `r section`, Example of structured and unstructured interviews, 101
 
 18 Writing a literature review.qmd
-- Step 1: Document your searches 
-- Step 2: Stash your results  
-- Step 3: Decide on an organizing principle 
-- The fly in the ointment: too many/too few references 
-- Bibliography
+- Introduction, 145 
+- Step 1: Document your searches, 293 
+- Step 2: Stash your results , 742 
+- Step 3: Decide on an organizing principle, 398 
+- The fly in the ointment: too many/too few references, 264 
+- Bibliography, 548
 
 19 Writing a methods section.qmd
-- Step 1: Talk about who 
-- Step 2: Talk about how 
-- Step 3: Talk about your analysis plan 
-- The fly in the ointment: when your who is a what 
-- Bibliography
+- Introduction, 302 
+- Step 1: Talk about who, 229 
+- Step 2: Talk about how, 310 
+- Step 3: Talk about your analysis plan, 681 
+- The fly in the ointment: when your who is a what, 320 
+- Bibliography, 675
 
 20 Writing a results section.qmd
-- Step 1: 
-- Step 2: 
-- Step 3: 
-- The fly in the ointment: 
-- Bibliography
+- Introduction, 40 
+- Step 1:, 9 
+- Step 2:, 10 
+- Step 3:, 6 
+- The fly in the ointment:, 6 
+- Bibliography, 7
 
 21 Writing a discussion section.qmd
-- Step 1: Compare/contrast your results to previous results. 
-- Step 2: List the strengths and limitations of your study. 
-- Step 3: Advocate changes (or support the status quo) 
-- Step 4: Suggest areas for further research. 
-- The fly in the ointment: When should research end? 
-- Bibliography
+- Introduction, 67 
+- Step 1: Compare/contrast your results to previous results., 11 
+- Step 2: List the strengths and limitations of your study., 243 
+- Step 3: Advocate changes (or support the status quo), 74 
+- Step 4: Suggest areas for further research., 223 
+- The fly in the ointment: When should research end?, 258 
+- Bibliography, 274
 
 98 summary.qmd
+- Introduction, 12 
+- Summary text, 4
 
-99 references.qmd</code></pre>
+99 references.qmd
+- Introduction, 31 
+- References, 5</code></pre>
 </div>
 </div>
 </section>
