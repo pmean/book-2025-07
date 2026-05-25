@@ -2,6 +2,10 @@
 
 While this book is in progress, I will use the section of the preface to track my activity (or lack of activity). When the book is complete, the first section drops and I revert to a normal preface.
 
+On **2026-05-22**, I started work on Chapter 10 (Descriptive analysis). This is going to be a difficult chapter because easy concepts are the hardest to explain. It also will require changing the SPSS examples into R (and possibly Python). I now am back to a bit more than 27 thousand words.
+
+On **2026-05-21**, I finished up Chapter 6 (Pilot studies) and most of Chapter 17 (Focus groups). I also cleaned out some extraneous text. The latter reduced my word count to about 26 thousand, but that's okay. I feel like I'm getting closer to my target.
+
 On **2026-05-20**, I got a pretty good start on Chapter 6 (Pilot studies) and added about 1,300 words. I now have almost 28 thousand words.
 
 On **2026-03-13**, I added material to Chapters 8 (Ethical approval) and 16 (Systematic overview). I now have about 26 thousand words.
@@ -21,6 +25,16 @@ On **2025-09-10**, I standardized the bibliographies at the end of each chapter.
 On **2025-09-05**, I moved text that was wrongly placed in chapter 20 back in the correct chapter (19).  I started work on chapter 21, but there is a lot left to be written. I began organizing my bibliography better. I now have about 11 thousand words total, with four relatively complete chapters and now three partially completed chapters.
 
 On **2025-08-29**, I completed a pretty good draft of chapter 19, writing a methods section. This adds to three other chapters that we already in good form (chapters 1, 5, and 11). There is also a very little bit written for chapters 2 and 3. The total word count is just around 10 thousand, which is a jump from 7 thousand that the book had been stuck at for many months.
+
+Chapters that are a relatively complete first draft
+
+-   Chapter 1. Introduction
+-   Chapter 5. Selecting your sample size
+-   Chapter 6. Developing your pilot study
+-   Chapter 16. Running a systematic overview
+-   Chapter 18. Writing a literature review
+-   Chapter 19. Writing a methods section
+-   Chapter 21. Writing a discussion section
 
 **The real preface starts here**
 

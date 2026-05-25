@@ -84,7 +84,7 @@ for (progress_file in progress_files) {
 
 n_dates <- length(progress_files)
 
-for (i in n_dates:n_dates) {
+for (i in 2:n_dates) {
   delta_counts <- historical_counts[i+1] - historical_counts[i]
   historical_counts[ , c(1, i)] |>
     bind_cols(tibble(delta_counts)) -> improvement

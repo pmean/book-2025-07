@@ -20,4 +20,8 @@ Add text.
 
 Bahadoran Z, Mirmiran P, Zadeh-Vakili A, Hosseinpanah F, Ghasemi A. The Principles of Biomedical Scientific Writing: Results. Int J Endocrinol Metab. 2019 Apr 24;17(2):e92113. doi: [10.5812/ijem.92113][ref20-bahadoran-2019]. PMID: 31372173; PMCID: PMC6635678.
 
+Purdue University. Writing With Descriptive Statistics. Available in [html format][ref-purdue-nodate].
+
+[ref-purdue-nodate]: https://owl.purdue.edu/owl/research_and_citation/using_research/writing_with_statistics/writing_with_descriptive_statistics.html
+
 [ref-bahadoran-2019]: https://doi.org/10.5812/ijem.92113

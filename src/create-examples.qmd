@@ -1,0 +1,88 @@
+---
+title: "Create examples"
+execute: 
+  echo: true
+format:
+  html:
+    embed-resources: true
+---
+
+This program was written by Steve Simon on 2026-05-22 and is placed in the public domain. The program will read in several different publicly available data sets and produce a few simple tables and graphs. I hope to include some of these in my book.
+
+```{r}
+#| message: false
+#| warning: false
+#| label: setup
+
+library(glue)
+library(gt)
+library(stringr)
+library(tidyverse)
+```
+
+## Chapter 10 
+
+This chapter will use the famous Titanic data set. I have a [copy][ref-simon-nodate1] on my github site, but you can find it many other places as well. I wrote a [simple data dictionary][ref-simon-nodate2] for this file.
+
+[ref-simon-nodate1]: https://github.com/pmean/data/blob/main/files/titanic.txt
+[ref-simon=nodate2]: https://github.com/pmean/data/blob/main/files/titanic.yaml
+
+```{r}
+#| label: ch10-read
+
+ti <- read_tsv(file="../data/titanic.txt")
+glimpse(ti)
+```
+
+## Summary
+
+```{r}
+#| label: ch10-summary
+
+table_10_01 <- summary(ti$Age)
+
+table_10_01
+```
+
+We could use
+
+```{}
+sum(is.na(ti$Age))
+```
+
+or 
+
+```{}
+count_missing <- list(~ sum(is.na(.x)))
+ti |> 
+  summarise(across(everything(), count_missing))
+```
+
+If we wanted to show a Python example, we could use
+
+```{}
+import numpy as np
+import pandas as pd
+
+ti = pd.read_csv("../data/titanic.csv")
+table_10_01_py = ti['survived'].isnull().sum()
+
+table_10_01_py
+```
+
+
+
+Use
+
+```{}
+ti['Survived'].value_counts()
+```
+
+
+```{r}
+#| label: ch10-save
+
+save(
+  table_10_01,
+  file="../data/chapter-10-output.RData")
+```

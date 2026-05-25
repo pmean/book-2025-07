@@ -65,8 +65,49 @@
 \fi
 \makeatother
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -155,7 +196,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={jump-start-book, last major update 2025-09-10},
+  pdftitle={jump-start-book{,} last major update 2025-09-10},
   pdfauthor={Steve Simon},
   colorlinks=true,
   linkcolor={blue},
@@ -173,7 +214,6 @@
 
 \renewcommand*\contentsname{Table of contents}
 {
-\hypersetup{linkcolor=}
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
@@ -188,6 +228,23 @@
 While this book is in progress, I will use the section of the preface to
 track my activity (or lack of activity). When the book is complete, the
 first section drops and I revert to a normal preface.
+
+On \textbf{2026-05-21}, I finished up Chapter 6 (Pilot studies) and most
+of Chapter 17 (Focus groups). I also cleaned out some extraneous text.
+The latter reduced my word count to about 26 thousand, but that's okay.
+I feel like I'm getting closer to my target.
+
+On \textbf{2026-05-20}, I got a pretty good start on Chapter 6 (Pilot
+studies) and added about 1,300 words. I now have almost 28 thousand
+words.
+
+On \textbf{2026-03-13}, I added material to Chapters 8 (Ethical
+approval) and 16 (Systematic overview). I now have about 26 thousand
+words.
+
+On \textbf{2025-12-28}, I wrapped up the ``fly in the ointment'' section
+of Chapter 18. It was only about 150 words, but I feel that chapter is
+reasonably complete.
 
 On \textbf{2025-12-15}, I continued work on Chapter 18 (How to write a
 literature review). I have the first three sections laid out nicely, but
@@ -740,6 +797,10 @@ important shift to be. For the visual analog scale of pain, for example,
 a shift of at least 15 mm is considered the smallest value that is
 noticeable to the average patient.
 
+\section{The fly in the ointment.}\label{the-fly-in-the-ointment.}
+
+Longitudinal studies
+
 \section{Bibliography}\label{bibliography-4}
 
 Simon SD. Sample chapter, the first three steps in selecting an
@@ -753,29 +814,315 @@ appropriate sample size. PMean blog, 2010-07-24. Available in
 This chapter is based on a webpages I wrote in 2007, 2016, 2019, and
 2023.
 
+You want to run a pilot study? That reminds me of a cute joke. How many
+statisticians does it take to light a gas stove? I don't know because we
+haven't run the pilot study yet.
+
+You should start by carefully defining what you are doing. You will
+often see the terms ``pilot study'' and ``exploratory study'' used
+interchangeably. There is an important differene. An exploratory study
+is designed to generate interesting hypotheses. A pilot study is a study
+that offers no direct benefits of its own, but only indirect benefits
+through helping the planning of a larger scale study. Some people might
+quibble with that definition, but it is a good starting point for
+discussion.
+
+If you are planning a pilot study, you should describe a few details
+about the larger scale study and why that larger scale study could not
+proceed effectively without information from the pilot study. An
+economic argument would not fly (we're running a pilot because we don't
+have enough money to run a large study), because no large scale study
+will occur and no benefit will therefore accrue from the pilot study.
+
 \section{Step 1. Visualize the bigger study in the
 future}\label{step-1.-visualize-the-bigger-study-in-the-future}
 
-Insert text.
+The value of your pilot study only occurs when you start planning the
+larger study. It may seem premature, but do try your best to anticipate
+what that larger study would look like. You may end up missing the mark
+on this. Who knows, maybe the results of the pilot study will end up
+with a total abandonment of the large scale study. That's okay. A pilot
+study is successful even if it guides you away from what you really
+wanted to do.
 
-\section{Step 2. Identify planning
-gaps}\label{step-2.-identify-planning-gaps}
+Now think about your pilot study not as a scaled down version of your
+larger study but as an effort to examine those aspects of the larger
+study that you are most nervous about. You might want to skip running a
+control group if most of your concern is with getting the intervention
+details nailed down.
 
-Insert text.
+The two areas that probably make you the most nervous fall into two
+categories: estimating the resource needs and identifying unanticipated
+problems.
+
+\section{Step 2. Estimating resource
+needs}\label{step-2.-estimating-resource-needs}
+
+Resource needs are important. A study that requires lots of resources
+will require a larger budget. And if the budget is too large for you to
+handle, it's better to find it out quicky through your pilot study.
+
+The most obvious resource need is the number of patients that you neeed
+to recruit soe your larger study will have adequate power and precision.
+The power and precision calculations are the topic of the previous
+chapter. In that chapter you saw that a key piece of information is the
+standard deviation of your outcome meaasure (if your outcome is
+continuous) or the event rate in the control group (if your outcome is
+categorical). A really large standard deviation or a really small event
+rate is going to require a really large sample size.
+
+The standard deviation and the event rate are statistics which are often
+found in the peer reviewed literature. They might be hiding in that
+thick stack of research papers sitting on your desk. This great if you
+can find it, but sometimes there isn't a study out there that will help.
+It is ofen caused by your desire to measure your outcome using something
+that has not been handled before by other researchers. It's okay to have
+different set of patients or a different intervention, as long as they
+are not too different. But a different outcome measure might force you
+to use a pilot study with that new outcome.
+
+There are other resources that you need to account for beyond the sample
+size of the larger study. How much time do you spend per subject? How
+much money do you spend per subject? Both pieces of information are
+critical for preparing the budget for your full study.
+
+You might need an estimate of the proportion of volunteers who fail to
+meet the entry criteria or the proportion who run away in horror when
+you describe all the risks in your study. A large proportion in either
+case will require a larger budget.
 
 \section{Step 3. Think about where ``Murphy's Law'' might
 strike}\label{step-3.-think-about-where-murphys-law-might-strike}
 
-Insert text.
+Murphy's Law states that if something can go wrong, it will go wrong.
+You want to find out about all the things that can go wrong during the
+pilot study, because if they pop up during the larger study, you won't
+be able to fix things.
+
+Trying to anticipate what can go wrong is not easy. You may not have the
+foresight to anticipate everything that might go wrong. But here is a
+list of a few things you need to worry about.
+
+Murphy's Law says that anything that can go wrong, will go wrong. The
+reason you run a pilot study is to ensure that the things that do go
+wrong, go wrong during the pilot study so you can fix them before you
+start the full study.
+
+It's impossible to list all ways that a study could go wrong, but here
+are some areas that you should focus on.
+
+Recruitment and retention problems
+
+\begin{itemize}
+\tightlist
+\item
+  Do you get the types of subjects that you think you will get?
+\item
+  Are important segments of your population being left out?
+\item
+  Do a lot of people turn down the opportunity to participate in your
+  study?
+\item
+  Do a lot of people fail to finish your study?
+\item
+  Do a lot of people fail to comply with your protocol requirements?
+\end{itemize}
+
+Ambiguous situations.
+
+\begin{itemize}
+\tightlist
+\item
+  Is it obvious who meets and who does not meet the eligibility
+  requirements?
+\item
+  Do your subjects provide no answer, multiple answers, qualified
+  answers, or unanticipated answers to your survey?
+\end{itemize}
+
+Time and resource problems
+
+\begin{itemize}
+\tightlist
+\item
+  Does it take too long for your subjects to fill out all the survey
+  forms?
+\item
+  Will the study participants overload your phone lines or overflow your
+  waiting room?
+\item
+  How much time does it take to mail out a thousand surveys, and can
+  your tongue lick that many stamps in one day?
+\end{itemize}
+
+Machinery problems.
+
+\begin{itemize}
+\tightlist
+\item
+  Is the equipment readily available when and where you need it?
+\item
+  What happens when it breaks down or gets stolen?
+\item
+  If the machine produces a stream of electronic data, can your computer
+  software read and understand this data?
+\end{itemize}
+
+Data management problems.
+
+\begin{itemize}
+\tightlist
+\item
+  Is there enough room on the data collection form for all of the data
+  you receive?
+\item
+  Do you have any problems entering your data into the computer?
+\item
+  Can you match data that comes in from different sources?
+\item
+  Were any important data values forgotten about?
+\item
+  Does your data show too much or too little variability?
+\end{itemize}
+
+Uninformative data
+
+\begin{itemize}
+\tightlist
+\item
+  Are most of your lab results are below the limit of detection?
+\item
+  Does everybody gives the identical answer to a survey question?
+\end{itemize}
+
+Blind spots and oversights.
+
+Something will happen during your pilot study and you'll say ``I never
+thought about that!'' Better to have this oversight now than during the
+full study. Although you can and should show ask your colleagues whether
+there is there anything you overlooked in your protocol, it's still a
+good idea to run a pilot study. After all, your colleagues may have the
+same blind spots that you do.
 
 \section{The fly in the ointment}\label{the-fly-in-the-ointment-2}
 
-Insert text.
+So how a pilot study is smaller than the larger study that it is helping
+to plan. But how much smaller can you get? That's an open question and
+one with conflicting answers.
+
+Now, you can always defer to a higher authority and cite the sample size
+needed in a peer-reviewed article.
+
+Cooks et al 2014 suggests that the sample size be at least 9\% of the
+sample size for the larger study. Hertzog et al 2008 says 10 to 40 per
+group. Julious 2005 says 12 per group.
+
+Now each paper uses a different criteria to justify their number, and
+you should read each paper and see which one matches the criteria that
+you consider most important. But you won't do this. You'll just pick the
+article that matches the pilot study sample size that you wanted for
+budgetary and time constraints. That's fine. I won't judge.
+
+If you wanted to use your own criteria, here are some suggestions.
+
+It's easiest if some of the goals of your pilot study are quantitative.
+You might, for example, want to estimate the average amount of time that
+someone needs to fill out your survey. Or maybe you want to find out
+what the dropout rate would be like. Maybe you want that standard
+deviation of your outcome measure that will help you estimate the sample
+size needed for your larger study.
+
+This is easy. Just look at a confidence interval for your quantitative
+estimate and select a sample size large enough to make the interval
+reasonably narrow.
+
+If the goals of your pilot study are qualitative, then you will use a
+qualitative approach to judging the sample size. Will there be confusion
+over deciding who is or is not eligible to participate in the study? You
+need enough patients in your pilot study to reflect the overall
+diversity of volunteers. Will the emergency department abandon your
+protocol when things get busy? Run the pilot over enough shifts so that
+you are sure to capture both quiet and busy days.
 
 \section{Bibliography}\label{bibliography-5}
 
+The Lancaster et al publication is an excellent resource. Wittes et al
+is an argument in favor of including pilot data in the full research
+study.
+
+Blatch-Jones AJ, Pek W, Kirkpatrick E, Ashton-Key M. Role of feasibility
+and pilot studies in randomised controlled trials: a cross-sectional
+study. BMJ Open. 2018 Sep 25;8(9):e022233. doi:
+10.1136/bmjopen-2018-022233.
+
+Cocks K, Torgerson DJ. Sample size calculations for pilot randomized
+trials: a confidence interval approach. J Clin Epidemiol. 2013
+Feb;66(2):197-201. doi: 10.1016/j.jclinepi.2012.09.002. Epub 2012 Nov
+27. PMID: 23195919.
+
+Feeley N, Cossette S, Côté J, Héon M, Stremler R, Martorella G, Purden
+M. The importance of piloting an RCT intervention. Can J Nurs Res. 2009
+Jun;41(2):85-99. PMID: 19650515.
+
+Flight L, Julious S, Brennan A, Todd S. Expected Value of Sample
+Information to Guide the Design of Group Sequential Clinical Trials. Med
+Decis Making. 2022 May;42(4):461-473. doi:
+\href{https://doi.org/10.1177/0272989X211045036}{10.1177/0272989X211045036}.
+
+Hertzog MA. Considerations in determining sample size for pilot studies.
+Res Nurs Health. 2008 Apr;31(2):180-91. doi: 10.1002/nur.20247. PMID:
+18183564.
+
+Steven A. Julious. Sample size of 12 per group rule of thumb for a pilot
+study. Pharmaceut. Statist. 2005; 4: 287--291. Full article is
+\href{https://doi.org/10.1002/ps}{behind a paywall}.
+
+Julious SA. Pilot Studies in clinical research. Stat Methods Med Res.
+2016 Jun;25(3):995-6. doi:
+{[}10.1177/0962280216651022{]}{[}ref06-julious-2016{]}.
+
+https://doi.org/10.1177/0962280216651022
+
+Gillian. A. Lancaster, Susanna Dodd, Paula R. Williamson. Design and
+analysis of pilot studies: recommendations for good practice. J Eval
+Clin Pract 2004: 10(2); 307-12. Article is {[}behind a
+paywall{]}{[}ref06-lancaster-2004{]}.
+
+Whitehead AL, Sully BG, Campbell MJ. Pilot and feasibility studies: is
+there a difference from each other and from a randomised controlled
+trial? Contemp Clin Trials. 2014 May;38(1):130-3. doi:
+{[}10.1016/j.cct.2014.04.001{]}{[}ref06-whitehead-2014{]}.
+
+https://doi.org/10.1016/j.cct.2014.04.001
+
+Wittes J and Brittain E. The role of internal pilot studies in
+increasing the efficiency of clinical trials. Stat Med
+1990:9(1-2);65-71; discussion 71-2. {[}Medline{]}
+
+https://pubmed.ncbi.nlm.nih.gov/26092476/
+
+https://pubmed.ncbi.nlm.nih.gov/27207088/
+
+https://pubmed.ncbi.nlm.nih.gov/37990337/
+
+https://pubmed.ncbi.nlm.nih.gov/28606102/
+
+https://pubmed.ncbi.nlm.nih.gov/29403314/
+
+https://pubmed.ncbi.nlm.nih.gov/29403314/
+
+https://pubmed.ncbi.nlm.nih.gov/41840651/
+
+https://pubmed.ncbi.nlm.nih.gov/31399148/
+
+https://pubmed.ncbi.nlm.nih.gov/29361833/
+
+https://pubmed.ncbi.nlm.nih.gov/23961782/
+
+https://pubmed.ncbi.nlm.nih.gov/34477455/
+
 Steve Simon. IRB review of a pilot study. PMean blog, 2007-03-26.
-Available in \href{http://www.new.pmean.com/irb-review-pilot/}{html
+Available in \href{http://pmean.com/posts/irb-review-pilot/}{html
 format}.
 
 Steve Simon. So you're thinking about a pilot study. PMean blog,
@@ -841,30 +1188,112 @@ study}\label{obtaining-ethical-approval-for-your-study}
 
 This chapter is based on a webpage that I wrote in 2002.
 
-\section{Step 1. Establish your credentials as a
-researcher}\label{step-1.-establish-your-credentials-as-a-researcher}
+\section{Step 1. Demonstrate that you care about the people who will be
+participating in your
+study.}\label{step-1.-demonstrate-that-you-care-about-the-people-who-will-be-participating-in-your-study.}
 
-Insert text.
+Okay, you may be doing research to pad your resume or because your boss
+demands it or just for fun. There's nothing wrong with that, but always
+keep in mind that you owe a debt to the people who will be participating
+in your study. They are making \textbf{sacrifices} to help you with your
+research.
 
-\section{Step 2. Demonstrate your concern for privacy
-rights}\label{step-2.-demonstrate-your-concern-for-privacy-rights}
+In a randomized study, your patients will be sacrificing a degree of
+\textbf{autonomy}. They will allow the choice of therapy to be selected
+not by them, not by their trusted physician, but by the flip of a coin.
 
-Insert text.
+Even without randomization, volunteers in a prospective study will be
+asked to give something. Maybe some of their \textbf{blood or tissue}.
+For most studies, they will donate some of their time. They could be at
+home watching their favorite cartoon, that Square Sponge Bob Something.
 
-\section{Step 3. Prepare a defensible strategy for your data
-analysis}\label{step-3.-prepare-a-defensible-strategy-for-your-data-analysis}
+In a retrospective study, there may be a different sacrifice, but it is
+still important: a \textbf{privacy risk}. You will be looking at
+information about your patients and some of it may be very private:
+information about pregnancy outcomes, about legal and illegal drug use,
+about sexually transmitted diseases.
+
+Even if the information is not that sensitive, you still need to tread
+carefully. It's like you are an uninvited guest in their house and
+you're peeking into their attic, their closets, their refrigerator, and
+their medicine cabinet.
+
+So respect the fact that patients are sacrificing on your behalf and
+treat them well. Show the IRB that if there is some risk associated with
+your research, that you will \textbf{minimize risk} to the greatest
+extent possible. If there is some pain associated with your research,
+you will \textbf{minimize pain} to the greatest extent possible. If you
+are asking your patients to cede choices about therapies, make sure that
+\textbf{both therapies are good}--at least as good as what they might
+get outside of the study. If your patients are sacrificing time, make
+sure that you provide \textbf{compensation for their loss of time}. If
+you are collecting and storing private information, make sure that you
+\textbf{store private information safely and securely}.
+
+Talk about justice
+
+\section{Step 2. Demonstrate the value of your work to your
+patients}\label{step-2.-demonstrate-the-value-of-your-work-to-your-patients}
+
+Your research must provide value either to the patients, to society as a
+whole, or both.
+
+Document the benefits, if any, that you can offer to your patients
+during the study.
+
+An overlooked benefit to patients is the sharing of information that you
+learn during the study. This could be information about the patients
+themselves: things that you learned during all the poking and prodding
+that your research needs demanded. Also share information that you
+learned Giving them a free medical exam is not a benefit. But sharing
+information with them about what the exam reveals could be a benefit.
+
+\section{Step 3 Demonstrate the benefits of your research to
+society.}\label{step-3-demonstrate-the-benefits-of-your-research-to-society.}
+
+Be very careful in studies where there is no direct benefit to the
+patients other than a possible monetary compensation for their time.
+First, make sure that patients know that their participation in the
+study will not provide them with any direct benefits. They might still
+volunteer. There is a sense of altruism in many people. They want to
+help patients that have the same disease that they have, for example.
+
+But when there is no benefit, there will still be personal sacrifices,
+enduing some level of risk, pain, or inconvenience. Demonstrate to them
+that the benefit of your research to society as a whole is worth the
+sacrifices you are asking of them. This leads into the next section,
+demonstrating the value of your research.
+
+\section{Step 2a (Justice)}\label{step-2a-justice}
+
+The principle of justice means that subjects are selected fairly and
+that the risks and benefits of research are distributed equitably.
+Investigators should take precautions not to systematically select
+subjects simply because of the subjects' easy availability, their
+compromised position, or because of racial, sexual, economic, or
+cultural biases in society. Investigators should base inclusion and
+exclusion criteria on those factors that most effectively and soundly
+address the research problem.
+
+\section{Step 2a. Prepare a defensible strategy for your data
+analysis}\label{step-2a.-prepare-a-defensible-strategy-for-your-data-analysis}
 
 Insert text.
 
 \section{The fly in the ointment}\label{the-fly-in-the-ointment-4}
 
-Insert text.
+Studies that don't need IRB approval.
 
 \section{Bibliography}\label{bibliography-7}
 
 Simon SD. Getting IRB approval for your research. PMean blog,
 2002-01-01. Available in
 \href{http://pmean.com/posts/getting-irb-approval/}{html format}.
+
+Nagai H, Nakazawa E, Akira Akabayashi A. The creation of the Belmont
+Report and its effect on ethical principles: a historical study. Monash
+Bioeth Rev.~2022 Nov 10;40(2):157--170. doi:
+\href{https://doi.org/10.1007/s40592-022-00165-5}{10.1007/s40592-022-00165-5}
 
 \bookmarksetup{startatroot}
 
@@ -1146,19 +1575,147 @@ analysis}\label{running-a-descriptive-data-analysis}
 
 This chapter is based on a webpage I wrote in 2001.
 
+Every data analysis should start with a descriptive or exploratory
+analysis. If you have no research hypotheses, then you can stop with
+this. If you do have research hypotheses, the analysis will provide a
+solid foundation for any further statistical analysis.
+
+Here are three steps that seem to work well for many descriptive
+analysis:
+
+\begin{itemize}
+\tightlist
+\item
+  Know your count.
+\item
+  Compute ranges and frequencies.
+\item
+  Examine relationships.
+\end{itemize}
+
+These steps may not be appropriate for every analysis, but they do serve
+as a general guideline. In this presentation, you will see these steps
+applied to data from a breast feeding study, using SPSS software.
+
 \section{Step 1: Know your count}\label{step-1-know-your-count}
 
-Add text.
+You need to get a feel for how much data you have. This includes the
+number of subjects in your study; and the number of data values that are
+missing. When you have a count of the number of subjects in your study,
+keep that in mind when you examine any statistical procedures. If the
+total sample size in any of these procedures is less than your count,
+you may have problems with an undetected missing value.
+
+This seems like a simple thing, but often there are subtle details that
+you can't ignore.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{table\_10\_01}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+   0.17   21.00   28.00   30.40   39.00   71.00     557 
+\end{verbatim}
+
+Pay very special attention to counts when you are dealing with clusters
+or repeated measurements. An example of clusters would be when you
+randomly select families of subjects. For this type of study, you should
+note both the number of families in the study and the number of family
+members in the study. An example of repeated measurements would be when
+you examine a patient several times. For this type of study, note both
+the total number of patients and the total number of exams.
 
 \section{Step 2: Compute ranges and
 frequencies}\label{step-2-compute-ranges-and-frequencies}
 
-Add text.
+Compute ranges and frequencies
+
+You should know what the maximum and minimum values are for all the
+important variables in your data set. If any of these are surprising,
+you should investigate. You should also know how many observations fall
+into each level of any important categorical variables.
+
+Our outcome measure, the age when breast feeding was stopped is a
+continuous variable. Here is a table of statistics for this variable,
+including the minimum and maximum variables.
+
+height=``154''\}
+
+At first glance, the maximum value (34 weeks) seems a bit large (the
+study followed infants for only 24 weeks after discharge). But when I
+talked to the nurses involved, they explained that the length of breast
+feeding included the time the infants were in the hospital.
+
+Also notice that the sample size for this table (82) is less than the
+total number of data points. This serves as a reminder that some of the
+data are missing for the age when breastfeeding was stopped
+
+Other tables (not shown) tell us that the birth weights ranged from 1
+kilogram to 2.4 kilograms and the gestational age from 26 to 36 weeks.
+These are reasonable values for a population of pre-term infants. The
+youngest and oldest mothers are 16 and 44 years old respectively, which
+is also quite reasonable.
+
+Race/ethnicity is a categorical variable. Here is a table for
+frequencies for this variable.
+
+This table shows that the patient population is almost exclusively
+white. Not only is this valuable for writing up the description of the
+patient population in your research paper, it also indicates that any
+attempt to account for race in later models is probably a waste of time.
 
 \section{Step 3: Examine relationships using crosstabs, boxplots, and/or
 scatterplots}\label{step-3-examine-relationships-using-crosstabs-boxplots-andor-scatterplots}
 
-Add text.
+ou should have a general idea of how one variable changes as another one
+changes. For two categorical variables, we can examine this using
+crosstabs. For two continuous variables, we can examine this using a
+scatterplot. For a relationship between a continuous and a categorical
+variable, we can use boxplots.
+
+The following is a crosstabulation of feeding type versus delivery type.
+Notice that I have placed feeding type as the rows of the table.
+
+height=``202''\}
+
+Sometimes these tables are easier to interpret with percentages. I
+selected the row percentages option to get the following table.
+
+We can see that there was a roughly 50-50 change for a C-section birth
+to find itself in the treatment or control group. In the vaginal birhts,
+however, there was a slightly greater tendency to be found in the
+control group. This is an imbalance which might cause problems with
+interpretation of the results.
+
+Does delivery type also influence duration of breast feeding? The
+following box plot shows that c-section births tend to have longer
+durations than vaginal births, a somewhat surprising finding. Because
+delivery type is related to both feeding type and duration of breast
+feeding, we should be sure to examine delivery type as a potential
+confounding variable in any analysis.
+
+height=``256''\}
+
+The mother's age is an important factor in any breast feeding study.
+Here is a boxplot comparing ages in the two feeding groups.
+
+height=``256''\}
+
+We see that the NG tube group has older mothers than the bottle group.
+Further statistical analysis shows that the average age is 29 in the NG
+tube group and 25 in the bottle group, a difference of 4 years.
+
+We also should examine the relationship between mother's age and
+duration of breast feeding. The following scatterplot shows a slight
+tendency for older mothers to breast feed longer.
+
+height=``256''\}
+
+As with delivery type, we we should be careful to adjust for mother's
+age in any comparison of the two feeding groups.
 
 \section{The fly in the ointment: ordinal
 data}\label{the-fly-in-the-ointment-ordinal-data}
@@ -1628,7 +2185,7 @@ Add text.
 Simon SD. Steps in a typical ANOVA model. PMean blog, 2003-06-20.
 Available in \href{http://pmean.com/posts/steps-in-anova/}{html format}.
 
-\subsubsection{Dear Professor Mean,}\label{dear-professor-mean}
+Dear Professor Mean,
 
 I wanted to compare two groups in my research, those who completed every
 test battery, and those who completed only some of them. I ran ANOVAs on
@@ -1636,7 +2193,7 @@ age, iq, adhd score, and so forth. My professor says that I should have
 used a t-test instead. Why can't I use ANOVA. Isn't ANOVA better than a
 t-test? --Angry Anastasia*
 
-\subsubsection{Dear Anastasia}\label{dear-anastasia}
+Dear Anastasia
 
 When your grouping variable has two levels, the t-test and ANOVA are
 {[}identical{]}{[}hun1{]}. It's sort of like arguing over whether to buy
@@ -1654,152 +2211,6 @@ are.
 
 If you take the t-statistic in the t-test and square it, you get the
 F-statistic in ANOVA.
-
-Here's how you would run a t-test in SPSS. First, select ANALYZE
-\textbar{} COMPARE MEANS \textbar{} INDEPENDENT SAMPLES T-TEST from the
-menu.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.56.gif}}
-
-In the dialog box, place the outcome variable in the TEST VARIABLE(S)
-field and the categorical variable in the GROUPING VARIABLE field. You
-then define what the two group levels are by clicking on the dialog box.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.57.gif}}
-
-In this example, the groups are represented by the strings ``Control''
-and ``Treatmen''. Click on the CONTINUE button and then the OK button of
-the previous dialog box.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.58.gif}}
-
-The output from SPSS starts out nicely enough. SPSS tells you that the
-control group has 44 patients, a mean of 13.32, a standard deviation of
-9.981, and a standard error (standard deviation divided by the square
-root of the sample size) of 1.505. The treatment group has fewer
-patients, 38, and the mean is much larger. The standard deviation and
-standard error for the treatment group are roughly the same as the
-controls.
-
-Unfortunately, the second table in SPSS is so wide that it is hard to
-display well on your computer screen or in the web page. I split the
-second table into four pieces.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.59.gif}}
-
-SPSS provides two different versions of the t-test. The first row,
-labeled ``Equal variances assumed,'' gives the traditional t-test, which
-uses a pooled estimate of variance. The second row, labeled ``Equal
-variances not assumed,'' gives an alternative version that uses a
-Satterthwaite approximation. I feel that presenting two versions of the
-same test is needlessly confusing, but unfortunately, SPSS does not give
-you a way to turn one or the other.
-
-As a general rule, I encourage people to use the traditional t-test
-(Equal variances assumed row) unless you have a strong a priori reason
-to believe that the two groups have markedly different variances. Other
-people will recommend that you choose the Satterthwaite approximation
-(Equal variances not assumed row) because that test requires fewer
-assumptions. A third group of people will run a statistical test and
-then choose the row based on that statistical test.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.60.gif}}
-
-The second part of this table shows Levene's test for equality of
-variances. I dislike Levene's test for a variety of reasons, and it
-turns out that you can safely ignore this part of the table. If you
-belong to that third camp of people described above, then you would
-choose the Equal Variances Assumed row when Levene's test was not
-statistically significant, and the Equal Variances Not Assumed row when
-Levene's test was statistically significant. I dislike this approach,
-because it is the magnitude of the deviation from equality rather than
-the statistical significance of the deviation from equality that is
-important.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.61.gif}}
-
-The third part of the table gives the t-test. I would usually select the
-t-test in the first row, but notice here that there is very little
-difference in the t-statistics, and the p-values are identical. Since
-the p-value is small, we would conclude that there is a statistically
-significant difference between the treatment and control groups in
-average duration of breast feeding.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.62.gif}}
-
-The final portion of the table provide the mean difference, the standard
-error for this difference and the confidence interval. SPSS computes the
-mean difference as Group 1 - Group 2. In this case, this means the
-control group minus the treatment group. If you prefer to compute the
-difference as Group 2 - Group 1, then simply negate and reverse the
-confidence limits. This would make the mean difference +7.050 and the
-95\% confidence interval would be 2.788 to 11.312.
-
-Since the 95\% confidence interval excludes the value of zero, we would
-conclude again that there is a statistically significant difference
-between the treatment and control groups. Furthermore, this difference
-is large--at least 2.8 weeks, even after allowing for sampling error.
-
-Now let's compute the same statistic using an ANOVA model. Select
-ANALYZE \textbar{} GENERAL LINEAR MODEL \textbar{} UNIVARIATE from the
-SPSS menu.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.63.gif}}
-
-Be sure to click on the OPTIONS button.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.64.gif}}
-
-The output appears in several nicely formatted tables.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.65.gif}}
-
-Next
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.66.gif}}
-
-Then
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.67.gif}}
-
-Finally,
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.68.gif}}
-
-The situation changes, however, when you have three or more groups. Here
-is some data on critical flicker frequency measured on nineteen people.
-According to the web page where I got this data
-
-An individual's critical flicker frequency is the highestfrequency at
-which the flicker in a flickering light source can be detected. At
-frequencies above the critical frequency, the light source appears to be
-continuous even though it is actually flickering. --{[}Description taken
-from the OzDASL website{]}{[}ozd1{]}
-
-In this data set, the eye color was recorded along with the critical
-flicker frequency. Here is a boxplot of the data.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.21.gif}}
-
-Notice that brown eyes tend to have the low flicker frequency and blue
-eyes tend to have high flicker. Here are the means and standard
-deviations for the three groups.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.32.gif}}
-
-It looks like there is a large difference between these three groups,
-but could this be caused by sampling error? To answer this question, you
-have to compute how much variation there is among these three means and
-compare that to variation within each group.
-
-Variation within groups is often called within subject variation or
-error variation and is denoted by SS\textsubscript{within} or SSW.
-Another abbreviation commonly used is SSE, with the E standing for
-Error.
-
-Within subject variation is a measure of the deviation of each
-individual data point from the mean for each group. The figure below
-shows these deviations for the flicker data set.
 
 \pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.within.ss.gif}}
 
@@ -1922,31 +2333,7 @@ ANOVA table is
 
 \pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.13.gif}}
 
-Here is how SPSS displays the ANOVA table. SPSS provides additional
-information in the first, second, and fifth rows of this table, which
-really isn't too important for most situations. The third, fourth, and
-sixth rows of the SPSS table represent what is traditionally reported.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.33.gif}}
-
-For this table, the F ratio is 4.802 (remember that we are ignoring the
-first two rows of the ANOVA table). This is a large value, and the
-p-value is 0.023, which is small and statistically significant.
-Therefore, we would conclude that there is indeed a difference among the
-three eye colors in the average critical flicker frequency.
-
-Notice the R Squared value listed at the bottom of this table which
-matches the value that we calculated above. Adjusted R Squared is
-similar measure to R Squared with an adjustment based on the degrees of
-freedom in the model. The adjustment provides a bit of discouragement
-from using overly complex models, but selecting between models with
-differing levels of complexity is Adjusted R Squared provides a moderate
-penalty for overly complex models. This is good, but perhaps the penalty
-for complexity needs to be stiffened. Selecting among different ANOVA
-models is quite challenging.
-
-\subsubsection{Estimating mean
-differences}\label{estimating-mean-differences}
+Estimating mean differences
 
 Once you have established the statistical significance, you should
 examine the size of the differences between the group means. To do this
@@ -1956,98 +2343,8 @@ An indicator variable has two possible values, 1 and 0, representing the
 presence or absence of some value. Indicator variables are very useful
 for understanding how categorical variables behave.
 
-In the flicker data set, there are three possible indicator variables.
-You can indicate the presence of absence of brown eyes, of green eyes,
-or of blue eyes. Here's how you would create an indicator variable for
-brown eyes. First, select TRANSFORM \textbar{} COMPUTE from the SPSS
-menu. A dialog box like the one shown below will appear.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.14.gif}}
-
-The numeric expression (Colour=``Brown'') runs a test on each row of the
-data. When the test is true, a value of 1 is computed and when the test
-is false, a value of 0 is computed. You create indicator variables for
-green and blue by changing the numeric expression to (Colour=``Green'')
-or (Colour=``Blue'').
-
-Be careful with this approach if you have any missing values for Colour.
-
-Another approach that works well for creating indicator variables is to
-select TRANSFORM \textbar{} RECODE \textbar{} INTO DIFFERENT VARIABLES
-from the SPSS menu.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.15.gif}}
-
-Put the name of the indicator variable in the OUTPUT VARIABLE window and
-click on the CHANGE button. Then click on the OLD AND NEW VALUES button.
-This brings up another dialog box.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.16.gif}}
-
-Designate the category of interest in the OLD VALUE field and use 1 in
-the NEW VALUE field. Then select the SYSTEM OR USER MISSING option
-button on the left side and the SYSTEM MISSING option button on the
-right side. Finally, select the ALL OTHER VALUES option button on the
-left side and use 0 in the NEW VALUE field. When you are finished, the
-dialog box should look like this:
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.17.gif}}
-
-Click on the CONTINUE button and then the OK button.
-
-Although it is possible to create three different indicator variables
-for the three different eye colors, it turns out that only two
-indicators are really needed. Let's create a second indicator for green
-eyes, but leave out (for now) the indicator for blue eyes. Here's what
-your data set looks like after you create these two indicator variables.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.18.gif}}
-
-To estimate differences in means, use the two indicator variables as
-covariates in a general linear model.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.19.gif}}
-
-Normally, you would reserve the covariate field for continuous
-variables, but it turns out that indicator variables also work well
-here. Be sure to click on the OPTIONS button and select DESCRIPTIVE
-STATISTICS and PARAMETER ESTIMATES in the dialog box that opens.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.34.gif}}
-
-The interpretation of this table is interesting. The intercept equals
-the average flicker for blue eyes. The slope for the indicator for brown
-eyes equals the average difference between brown and blue (-2.579 =
-25.588 - 28.167). The slope for the indicator for green eyes equals the
-average difference between green and blue eyes (-1.247 = 26.920 -
-28.167). It turns out that the one indicator out of the three that you
-leave out of the model ends up being the center of attention!
-
-Suppose that we had included indicators for green and blue. The
-parameter estimates change to the following:
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.35.gif}}
-
-The intercept is now the average for brown and the indicators represent
-the average differences of green from brown (1.333 = 26.920 - 25.587)
-and blue from brown (2.579 = 28.167 - 25.587).
-
-When you run an ANOVA model, you have to decide to leave one of the
-indicator variables out. The category for that indicator becomes the
-reference level, and all comparisons will be made with respect to this
-reference level.
-
 The choice of reference level is not always obvious. If one of the
 categories represents a control group, then this is a logical choice.
-
-If you include the variable ``Colour'' as a fixed factor, what does SPSS
-do? It turns out that SPSS will choose the largest value as the
-reference level. With strings, the largest value is the one that appears
-last in alphabetical order.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.36.gif}}
-
-\subsubsection{Confidence interval}\label{confidence-interval}
 
 The table of parameter estimates provides simple confidence intervals
 for the mean differences, but there are two problems with this. First,
@@ -2061,28 +2358,12 @@ confidence level across all the intervals will be less than 95\%. If
 each interval has a 5\% chance of being wrong, then if you compute
 multiple intervals, you will accumulate a greater chance for error.
 
-There are several modifications for these confidence intervals that try
-to insure that the overall confidence level remains at 95\%. Click on
-the POST HOC button in the general linear models dialog box to see what
-your options are.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.37.gif}}
-
 In this example, the TUKEY option was chosen. Tukey works well when you
 are interested in examining differences between all possible pairs of
 means. If you wish instead to compare each group to a control group,
 then the DUNNETT option works well. Just make sure that your control
 group is either the last (that is, largest) value or the first
 (smallest) value.
-
-Here is part of the output.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.38.gif}}
-
-There are six rows in this table, but half of them are simply reversals.
-For example, the confidence interval for Brown - Blue is (-4.735,
-0.423), but this is just the reversal of the confidence interval for
-Blue - Brown (-0.423, 4.735) just two rows above it.
 
 At first glance, you may notice an apparent contradiction in these
 confidence intervals. There is no statistically significant difference
@@ -2100,10 +2381,6 @@ is about 2.6, which is beyond the limits of sampling error.
 One way to think of this is that the confidence intervals are measuring
 closeness rather than equality. Just because Blue is close to Green and
 Green is close to Brown does not imply that Blue is close to Brown.
-
-SPSS also produces a list of homogenous subsets.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.39.gif}}
 
 This list shows groups of means which would close enough together to be
 considered within the range of sampling error. This list recpas the
@@ -2150,15 +2427,9 @@ if you knew the value for goggles. Swim times are 0.79 minutes less if
 goggles are on (18.93 = 19.72 - 0.79) and 0.79 minutes more if the
 goggles are off (20.51 = 19.72 + 0.79). Notice that the improvement in
 prediction is very modest. You can quantify the improvement as
-SS(goggles) = 24 * 0.79\^{}2 = 14.98. The ANOVA table in SPSS (see
-below) produces a slightly smaller value, 14.90, because the
-calculations above have a bit of rounding error.
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.40.gif}}
-
-Notice that there is a lot of room for improvement. Total variation is
-193.76, so a model with goggles in it accounts for only 14.90 / 193.76 =
-7.7\% =of the variation.
+SS(goggles) = 24 * 0.79\^{}2 = 14.98. Notice that there is a lot of room
+for improvement. Total variation is 193.76, so a model with goggles in
+it accounts for only 14.90 / 193.76 = 7.7\% =of the variation.
 
 How much better would the prediction be if we also accounted for the
 second factor, flippers?
@@ -2244,10 +2515,6 @@ This measures the effect of a factor above and beyond all the other
 factors in the model. Partial SS answers the question, how much
 variation does this factor account for after variation for all the other
 factors have been removed.
-
-Here's an example of partial SS calculations:
-
-\pandocbounded{\includegraphics[keepaspectratio]{index_files/mediabag/anova.49.gif}}
 
 A two factor model without goggles accounts for 169.97 units of
 variation. A model with all three factors accounts for 184.87 units of
@@ -2428,22 +2695,349 @@ overview}\label{running-a-systematic-overview}
 
 This chapter is based on a webpage I wrote in 2016.
 
+If you are designing a systematic overview, you should talk to a
+statistician early in the process. There are lots of little things that
+you can do to make your research more rigorous. Here is a broad overview
+of these issues.
+
+First things first, you should talk to a medical librarian. A librarian
+can help you in a lot of ways above and beyond what a statistician can
+help you with. I'm going to focus on the statistical issues associated
+with a systematic overview, but will also comment where appropriate on
+issues that the librarian can help you with.
+
+Make sure that you have the right medical experts working with you as
+well. There's a famous quote ``the glitter of the t-table distracts from
+the inadequacy of the fare.'' Don't get so focused on the statistical
+methods that you lose sight of the practical scientific/medical
+questions that you are interested in.
+
+You may have seen the term meta-analysis instead of systematic overview.
+These terms are used interchangeably, which is not surprising because
+they are so similar. There is a technical distinction, however.
+Meta-analysis is the statistical combination of quantitative information
+from multiple research studies. A systematic overview is a rigorous
+review of the peer-reviewed literature. You must have a systematic
+overview in order to run a meta-analysis. But a systematic overview will
+not always lead to a quantitative combination of information.
+
+The word ``systematic'' in systematic overview is not there by accident.
+The systematic overview is intended to be a reproducible form of
+research, so you need to prepare a research protocol that describes all
+of the steps that you plan to take. In many ways, the protocol for a
+systematic overview resembles the protocol for a prospective clinical
+trial. In particular, the research papers in your systematic overview
+are like the patients in a clinical trial, except that you don't have to
+read an informed consent statement to a research paper.
+
 \section{Step 1: Write a protocol}\label{step-1-write-a-protocol}
 
-Look for interactions
+First, define in clear and unambiguous terms what types of research
+studies you are looking for in your systematic overview. These are like
+the inclusion and exclusion criteria that you see in a prospective
+clinical trial. Tread cautiously here. Cast your net too widely and you
+are likely to have difficulty with heterogeneity, the statistical mixing
+of apples and oranges. But a little bit of heterogeneity is actually a
+benefit. If you study an intervention across a wide range of
+implementations, a wide range of patient populations, and a wide range
+of research designs, and the results are reasonably consistent, you have
+found evidence of a robust intervention that works consistently no
+matter what.
+
+If you are thinking about inclusion and exclusion criteria for research
+studies, you might start first by considering the type of intervention
+or exposure. Make sure that you define your boundaries clearly. You may,
+for example, be interested in weight loss programs. Would you want to
+include programs that are dietary only, or is some combination of diet
+and exercise okay? How about weight loss programs that include some type
+of drug or some type of surgery? You need to think in terms of both
+inclusions and exclusions.
+
+You may also want to place restrictions on the types of patients that
+are being studied. Do you want to look only at moderately ill patients,
+only at severely ill patients, or any combination? Do you want to limit
+the ages of the patients being studied? Do you want to restrict the
+geographical boundaries (e.g., studies in the United States only)? Do
+you want to limit where patients receive their treatments (e.g.,
+outpatient only)?
+
+Think about how far back you want to go. Do you want studies only in the
+past decade or would earlier studies be okay?
+
+Finally, think about any restrictions that you might place on the
+research design? Do you want only blinded studies, only randomized
+studies, only prospective studies? Do you care if the researchers used a
+surrogate outcome? Do you want to look only at a certain duration of
+follow-up time (e.g., no short term studies)?
+
+You may decide on other exclusions as well. Remember that you want the
+systematic overview to be reproducible, so define your inclusion and
+exclusion criteria in sufficient detail that another reasonably
+intelligent person would end up picking the same studies that you did.
 
 \section{Step 2: Collect references}\label{step-2-collect-references}
 
-Add text.
+As you collect your references, you need to think about
+
+One of the biggest and most talked about issues in systematic overview
+is publication bias. Research studies are defined by ``findability''
+along a continuum from easy-to-find to hard-to-find to
+almost-impossible-to-find.
+
+An example of an easy-to-find study is one published in a peer-reviewed
+journal that is indexed in PubMed (the National library of Medicine's
+searchable database of medical publications). An example of a
+difficult-to-find study is one that was presented at a research
+conference, but never published in a peer-reviewed journal. An example
+of a next-to-impossible-to-find study is one that was completed but the
+research team never disseminated the results in any forum.
+
+There is a lot of empirical evidence that results of studies vary across
+the findability spectrum. In 1991, researchers reviewed studies approved
+by the Central Oxford Research Ethics Committee from 1984 to 1987. They
+found that of the 107 studies that were published and presented, 68\%
+showed statistically significant results. In the 31 studies that were
+published only, this proportion dropped to 65\%. It dropped further to
+55\% among the 55 studies that were presented only. The bottom fell out
+in the studies that were neither published nor presented. Only 23 of
+these 78 studies (29\%) showed statistically significant results.
+
+The direction seen in this setting has been replicated in many other
+studies. Easier-to-find studies are more likely to show positive results
+compared to harder-to-find studies across several different dimensions
+of the findability spectrum.
+
+So you can't do a lazy search. If you do, your results are more likely
+to over-estimate the effect of your treatment or intervention.
+
+You could try to adjust for publication after-the-fact, but this is
+controversial at best and not as effective as trying to do a truly
+thorough job of searching. There's a lot of debate in the research
+community about how rigorous you need to make your literature search.
+Most experts recommend that you review several bibliographic databases,
+not just PubMed. There are many unpublished research studies, and you
+need to identify how you will try to find these studies as well.
+
+This is where a librarian can help. The inventors of the Dewey Decimal
+System are experts at finding things. A librarian can help you design a
+reasonably comprehensive literature search strategy. One factor that you
+may overlook, if you don't consult with a librarian first, is how to
+save your search strategy. A saved search strategy ensures the
+reproducibility of your work and also allows you to refine your search
+strategy as needed.
+
+There are sensitive searches and specific searches and you need to
+balance these appropriately. A sensitive search is one that, if a study
+is out there, your search is likely to find it. You get a more sensitive
+search by looking at multiple bibliographic databases, hand searching
+selected journals, sending out requests to prominent researchers in this
+area, and reviewing clinical trial registries. You also improve
+sensitivity by including a wide range synonyms and using MeSH terms in
+your search. How much effort do you want to put in here? That's a tough
+call. A sensitive search does reduce the risk of bias in your systematic
+overview. There's a fair amount of empirical data to support the notion
+your systematic overview will be overly optimistic if you leave out
+papers that are harder to find: because they didn't make it into a
+peer-reviewed study, because they were published in a journal not
+indexed by the major databases, because they were written in a language
+other than English, and so forth. So your efforts to improve sensitivity
+will pay off in producing a systematic overview that is more
+authoritative.
+
+But too much of this might be overkill. There's a saying that the good
+is the enemy of the great and I tend to fall on the side of the good
+rather than the great. The effort you spend producing an ever more
+exquisitely sensitive search is effort that could have been spent
+producing a second or even a third good systematic overview.
+
+The particular topic you want to research may be an important
+consideration here. Certain types of therapies, such as complementary
+and alternative medicine are likely to have lots of research in obscure
+journals and a lot of research that was conducted but never published.
+So for an area like this, improving your sensitivity may be really
+important.
+
+The flip side of the coin is a specific search. A specific search does
+not produce a lot of false positives: papers that don't really meet your
+inclusion criteria. It's nearly impossible to produce a highly specific
+search unless you are willing to live with mediocre sensitivity. So get
+used to the fact that you'll be reviewing a lot more papers than the
+ones that meet your inclusion and exclusion criteria. Your librarian can
+help some here. In particular, if you are looking for certain factors
+associated with the research design, such as randomized studies only,
+there are some filters that have been tested and shown to work
+reasonably well.
+
+Because you aren't likely to get a highly specific search, it's okay to
+screen some studies out, based just on the abstract. The abstract is
+often a highly imperfect summary of a research study, but for the
+purposes of deciding which studies obviously need to be excluded, the
+abstract does a pretty good job. Keep two things in mind, though. First,
+if the paper does not have an abstract, you have to read the entire
+paper. Second, if there is any uncertainty in whether a paper meets your
+inclusion criteria based just on the abstract, you have to read the full
+paper.
+
+Keep track of the number of papers that you have identified and the
+number which were excluded based just on a review of the abstract.
+
+Now for the papers that didn't obviously get excluded based just on the
+abstract, you need to get some help. First, you'll need to translate any
+papers not written in English. More importantly, you need to have a
+second person read these papers independently from you. Your goal is
+reproducibility and one of the best ways to establish reproducibility is
+to demonstrate that two independent reviewers both came to the same
+conclusions about whether a paper should be included or excluded. Track
+the number of papers that you and your friend disagreed on. You can
+resolve this disagreement through the use of a third party to adjudicate
+the dispute. If the number of disagreements is too high, then rethink
+your inclusion and exclusion criteria and write them with more
+precision.
+
+All along the way, you have to make sure that a study is not
+double-counted. Some duplicates come because you used multiple
+bibliographic databases, and these are not too hard to find and remove.
+The bigger problem is when researchers like a study so much that they
+publish it several times in several different locations. There are
+sometimes legitimate reasons for this: one paper looks at the primary
+outcomes and another looks at the secondary outcomes. One paper might
+look at the short term results and a paper on the long term results
+appears later. Sometimes a paper appears originally in the native
+language and then gets republished in an English language journal. In a
+multi-center study, one paper might focus on the summary across all
+centers and another might look at a single center because that center
+conducted additional research and collected additional data above and
+beyond what the other centers did. When the reasons for multiple
+publications are legitimate, the authors will normally cite the related
+papers.
+
+What is more worrisome is covert duplicate publications, where
+researchers publish their research results twice without letting anyone
+know. This might be an effort to pad someone's resume, but it represents
+an abuse of the free reviews provided by the editors and peer reviewers.
+Tracking covert duplicate publications is not easy. Sometimes (but not
+always) you can deduce this by looking at the author lists, or reviewing
+some of the details of the studies.
+
+If you end up counting some of the studies twice, you are likely to
+produce an overly optimistic bias, because the studies with very
+striking results are more likely to have duplicate publications.
 
 \section{Step 3: Extract information}\label{step-3-extract-information}
 
-Add text.
+Now that you have all the papers in hand that satisfy your inclusion and
+exclusion criteria, you need to build a database from these papers.
+Recruit your friend again here, because the process of pulling data from
+research papers is not as clear and unambiguous as you might think. So
+both you and your friend read the paper independently and fill your
+database independently. If you can demonstrate that you and your friend
+produce pretty much the same data, then you have established that the
+systematic overview is reproducible. Get a third party to adjudicate the
+few differences that you do have.
+
+If you disagree a lot, then you have to start over again with more
+precise definitions of what you want. This will really test your
+friendship and you might want to spring for a fancy dinner after all the
+work is done.
+
+So what do you put in your database? First, you need information about
+the studies themselves. In particular, you want information on the
+interventions, the patients being studied, and the type of research
+design. Focus on information from the studies that are likely to be
+sources of heterogeneity. If your intervention is defined quite broadly,
+for example, then you need to categorize which interventions are
+evaluated in which studies.
+
+Many systematic overviews use quality scores (the Jadad score is one
+example), and you and your friend should apply the quality scores
+independently. Does your friend like flowers? Maybe a dozen roses in
+addition to that fancy dinner is in order here.
+
+Your database needs information from all the relevant outcome measures.
+You can decide in advance that you will exclude certain outcome
+measures, of course, but even with these measures excluded, you will
+shocked at how many different ways that researchers can measure the same
+thing.
+
+The two most common types of outcome measures are continuous outcome
+measures and binary outcome measures. For continuous outcome measures,
+you need to record six numbers: the mean, standard deviation, and sample
+size in the treatment group and the mean, standard deviation, and sample
+size in the control group. For binary outcome measures, you need to
+record four numbers: the number of events and the total sample size in
+the treatment group and the number of events and the total sample size
+in the control group. Not every study, of course, will have every
+outcome measure, so develop a missing value code.
+
+There are lots of complications that can occur, and you should consult
+with a statistician about how to handle these cases. For example, some
+studies may not report a standard deviation. Sometimes you can infer
+what the standard deviation would be based on other measures of
+variability, but do this carefully. Some studies might use paired
+patients and some might use unpaired patients. There's no easy way to
+combine paired and unpaired data. Some studies rely on survival curves,
+and for these studies, you should try to get access to the original data
+sets.
+
+If you don't have these complications, the standard meta-analysis is not
+that difficult. Even so, you should probably use specialized software
+for this. The two basic choices for analyses are a fixed effects
+meta-analysis and a random effects meta-analysis. I strongly prefer the
+random effects meta-analysis, because it mirrors closely how you might
+analyze a multi-center clinical trial. (I often joke that meta-analysis
+is a multi-center trial where each center gets to use its own protocol.)
+
+There are measures of heterogeneity that you can use, and funnel plots
+that some researchers like to see as an assessment of publication bias.
+But there is a fair amount of criticism of both measures of
+heterogeneity and funnel plots. When you're writing your protocol, it's
+best to mention that you will calculate these things because you can
+always leave them off in your publication.
+
+The one graph that is universally used is the forest plot and it is
+actually a pretty good plot. One final choice that you will face is with
+binary outcome measures. For these measures, you can combine them as
+odds ratios, or as relative risks, or as absolute risks. This choice is
+trickier than you might think because sometimes the statistic that you
+use for a binary outcome can create heterogeneity. In general, I like to
+combine odds ratios, but there are sometimes good arguments to be made
+for combining relative risks.
+
+The one thing that difference in meta-analysis is that subgroup analysis
+is strongly encouraged. If you're familiar at all with other types of
+research design, the research community is generally hostile towards
+subgroup analysis. There are good reasons for this, but in
+meta-analysis, one of your biggest concerns is heterogeneity. If you can
+show that the results across various subgroups are reasonably
+consistent, then you have established that heterogeneity does not exist
+(or perhaps it exists but does not produce any problems). If you find
+that some subgroups are different than others then you have removed the
+problem of heterogeneity by focusing on smaller, more homogeneous
+subsets. You can also think of subgroup analysis as a type of
+sensitivity analysis. One of the strengths of the forest plot, by the
+way, is that it easily accommodates subgroup analyses. That's probably
+the reason it is so popular.
+
+So what subgroups should you look at. This may depend on what types of
+studies you find, but prior to the study, try to imagine potential
+sources of heterogeneity. Is there a lot of variation in patient
+populations? Are there a broad range of research designs that are
+commonly used? Is the duration of follow-up quite different? Areas where
+you might expect to see heterogeneity are areas that you should plan
+subgroup analyses around. Then allow for the possibility of conducting
+several post hoc subgroup analyses based on what you find during data
+collection.
+
+I wish you the best of luck on your systematic overview. They are a lot
+of work, but they are also very important.
 
 \section{The fly in the ointment: extreme
 heterogeneity}\label{the-fly-in-the-ointment-extreme-heterogeneity}
 
-Add text.
+Assess heterogeneity qualitatively rather than quantitatively. Formal
+tests and measures of heterogeneity have an uncertain endorsement in the
+research community. Besides, in your first meta-analysis, why add more
+complicated mathematics? {[}Elaborate{]}
 
 \section{Bibliography}\label{bibliography-15}
 
@@ -2462,30 +3056,177 @@ Steve Jobs as quoted in
 This chapter is based on a blog post I wrote in 2004 and slides from a
 course I have taught on Clinical Research Methodology.
 
-\section{Step 1: Plan your logistics}\label{step-1-plan-your-logistics}
+A focus group is a meeting with multiple participants, either, where you
+ask questions and get responses from the participants. You can do this
+either live or via videoconferencing. There aren't too many differences.
+In a live focus group, you have an easier time identifying body language
+clues that might indicate trouble. Videoconferencing allows you to
+overcome travel constraints.
 
-Logistics sounds so mundane .
+The recommendations for the number of participants in a focus group is
+six to ten. A few more or a few less is probably fine. You can't do a
+focus group with just one participant, though. A focus group with just
+one participant is more properly defined as an interview.
+
+The group dynamics with multiple participants offers some advantages.
+First, it saves a bit of time compared to interviewing each participant
+separately. Second, the interaction of multiple participants may lead to
+a richer set of responses. One participant may elaborate on a point by
+another, either providing greater support or offering a countervailing
+opinion. Be careful, though, because participants may not raise certain
+issues in a group setting that they might talk about more openly in a
+one-on-one interview. You also have to worry about group dynamics, such
+as the steamroller who dominates the conversation or the wallflower who
+lets everyone else do all the talking.
+
+Then KL, Rankin JA, Ali E. Focus group research: what is it and how can
+it be used? Can J Cardiovasc Nurs. 2014 Winter;24(1):16-22. PMID:
+24660275.
+
+Olawade DB, Omeni D, Gore MN, Hadi M. Enhancing qualitative research
+through virtual focus groups and artificial intelligence: A review. Int
+J Med Inform. 2025 Nov;203:106004. doi: 10.1016/j.ijmedinf.2025.106004.
+Epub 2025 Jun 3. PMID: 40482393.
 
 \section{Step 1: Select a theoretical
 framework}\label{step-1-select-a-theoretical-framework}
 
-phenomenology topic\_10: ``Grounded theory'' topic\_11: ``Ethnography''
-topic\_12: ``The case sudy'' topic\_13: ``Narrative''
+If you are running a focus group, you have implicitly acknowledged your
+use of qualitative research. Good for you. Qualitative data is great
+stuff. It can put right at the doorstep of profound insights; insights
+that quantitative data can only wave at from a distance.
 
-Look for interactions
+Once you are inside the qualitative data camp, your expectations are
+different. One thing you will have to face early is the theoretical
+framework that will guide your work. There are five general frameworks
+for qualitative research. You may decide to use a different framework or
+to not adopt any framework at all. Fine. Go ahead and travel to the beat
+of a different drum. Just recognize that those who might review your
+work will be looking for one these five approaches and will be
+disappointed when they don't see it.
 
-\section{Step 2: Write probe
-questions}\label{step-2-write-probe-questions}
+The five theoretical frameworks are phenomenology, grounded theory,
+ethnography, the case study, and narrative.
 
-Add text.
+These approaches are all inductive (using specific findings to develop
+broader theories). You are trying to develop a framework of
+understanding. Don't go in with a heavy set of expectations. The
+research methodology is adaptive. How you collect information changes
+all along the way. This sounds subjective, but the qualitative data camp
+believes that you become more objective when you put aside your
+pre-conceived notions and assumptions and adapt your research approach
+during the study using the information that you get along the way.
 
-\section{Step 3: Revise your questions as you learn from each focus
-group}\label{step-3-revise-your-questions-as-you-learn-from-each-focus-group}
+Here is a brief description of the five frameworks.
 
-Add text.
+\textbf{Phenomenology}. Phenomenology is the study of phenomenons.
+That's not a very helpful definition. Let me try again. A ``phenomenon''
+is an event that you observe. Your goal in phenomenology is to find how
+different people place their own meaning on this event.
 
-\section{The fly in the ointment:uneven
-participation}\label{the-fly-in-the-ointmentuneven-participation}
+\textbf{Grounded theory}. In grounded theory, you develop a new theory
+through the personal experiences of individuals. These experiences are
+primary: your theory is grounded in the data you collect and you need to
+put aside any existing theoretical beliefs.
+
+\textbf{Ethnography}. Derived originally from the fields of Sociology
+and Anthropology, ethnography has expanded into many different aspects
+of health care. It is the study of a group of people who share the same
+culture. Many resources on ethnography stressed the improtance of
+observation rather than interviewing, but this is still a valid
+framework for a focus group.
+
+\textbf{Case study}. The case study is an in-depth examination of a
+case. It is not clear, to me anyway, what the difference is between a
+case and a phenomenon. The difference appears to be emphasis. In
+phenomenology, you want to understand perceptions about a phenomenon and
+wish to develop insights that can be generalized. In a case study, the
+emphasis is on understanding the particular case without any effort at
+generalization. The case is defined narrowly with respect to time,
+location, demographics, or other factors and tries to understand the
+unusual or the outlier rather than the typical or average.
+
+The case study is not the same as a case report. The case report
+typically uses a factual reporting (mostly quantitative) of an unusual
+occurrence for a single patient.
+
+\textbf{Narrative}. When I think of narrative, I think of the word
+``story.'' A narrative is a detailed account of an event placed in a
+structure and eveloped from a variety of perspectives. The structure
+could be chronology, stating with ``once upon a time'' and ending with
+``lived happily ever after''. It might, however be organized by themes.
+
+https://measuringu.com/qual-methods/
+
+An alternative:
+
+\begin{itemize}
+\tightlist
+\item
+  Content analysis
+\item
+  Thematic analysis
+\item
+  Narrative analysis
+\item
+  Grounded theory analysis
+\item
+  Discourse analysis
+\end{itemize}
+
+https://getthematic.com/insights/methods-of-qualitative-data-analysis
+
+https://contentsquare.com/guides/qualitative-data-analysis/methods/
+
+\section{Step 2: Set the stage}\label{step-2-set-the-stage}
+
+You have to have the right environment for a focus group. This can vary,
+but here are some common recommendations.
+
+First, get two people. You can do this by yourself, but I don't
+recommend it. One person is the facilitator. Your roles as facilitator
+is is to guide the discussion. This means that you intervene if the
+group is getting off target or when you notice a steamroller or a
+wallflower. Doing this while still trying to keep neutral is not that
+easy. You should prepare some brief prompts to redirect the discussion
+or change the focus when needed.
+
+The second person is the facilitator. If you are the facilitator, you
+don't say anything after the introductions. Instead, you run the
+recording device and take notes. The notes serve several purposes.
+First, they serve as a backup if your recording fails. Second, they note
+any significant non-verbal information such as gestures and body
+language. Third, the notes help to identify who is speaking when. A
+seating diagram is helpful for this. Note that not all focus groups
+track who is speaking.
+
+After the session is complete, the two of you sit down in a debriefing
+session. Talk about how things went and how you might approach the next
+focus group. Next focus group? Yes. You did know that you couldn't get
+away with just one focus group. Part of the on-going analysis of focus
+group data is to examine the new themes that emerge with each successive
+focus group.
+
+\section{Step 3: Write and rewrite probe
+questions}\label{step-3-write-and-rewrite-probe-questions}
+
+Your should prepare a set of open-ended questions for the focus group
+including some follow-up prompts such as ``Can you give a specific
+example of when this happened'' or ``What emotions did you feel at the
+time'' or just simply ``Tell me more about this.'' Don't be afraid to go
+off script if a new issue arises. You can comment on a facial expression
+with prompt like ``You smiled/frowned at that last statement. Tell me
+brought that on.''
+
+Most importantly, use the results of one focus group to plan your next
+focus group. Revise your open-ended questions is they fall flat or if
+you need to investigate more deeply an issue that arose. This general
+strategy of letting the data influence the data collection process
+strikes some people as wrong. The qualitative camp, however, encourages
+this process.
+
+\section{The fly in the ointment: uneven
+participation}\label{the-fly-in-the-ointment-uneven-participation}
 
 Add text.
 
@@ -2512,219 +3253,6 @@ Lander, J., Wallraf, S., Pieper, D. et al.~Recruiting participants for
 focus groups in health research: a meta-research study. BMC Med Res
 Methodol 25, 9 (2025). doi: {[}10.1186/s12874-025-02464-x{]}{[}ref17{]}
 https://doi.org/10.1186/s12874-025-02464-x
-
-\section{Material from Clinical Research Methodology
-class}\label{material-from-clinical-research-methodology-class}
-
-\section{\texorpdfstring{\texttt{r\ section}, Running focus
-groups}{r section, Running focus groups}}\label{r-section-running-focus-groups}
-
-\begin{itemize}
-\tightlist
-\item
-  Two person job
-\item
-  Facilitator
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Asks questions
-  \item
-    Guide discussion, but stays neutral
-  \end{itemize}
-\item
-  Recorder
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Runs the tape recorder
-  \item
-    Keeps written notes
-  \end{itemize}
-\item
-  Debriefing session
-\end{itemize}
-
-If you decide to collect data in a focus group, you need a second
-person. You could do it by yourself, but you are asking for trouble. One
-of you takes the role of the facilitator and one takes the role of the
-recorder.
-
-The facilitator asks a series of prepared questions. Your role is to
-guide the discussion while still keeping neutral. This means that you
-intervene if the group is getting off target or if one person is
-dominating the discussion. You should prepare some brief prompts to get
-your participants to elaborate or to draw in other participants.
-
-The recorder doesn't say anything after the introductions, but runs the
-recording device and take notes. The notes serve several purposes.
-First, they serve as a backup if your recording fails. Second, they note
-any significant non-verbal information such as gestures and body
-language. Third, the notes help to identify who is speaking when. A
-seating diagram is helpful for this. Note that not all focus groups
-track who is speaking.
-
-After the session is complete, the two of you sit down and talk about
-how things went.
-
-\section{\texorpdfstring{\texttt{r\ section}, Structure of a focus
-group}{r section, Structure of a focus group}}\label{r-section-structure-of-a-focus-group}
-
-\begin{itemize}
-\tightlist
-\item
-  Six to ten participants
-\item
-  Multiple groups
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Stop when you achieve saturation
-  \end{itemize}
-\item
-  Sixty to ninety minutes
-\item
-  Ten questions, semi-structured interview
-\end{itemize}
-
-The size of a focus group can vary, but I've seen recommendations of six
-to ten people.
-
-What the research community does agree on is that you need to plan for
-more than one group. The consistency of responses from one group to the
-next will tell you if you have reached saturation.
-
-Saturation is evidence that no new themes or ideas have emerged from
-your groups. Almost all assessments of whether saturation has been
-achieved are qualitative and subjective.
-
-The concept of saturation makes it difficult for you to plan a budget,
-but keep in mind that you cannot even begin to assess saturation until
-you've run your second focus group.
-
-Other common recommendations are to keep each session short, 60 to 90
-minutes, and to have no more than ten questions. Your questions should
-follow a semi-structured format, which I'll talk about in the context of
-interviewing.
-
-Getting information from a group is a double-edged sword. Often in a
-focus group, one participant will build on the comments of another and
-provide a perspective that you may have missed in a single person
-interview. At other times, however, one person may stifle the feedback
-from another. A good focus group leader will recognize this and work to
-insure that everyone participates fully. It's easy to say this in
-theory, but in practice, it can be difficult.
-
-\section{\texorpdfstring{\texttt{r\ section},
-Interview}{r section, Interview}}\label{r-section-interview}
-
-\begin{itemize}
-\tightlist
-\item
-  Administration
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Telephone
-  \item
-    Face-to-face
-  \end{itemize}
-\item
-  Format
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Unstructured
-  \item
-    Semi-structured
-  \item
-    Structured
-  \end{itemize}
-\end{itemize}
-
-An interview is direct communication between the researcher and the
-subject. You can set up the interview on the telephone or conduct a
-face-to-face interview. The obvious advantage of a telephone interview
-is that it is fast and does not involve travel of either party.
-
-A face-to-face interview takes more effort, but can sometimes help with
-building a sense of rapport and trust.
-
-Interviews have three formats, unstructured, semi-structured, or
-structured.
-
-In an unstructured interview, you go in with a general idea of what to
-discuss, but no specific questions. The general direction of the
-interview will determine what questions to ask next. An unstructured
-format is rarely used in research because it makes you work impossible
-to replicate.
-
-A semi-structured interview has a planned structure that includes a list
-of questions to ask. These questions are typically open ended, to allow
-the patient to bring up issues that the researcher may not have been
-aware of. Most semi-structured interviews have a series of probe
-questions that are intended to prompt the research subject to elaborate
-further on a topic of interest.
-
-A structured interview has a fixed set of questions that are asked in a
-consistent order with no major deviations. There are no prompts to get
-your patients to elaborate, but the interviewer can try to clarify any
-ambiguous or clearly invalid responses.
-
-\section{\texorpdfstring{\texttt{r\ section}, Example of structured and
-unstructured
-interviews}{r section, Example of structured and unstructured interviews}}\label{r-section-example-of-structured-and-unstructured-interviews}
-
-\pandocbounded{\includegraphics[keepaspectratio]{chapters/../images/interview-questions.png}}
-
-Here's an example of two interviews. The first is a structured interview
-with four yes/no questions.
-
-``Before you were 17 years of age (Each question had answer choices of
-``Yes'' or ``No)''
-
-a parent or guardian ever do something to you on purpose (for example,
-hit or punch or cut you, or push you down) that made you bleed or gave
-you bruises or scratches.
-
-Did, or that broke bones or teeth?''
-
-Did either of your parents or guardians get so mad at you that they hurt
-you physically?
-
-Did either of your parents or guardians use physical punishment for
-discipline?
-
-The second interview is described as unstructured. I would call it
-semi-structured, but that is a nitpick. The questions were
-
-How do your parents or guardians discipline you?
-
-Do they ever physically hit you?
-
-How do they punish you?
-
-Further probing was done depending on the responses to the questions:
-having been hit, punched, kicked, or otherwise struck or pushed down;
-cut, bruised, made to bleed, scratched, having broken bones, broken
-teeth, or having been hurt physically
-
-The questions in this structured interview are close ended. This is
-quite common, but you can also have a structured interview with open
-ended questions. For the semi-structured or unstructured interview,
-however, the questions must be open ended so that you can probe for more
-information.
-
-The article that these interview questions came from noted that the
-unstructured interview was far more likely to uncover reports of abuse
-than the structured interview.
-
-Image source: Diaz 2017 (see the reading list for full details).
 
 \bookmarksetup{startatroot}
 
@@ -2777,16 +3305,19 @@ You can produce a literature review as a stand-alone paper, but this
 chapter will focus on writing a literature review that is part of a
 larger research paper. In this setting the literature review provides
 the background that any reader needs to know before examining the rest
-of your research. You will summarize the details of your research as in
-a methods section (our next chapter). Keep in mind as you write your
-literature review that it will need to lead in to the next section of
-your paper, the methods section. Writing the methods section is a topic
-for the next chapter.
+of your research. Keep in mind as you write your literature review that
+it will need to lead in to the next section of your paper, the methods
+section. Writing the methods section is a topic for the next chapter.
 
 There is a fairly universal demand that your literature review rely only
 on \textbf{primary sources}. Primary sources are the sources that
 actually produced the findings. Do not, the advice goes, rely on
 secondary sources, sources that synthesize the work of others.
+
+A minor technical point here is that a systematic overview is still a
+primary source, even though it is, strictly speaking, a synthesis. it is
+the non-systematic overviews, such as invited editorials, that are
+considered secondary sources.
 
 The epitome of secondary sources is Wikipedia. I know that a lot of
 people hate Wikipedia. Just for the record, I think that Wikipedia is a
@@ -2890,7 +3421,7 @@ have changed dramatically over time. Do be careful, though. A literature
 review that goes ``First\ldots, Next\ldots, Then\ldots{}'' can sometime
 come across as dull.
 
-Another approach is thematic. identify themese and present all the
+Another approach is thematic. identify themes and present all the
 references that are associated with the first theme, then those
 associated with the second theme, and so forth.
 
@@ -2976,15 +3507,46 @@ addition''. If the study contrasts or contradicts the previous study,
 emphasize this using words like ``in contrast'' or ``on the other
 hand''. This is a little thing, but it does help.
 
-THe final transition should be a summary of your work. All the previous
-references should build to a climax, a climax that asserts how your
-research is the next logical step in the series of references that you
-have summarized.
+THe final transition should be a summary of your upcoming work. All the
+previous references should build to a climax, a climax that asserts how
+your research is the next logical step in the series of references that
+you have summarized.
 
 \section{The fly in the ointment: too many/too few
 references}\label{the-fly-in-the-ointment-too-manytoo-few-references}
 
-Add text.
+You might think that too many references is a problem. Well, maybe. You
+do have a page limit. Even if you don't an excessively long literature
+review makes your whole paper less appealing to read. What should you do
+with too many references?
+
+Organize your references into groups where each reference in that group
+makes pretty much the same point. Select one reference in each group and
+discuss that reference in detail. You want to make sure that the
+literature flows nicely. Leaving out references that create gaps in your
+narrative is bad, but removing redundancies is good.
+
+What should you do if you have too few references, even after an
+exhausting series of searches?
+
+Maybe you're being too fussy. It may not be reasonable to rely on
+studies in different populations. You may be forced to look at studies
+in different countries, different age groups, different race/ethnicity
+groups, to name a few examples. Yes, this may be a difficult
+extrapolation and you should say so. Still a difficult extrapolation can
+still help your readers understand the context in which your research
+fits.
+
+The other possibility is that the too few references is not because of
+your poor searching skills. It is because you can't find something that
+doesn't exist. Make a bold assertion about a knowledge gap. Don't be
+tentative here. Don't say that you couldn't find any randomized
+controlled trials examining X. Instead assert that no randomized
+controlled trials have examined X.
+
+Knowledge gaps make it easier for you to argue why your research is
+important. So a fruitless search, if you trust your searching skills, is
+actually a good thing.
 
 \section{Bibliography}\label{bibliography-17}
 
@@ -3536,6 +4098,8 @@ newsletter, July/August 2012. Available in
 
 \chapter{Summary}\label{summary}
 
+\section{Summary text}\label{summary-text}
+
 In summary, this book has no content whatsoever.
 
 \bookmarksetup{startatroot}
@@ -3545,7 +4109,12 @@ In summary, this book has no content whatsoever.
 
 \markboth{References}{References}
 
-\phantomsection\label{refs}
+\protect\phantomsection\label{refs}
+
+\section*{References}\label{references-1}
+\addcontentsline{toc}{section}{References}
+
+\markright{References}
 
 I'm thinking that maybe it makes more sense to put a bibliography at the
 end of each chapter, but I haven't decided for sure just yet.

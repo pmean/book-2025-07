@@ -2259,9 +2259,9 @@ vertical-align: -.125em;
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(n_total, n), </span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">file=</span><span class="fu">paste0</span>(<span class="fu">Sys.Date</span>(), <span class="st">&quot;.txt&quot;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>There are approximately 28,625 words in the book. I use the word “approximate” because it is easy to count something that isn’t a word. The word counts for individual chapters are</p>
+<p>There are approximately 27,586 words in the book. I use the word “approximate” because it is easy to count something that isn’t a word. The word counts for individual chapters are</p>
 <ul>
-<li>01 Introduction.qmd: 736</li>
+<li>01 Introduction.qmd: 779</li>
 <li>02 Picking a research topic.qmd: 1588</li>
 <li>03 Selecting your research hypothesis.qmd: 556</li>
 <li>04 Selecting your research design.qmd: 162</li>
@@ -2271,17 +2271,17 @@ vertical-align: -.125em;
 <li>08 Obtaining ethical approval for your study.qmd: 147</li>
 <li>09 Setting up your data entry process.qmd: 791</li>
 <li>10 Running a descriptive data analysis.qmd: 1726</li>
-<li>11 Running a linear regression analysis.qmd: 72</li>
+<li>11 Running a linear regression analysis.qmd: 1063</li>
 <li>12 Running a logistic regression analysis.qmd: 2214</li>
 <li>13 Running a multi-factor analysis of variance model.qmd: 106</li>
-<li>14 Running a survival data analysis.qmd: 5900</li>
+<li>14 Running a survival data analysis.qmd: 3858</li>
 <li>15 Running a non-linear regression analysis.qmd: 87</li>
 <li>16 Running a systematic overview.qmd: 72</li>
 <li>17 Running a focus group.qmd: 3237</li>
-<li>18 Writing a literature review.qmd: 1575</li>
+<li>18 Writing a literature review.qmd: 1510</li>
 <li>19 Writing a methods section.qmd: 2359</li>
 <li>20 Writing a results section.qmd: 2486</li>
-<li>21 Writing a discussion section.qmd: 60</li>
+<li>21 Writing a discussion section.qmd: 94</li>
 <li>98 summary.qmd: 1098</li>
 <li>99 references.qmd: 13</li>
 <li>01 Introduction.qmd: 34</li>
@@ -2310,7 +2310,7 @@ vertical-align: -.125em;
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>n_dates <span class="ot">&lt;-</span> <span class="fu">length</span>(progress_files)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> n_dates<span class="sc">:</span>n_dates) {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>n_dates) {</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  delta_counts <span class="ot">&lt;-</span> historical_counts[i<span class="sc">+</span><span class="dv">1</span>] <span class="sc">-</span> historical_counts[i]</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  historical_counts[ , <span class="fu">c</span>(<span class="dv">1</span>, i)] <span class="sc">|&gt;</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bind_cols</span>(<span class="fu">tibble</span>(delta_counts)) <span class="ot">-&gt;</span> improvement</span>
@@ -2318,6 +2318,286 @@ vertical-align: -.125em;
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 25 × 3
+   section                                     `2025-05-26.txt` `2025-08-29.txt`
+   &lt;chr&gt;                                                  &lt;dbl&gt;            &lt;dbl&gt;
+ 1 Entire book                                             7166             2847
+ 2 Preface                                                  303                9
+ 3 01 Introduction.qmd                                     1389              199
+ 4 02 Picking a research topic.qmd                          516               12
+ 5 03 Selecting your research hypothesis.qmd                147                2
+ 6 04 Selecting your research design.qmd                     91               -1
+ 7 05 Selecting your sample size.qmd                       1461              -19
+ 8 06 Developing your pilot study.qmd                       148               -1
+ 9 07 Designing your questionnaire.qmd                       59               -8
+10 08 Obtaining ethical approval for your stu…               65                0
+11 09 Setting up your data entry process.qmd                 74                0
+12 10 Running a descriptive data analysis.qmd                72                0
+13 11 Running a linear regression analysis.qmd             2160              211
+14 12 Running a logistic regression analysis.…               74                0
+15 13 Running a multi-factor analysis of vari…               70                0
+16 14 Running a survival data analysis.qmd                   83                0
+17 15 Running a non-linear regression analysi…               67                0
+18 16 Running a systematic overview.qmd                      63                0
+19 17 Running a focus group.qmd                              68                0
+20 18 Writing a literature review.qmd                        76                0
+21 19 Writing a methods section.qmd                          50                0
+22 20 Writing a results section.qmd                          43             2443
+23 21 Writing a discussion section.qmd                       43                0
+24 98 summary.qmd                                            11                0
+25 99 references.qmd                                         33                0
+# A tibble: 25 × 3
+   section                                     `2025-08-29.txt` `2025-09-05.txt`
+   &lt;chr&gt;                                                  &lt;dbl&gt;            &lt;dbl&gt;
+ 1 Entire book                                            10013             1255
+ 2 Preface                                                  312              105
+ 3 01 Introduction.qmd                                     1588                0
+ 4 02 Picking a research topic.qmd                          528                0
+ 5 03 Selecting your research hypothesis.qmd                149                0
+ 6 04 Selecting your research design.qmd                     90                0
+ 7 05 Selecting your sample size.qmd                       1442                0
+ 8 06 Developing your pilot study.qmd                       147                0
+ 9 07 Designing your questionnaire.qmd                       51                0
+10 08 Obtaining ethical approval for your stu…               65                0
+11 09 Setting up your data entry process.qmd                 74                0
+12 10 Running a descriptive data analysis.qmd                72                0
+13 11 Running a linear regression analysis.qmd             2371                0
+14 12 Running a logistic regression analysis.…               74                0
+15 13 Running a multi-factor analysis of vari…               70                0
+16 14 Running a survival data analysis.qmd                   83                0
+17 15 Running a non-linear regression analysi…               67                0
+18 16 Running a systematic overview.qmd                      63                0
+19 17 Running a focus group.qmd                              68               53
+20 18 Writing a literature review.qmd                        76               32
+21 19 Writing a methods section.qmd                          50             2436
+22 20 Writing a results section.qmd                        2486            -2426
+23 21 Writing a discussion section.qmd                       43             1055
+24 98 summary.qmd                                            11                0
+25 99 references.qmd                                         33                0
+# A tibble: 25 × 3
+   section                                     `2025-09-05.txt` `2025-09-10.txt`
+   &lt;chr&gt;                                                  &lt;dbl&gt;            &lt;dbl&gt;
+ 1 Entire book                                            11268              315
+ 2 Preface                                                  417               64
+ 3 01 Introduction.qmd                                     1588                0
+ 4 02 Picking a research topic.qmd                          528               28
+ 5 03 Selecting your research hypothesis.qmd                149               13
+ 6 04 Selecting your research design.qmd                     90               -6
+ 7 05 Selecting your sample size.qmd                       1442               21
+ 8 06 Developing your pilot study.qmd                       147               12
+ 9 07 Designing your questionnaire.qmd                       51               96
+10 08 Obtaining ethical approval for your stu…               65               16
+11 09 Setting up your data entry process.qmd                 74                6
+12 10 Running a descriptive data analysis.qmd                72                0
+13 11 Running a linear regression analysis.qmd             2371               12
+14 12 Running a logistic regression analysis.…               74               32
+15 13 Running a multi-factor analysis of vari…               70                6
+16 14 Running a survival data analysis.qmd                   83                4
+17 15 Running a non-linear regression analysi…               67                5
+18 16 Running a systematic overview.qmd                      63                6
+19 17 Running a focus group.qmd                             121                0
+20 18 Writing a literature review.qmd                       108                0
+21 19 Writing a methods section.qmd                        2486                0
+22 20 Writing a results section.qmd                          60                0
+23 21 Writing a discussion section.qmd                     1098                0
+24 98 summary.qmd                                            11                0
+25 99 references.qmd                                         33                0
+# A tibble: 25 × 3
+   section                                     `2025-09-10.txt` `2025-10-03.txt`
+   &lt;chr&gt;                                                  &lt;dbl&gt;            &lt;dbl&gt;
+ 1 Entire book                                            11583             1834
+ 2 Preface                                                  481                0
+ 3 01 Introduction.qmd                                     1588                0
+ 4 02 Picking a research topic.qmd                          556                0
+ 5 03 Selecting your research hypothesis.qmd                162                0
+ 6 04 Selecting your research design.qmd                     84                0
+ 7 05 Selecting your sample size.qmd                       1463                0
+ 8 06 Developing your pilot study.qmd                       159                0
+ 9 07 Designing your questionnaire.qmd                      147                0
+10 08 Obtaining ethical approval for your stu…               81                0
+11 09 Setting up your data entry process.qmd                 80              674
+12 10 Running a descriptive data analysis.qmd                72                0
+13 11 Running a linear regression analysis.qmd             2383                0
+14 12 Running a logistic regression analysis.…              106                0
+15 13 Running a multi-factor analysis of vari…               76                0
+16 14 Running a survival data analysis.qmd                   87                0
+17 15 Running a non-linear regression analysi…               72                0
+18 16 Running a systematic overview.qmd                      69                0
+19 17 Running a focus group.qmd                             121             1160
+20 18 Writing a literature review.qmd                       108                0
+21 19 Writing a methods section.qmd                        2486                0
+22 20 Writing a results section.qmd                          60                0
+23 21 Writing a discussion section.qmd                     1098                0
+24 98 summary.qmd                                            11                0
+25 99 references.qmd                                         33                0
+# A tibble: 25 × 3
+   section                                     `2025-10-03.txt` `2025-10-12.txt`
+   &lt;chr&gt;                                                  &lt;dbl&gt;            &lt;dbl&gt;
+ 1 Entire book                                            13417             1029
+ 2 Preface                                                  481               57
+ 3 01 Introduction.qmd                                     1588                0
+ 4 02 Picking a research topic.qmd                          556                0
+ 5 03 Selecting your research hypothesis.qmd                162                0
+ 6 04 Selecting your research design.qmd                     84                0
+ 7 05 Selecting your sample size.qmd                       1463                0
+ 8 06 Developing your pilot study.qmd                       159                0
+ 9 07 Designing your questionnaire.qmd                      147                0
+10 08 Obtaining ethical approval for your stu…               81                0
+11 09 Setting up your data entry process.qmd                754              972
+12 10 Running a descriptive data analysis.qmd                72                0
+13 11 Running a linear regression analysis.qmd             2383                0
+14 12 Running a logistic regression analysis.…              106                0
+15 13 Running a multi-factor analysis of vari…               76                0
+16 14 Running a survival data analysis.qmd                   87                0
+17 15 Running a non-linear regression analysi…               72                0
+18 16 Running a systematic overview.qmd                      69                0
+19 17 Running a focus group.qmd                            1281                0
+20 18 Writing a literature review.qmd                       108                0
+21 19 Writing a methods section.qmd                        2486                0
+22 20 Writing a results section.qmd                          60                0
+23 21 Writing a discussion section.qmd                     1098                0
+24 98 summary.qmd                                            11                0
+25 99 references.qmd                                         33                0
+# A tibble: 25 × 3
+   section                                     `2025-10-12.txt` `2025-12-12.txt`
+   &lt;chr&gt;                                                  &lt;dbl&gt;            &lt;dbl&gt;
+ 1 Entire book                                            14446             6707
+ 2 Preface                                                  538              124
+ 3 01 Introduction.qmd                                     1588                0
+ 4 02 Picking a research topic.qmd                          556                0
+ 5 03 Selecting your research hypothesis.qmd                162                0
+ 6 04 Selecting your research design.qmd                     84                0
+ 7 05 Selecting your sample size.qmd                       1463                0
+ 8 06 Developing your pilot study.qmd                       159                0
+ 9 07 Designing your questionnaire.qmd                      147                0
+10 08 Obtaining ethical approval for your stu…               81                0
+11 09 Setting up your data entry process.qmd               1726                0
+12 10 Running a descriptive data analysis.qmd                72                0
+13 11 Running a linear regression analysis.qmd             2383             -169
+14 12 Running a logistic regression analysis.…              106                0
+15 13 Running a multi-factor analysis of vari…               76             5824
+16 14 Running a survival data analysis.qmd                   87                0
+17 15 Running a non-linear regression analysi…               72                0
+18 16 Running a systematic overview.qmd                      69                0
+19 17 Running a focus group.qmd                            1281                0
+20 18 Writing a literature review.qmd                       108              928
+21 19 Writing a methods section.qmd                        2486                0
+22 20 Writing a results section.qmd                          60                0
+23 21 Writing a discussion section.qmd                     1098                0
+24 98 summary.qmd                                            11                0
+25 99 references.qmd                                         33                0
+# A tibble: 25 × 3
+   section                                     `2025-12-12.txt` `2025-12-15.txt`
+   &lt;chr&gt;                                                  &lt;dbl&gt;            &lt;dbl&gt;
+ 1 Entire book                                            21153              983
+ 2 Preface                                                  662              -38
+ 3 01 Introduction.qmd                                     1588                0
+ 4 02 Picking a research topic.qmd                          556                0
+ 5 03 Selecting your research hypothesis.qmd                162                0
+ 6 04 Selecting your research design.qmd                     84                0
+ 7 05 Selecting your sample size.qmd                       1463                0
+ 8 06 Developing your pilot study.qmd                       159                0
+ 9 07 Designing your questionnaire.qmd                      147                0
+10 08 Obtaining ethical approval for your stu…               81                0
+11 09 Setting up your data entry process.qmd               1726                0
+12 10 Running a descriptive data analysis.qmd                72                0
+13 11 Running a linear regression analysis.qmd             2214                0
+14 12 Running a logistic regression analysis.…              106                0
+15 13 Running a multi-factor analysis of vari…             5900                0
+16 14 Running a survival data analysis.qmd                   87                0
+17 15 Running a non-linear regression analysi…               72                0
+18 16 Running a systematic overview.qmd                      69                0
+19 17 Running a focus group.qmd                            1281                0
+20 18 Writing a literature review.qmd                      1036             1021
+21 19 Writing a methods section.qmd                        2486                0
+22 20 Writing a results section.qmd                          60                0
+23 21 Writing a discussion section.qmd                     1098                0
+24 98 summary.qmd                                            11                0
+25 99 references.qmd                                         33                0
+# A tibble: 25 × 3
+   section                                     `2025-12-15.txt` `2025-12-28.txt`
+   &lt;chr&gt;                                                  &lt;dbl&gt;            &lt;dbl&gt;
+ 1 Entire book                                            22136              351
+ 2 Preface                                                  624               49
+ 3 01 Introduction.qmd                                     1588                0
+ 4 02 Picking a research topic.qmd                          556                0
+ 5 03 Selecting your research hypothesis.qmd                162                0
+ 6 04 Selecting your research design.qmd                     84                0
+ 7 05 Selecting your sample size.qmd                       1463                0
+ 8 06 Developing your pilot study.qmd                       159                0
+ 9 07 Designing your questionnaire.qmd                      147                0
+10 08 Obtaining ethical approval for your stu…               81                0
+11 09 Setting up your data entry process.qmd               1726                0
+12 10 Running a descriptive data analysis.qmd                72                0
+13 11 Running a linear regression analysis.qmd             2214                0
+14 12 Running a logistic regression analysis.…              106                0
+15 13 Running a multi-factor analysis of vari…             5900                0
+16 14 Running a survival data analysis.qmd                   87                0
+17 15 Running a non-linear regression analysi…               72                0
+18 16 Running a systematic overview.qmd                      69                0
+19 17 Running a focus group.qmd                            1281                0
+20 18 Writing a literature review.qmd                      2057              302
+21 19 Writing a methods section.qmd                        2486                0
+22 20 Writing a results section.qmd                          60                0
+23 21 Writing a discussion section.qmd                     1098                0
+24 98 summary.qmd                                            11                0
+25 99 references.qmd                                         33                0
+# A tibble: 25 × 3
+   section                                     `2025-12-28.txt` `2026-03-13.txt`
+   &lt;chr&gt;                                                  &lt;dbl&gt;            &lt;dbl&gt;
+ 1 Entire book                                            22487             3909
+ 2 Preface                                                  673               25
+ 3 01 Introduction.qmd                                     1588                0
+ 4 02 Picking a research topic.qmd                          556                0
+ 5 03 Selecting your research hypothesis.qmd                162                0
+ 6 04 Selecting your research design.qmd                     84                0
+ 7 05 Selecting your sample size.qmd                       1463                7
+ 8 06 Developing your pilot study.qmd                       159                0
+ 9 07 Designing your questionnaire.qmd                      147                0
+10 08 Obtaining ethical approval for your stu…               81              710
+11 09 Setting up your data entry process.qmd               1726                0
+12 10 Running a descriptive data analysis.qmd                72                0
+13 11 Running a linear regression analysis.qmd             2214                0
+14 12 Running a logistic regression analysis.…              106                0
+15 13 Running a multi-factor analysis of vari…             5900                0
+16 14 Running a survival data analysis.qmd                   87                0
+17 15 Running a non-linear regression analysi…               72                0
+18 16 Running a systematic overview.qmd                      69             3167
+19 17 Running a focus group.qmd                            1281                0
+20 18 Writing a literature review.qmd                      2359                0
+21 19 Writing a methods section.qmd                        2486                0
+22 20 Writing a results section.qmd                          60                0
+23 21 Writing a discussion section.qmd                     1098                0
+24 98 summary.qmd                                            11                0
+25 99 references.qmd                                         33                0
+# A tibble: 25 × 3
+   section                                     `2026-03-13.txt` `2026-05-20.txt`
+   &lt;chr&gt;                                                  &lt;dbl&gt;            &lt;dbl&gt;
+ 1 Entire book                                            26396             1363
+ 2 Preface                                                  698               17
+ 3 01 Introduction.qmd                                     1588                0
+ 4 02 Picking a research topic.qmd                          556                0
+ 5 03 Selecting your research hypothesis.qmd                162                0
+ 6 04 Selecting your research design.qmd                     84                0
+ 7 05 Selecting your sample size.qmd                       1470                0
+ 8 06 Developing your pilot study.qmd                       159             1345
+ 9 07 Designing your questionnaire.qmd                      147                0
+10 08 Obtaining ethical approval for your stu…              791                0
+11 09 Setting up your data entry process.qmd               1726                0
+12 10 Running a descriptive data analysis.qmd                72                0
+13 11 Running a linear regression analysis.qmd             2214                0
+14 12 Running a logistic regression analysis.…              106                0
+15 13 Running a multi-factor analysis of vari…             5900                0
+16 14 Running a survival data analysis.qmd                   87                0
+17 15 Running a non-linear regression analysi…               72                0
+18 16 Running a systematic overview.qmd                    3236                1
+19 17 Running a focus group.qmd                            1281                0
+20 18 Writing a literature review.qmd                      2359                0
+21 19 Writing a methods section.qmd                        2486                0
+22 20 Writing a results section.qmd                          60                0
+23 21 Writing a discussion section.qmd                     1098                0
+24 98 summary.qmd                                            11                0
+25 99 references.qmd                                         33                0
+# A tibble: 25 × 3
    section                                     `2026-05-20.txt` `2026-05-21.txt`
    &lt;chr&gt;                                                  &lt;dbl&gt;            &lt;dbl&gt;
  1 Entire book                                            27759              866
@@ -2344,7 +2624,35 @@ vertical-align: -.125em;
 22 20 Writing a results section.qmd                          60                0
 23 21 Writing a discussion section.qmd                     1098                0
 24 98 summary.qmd                                            11                2
-25 99 references.qmd                                         33                1</code></pre>
+25 99 references.qmd                                         33                1
+# A tibble: 25 × 3
+   section                                     `2026-05-21.txt` `2026-05-22.txt`
+   &lt;chr&gt;                                                  &lt;dbl&gt;            &lt;dbl&gt;
+ 1 Entire book                                            28625            -1039
+ 2 Preface                                                  736               43
+ 3 01 Introduction.qmd                                     1588                0
+ 4 02 Picking a research topic.qmd                          556                0
+ 5 03 Selecting your research hypothesis.qmd                162                0
+ 6 04 Selecting your research design.qmd                     84                0
+ 7 05 Selecting your sample size.qmd                       1470                0
+ 8 06 Developing your pilot study.qmd                      2052                0
+ 9 07 Designing your questionnaire.qmd                      147                0
+10 08 Obtaining ethical approval for your stu…              791                0
+11 09 Setting up your data entry process.qmd               1726                0
+12 10 Running a descriptive data analysis.qmd                72              991
+13 11 Running a linear regression analysis.qmd             2214                0
+14 12 Running a logistic regression analysis.…              106                0
+15 13 Running a multi-factor analysis of vari…             5900            -2042
+16 14 Running a survival data analysis.qmd                   87                0
+17 15 Running a non-linear regression analysi…               72                0
+18 16 Running a systematic overview.qmd                    3237                0
+19 17 Running a focus group.qmd                            1575              -65
+20 18 Writing a literature review.qmd                      2359                0
+21 19 Writing a methods section.qmd                        2486                0
+22 20 Writing a results section.qmd                          60               34
+23 21 Writing a discussion section.qmd                     1098                0
+24 98 summary.qmd                                            13                0
+25 99 references.qmd                                         34                0</code></pre>
 </div>
 </div>
 </section>
@@ -2449,12 +2757,13 @@ vertical-align: -.125em;
 - Bibliography, 313
 
 10 Running a descriptive data analysis.qmd
-- Introduction, 24 
-- Step 1: Know your count, 11 
+- Introduction, 56 
+- Step 1: Know your count, 26 
 - Step 2: Compute ranges and frequencies, 19 
-- Step 3: Examine relationships using crosstabs, boxplots, and/or scatterplots, 17 
-- The fly in the ointment: ordinal data, 12 
-- Bibliography, 20
+- Step 3: Examine relationships using crosstabs, boxplots, and/or scatterplots, 342 
+- The fly in the ointment: ordinal data, 286 
+- Altnerative is The fly in the ointment: hierarchical data, 256 
+- Bibliography, 119
 
 11 Running a linear regression analysis.qmd
 - Introduction, 122 
@@ -2475,16 +2784,12 @@ vertical-align: -.125em;
 
 13 Running a multi-factor analysis of variance model.qmd
 - Introduction, 399 
-- Step 1: Plot your data, 734 
-- Step 2: Fit individual models, 531 
-- Step 3: Fit multi-factor models, 553 
-- The fly in the ointment: unbalanced data, 731 
-- Bibliography, 588 ##
-- Dear Professor Mean,, 1702 ##
-- Dear Anastasia, 68 ##
-- Degrees of freedom and mean squares, 31 ##
-- Estimating mean differences, 11 ##
-- Confidence interval, 15 ##
+- Step 1: Plot your data, 718 
+- Step 2: Fit individual models, 501 
+- Step 3: Fit multi-factor models, 895 
+- The fly in the ointment: unbalanced data, 767 
+- Bibliography, 11 ##
+- Degrees of freedom and mean squares, 15 ##
 - Analysis of multiple factors, 12 ##
 - Sequential versus partial SS, 12 ##
 - Analysis of interactions, 575
@@ -2514,18 +2819,12 @@ vertical-align: -.125em;
 - Bibliography, 351
 
 17 Running a focus group.qmd
-- Introduction, 287 
-- Step 1: Plan your logistics, 255 
-- Step 1: Select a theoretical framework, 9 
-- Step 2: Set the stage, 12 
-- `r section`, Structure of a focus group, 156 
-- Step 3: Write and rewrite probe questions, 11 
-- The fly in the ointment: uneven participation, 16 
-- Bibliography, 267 
-- Material from Clinical Research Methodology class, 318 
-- `r section`, Running focus groups, 196 
-- `r section`, Interview, 14 
-- `r section`, Example of structured and unstructured interviews, 101
+- Introduction, 150 
+- Step 1: Select a theoretical framework, 11 
+- Step 2: Set the stage, 156 
+- Step 3: Write and rewrite probe questions, 265 
+- The fly in the ointment: uneven participation, 617 
+- Bibliography, 339
 
 18 Writing a literature review.qmd
 - Introduction, 145 
@@ -2544,7 +2843,7 @@ vertical-align: -.125em;
 - Bibliography, 675
 
 20 Writing a results section.qmd
-- Introduction, 40 
+- Introduction, 74 
 - Step 1:, 9 
 - Step 2:, 10 
 - Step 3:, 6 
