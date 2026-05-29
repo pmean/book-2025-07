@@ -2251,71 +2251,102 @@ vertical-align: -.125em;
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_lines</span>(<span class="fu">glue</span>(<span class="st">&quot;../chapters/{fn}&quot;</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count_words</span>() <span class="ot">-&gt;</span> ni</span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">append</span>(n, ni)</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>n_total <span class="ot">&lt;-</span> <span class="fu">sum</span>(n)</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">&quot;-   &quot;</span>, file_list, <span class="st">&quot;: &quot;</span>, n) <span class="sc">|&gt;</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(<span class="at">collapse=</span><span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>) <span class="ot">-&gt;</span> chapter_count</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">write_lines</span>(</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(n_total, n), </span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">file=</span><span class="fu">paste0</span>(<span class="fu">Sys.Date</span>(), <span class="st">&quot;.txt&quot;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>, fn, <span class="st">&quot;: &quot;</span>, ni, <span class="at">sep=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+01 Introduction.qmd: 1588
+02 Picking a research topic.qmd: 556
+03 Selecting your research hypothesis.qmd: 162
+04 Selecting your research design.qmd: 84
+05 Selecting your sample size.qmd: 1470
+06 Developing your pilot study.qmd: 2052
+07 Designing your questionnaire.qmd: 147
+08 Obtaining ethical approval for your study.qmd: 791
+09 Setting up your data entry process.qmd: 1726
+10 Running a descriptive data analysis.qmd: 1078
+11 Running a linear regression analysis.qmd: 2214
+12 Running a logistic regression analysis.qmd: 106
+13 Running a multi-factor analysis of variance model.qmd: 3858
+14 Running a survival data analysis.qmd: 87
+15 Running a non-linear regression analysis.qmd: 72
+16 Running a systematic overview.qmd: 3237
+17 Running a focus group.qmd: 1510
+18 Writing a literature review.qmd: 2359
+19 Writing a methods section.qmd: 2486
+20 Writing a results section.qmd: 94
+21 Writing a discussion section.qmd: 1098
+98 summary.qmd: 13
+99 references.qmd: 34</code></pre>
 </div>
-<p>There are approximately 27,586 words in the book. I use the word “approximate” because it is easy to count something that isn’t a word. The word counts for individual chapters are</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>n_total <span class="ot">&lt;-</span> <span class="fu">sum</span>(n)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">&quot;-   &quot;</span>, file_list) <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">append</span>(<span class="st">&quot;-   00 Index.qmd&quot;</span>, <span class="at">after=</span><span class="dv">0</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(<span class="st">&quot;: &quot;</span>, <span class="fu">format</span>(n, <span class="at">big.mark=</span><span class="st">&quot;,&quot;</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(<span class="at">collapse=</span><span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>) <span class="ot">-&gt;</span> chapter_count</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">write_lines</span>(</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(n_total, n), </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">file=</span><span class="fu">paste0</span>(<span class="fu">Sys.Date</span>(), <span class="st">&quot;.txt&quot;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>There are approximately 27,689 words in the book. I use the word “approximate” because it is easy to count something that isn’t a word. The word counts for individual chapters are</p>
 <ul>
-<li>01 Introduction.qmd: 779</li>
-<li>02 Picking a research topic.qmd: 1588</li>
-<li>03 Selecting your research hypothesis.qmd: 556</li>
-<li>04 Selecting your research design.qmd: 162</li>
-<li>05 Selecting your sample size.qmd: 84</li>
-<li>06 Developing your pilot study.qmd: 1470</li>
-<li>07 Designing your questionnaire.qmd: 2052</li>
-<li>08 Obtaining ethical approval for your study.qmd: 147</li>
-<li>09 Setting up your data entry process.qmd: 791</li>
-<li>10 Running a descriptive data analysis.qmd: 1726</li>
-<li>11 Running a linear regression analysis.qmd: 1063</li>
-<li>12 Running a logistic regression analysis.qmd: 2214</li>
-<li>13 Running a multi-factor analysis of variance model.qmd: 106</li>
-<li>14 Running a survival data analysis.qmd: 3858</li>
-<li>15 Running a non-linear regression analysis.qmd: 87</li>
-<li>16 Running a systematic overview.qmd: 72</li>
-<li>17 Running a focus group.qmd: 3237</li>
-<li>18 Writing a literature review.qmd: 1510</li>
-<li>19 Writing a methods section.qmd: 2359</li>
-<li>20 Writing a results section.qmd: 2486</li>
-<li>21 Writing a discussion section.qmd: 94</li>
-<li>98 summary.qmd: 1098</li>
-<li>99 references.qmd: 13</li>
-<li>01 Introduction.qmd: 34</li>
+<li>00 Index.qmd: 867</li>
+<li>01 Introduction.qmd: 1,588</li>
+<li>02 Picking a research topic.qmd: 556</li>
+<li>03 Selecting your research hypothesis.qmd: 162</li>
+<li>04 Selecting your research design.qmd: 84</li>
+<li>05 Selecting your sample size.qmd: 1,470</li>
+<li>06 Developing your pilot study.qmd: 2,052</li>
+<li>07 Designing your questionnaire.qmd: 147</li>
+<li>08 Obtaining ethical approval for your study.qmd: 791</li>
+<li>09 Setting up your data entry process.qmd: 1,726</li>
+<li>10 Running a descriptive data analysis.qmd: 1,078</li>
+<li>11 Running a linear regression analysis.qmd: 2,214</li>
+<li>12 Running a logistic regression analysis.qmd: 106</li>
+<li>13 Running a multi-factor analysis of variance model.qmd: 3,858</li>
+<li>14 Running a survival data analysis.qmd: 87</li>
+<li>15 Running a non-linear regression analysis.qmd: 72</li>
+<li>16 Running a systematic overview.qmd: 3,237</li>
+<li>17 Running a focus group.qmd: 1,510</li>
+<li>18 Writing a literature review.qmd: 2,359</li>
+<li>19 Writing a methods section.qmd: 2,486</li>
+<li>20 Writing a results section.qmd: 94</li>
+<li>21 Writing a discussion section.qmd: 1,098</li>
+<li>98 summary.qmd: 13</li>
+<li>99 references.qmd: 34</li>
 </ul>
 </section>
 <section id="changes-in-word-count" class="level2">
 <h2 class="anchored" data-anchor-id="changes-in-word-count">Changes in word count</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>progress_files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">pattern=</span><span class="st">&quot;*.txt&quot;</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>historical_counts <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">section=</span><span class="fu">c</span>(</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Entire book&quot;</span>,</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Preface&quot;</span>, </span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    file_list))</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (progress_file <span class="cf">in</span> progress_files) {</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  historical_count <span class="ot">&lt;-</span> <span class="fu">read_table</span>(</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span>progress_file,</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_names=</span>progress_file,</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_types=</span><span class="st">&quot;n&quot;</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  historical_counts <span class="sc">|&gt;</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bind_cols</span>(historical_count) <span class="ot">-&gt;</span> historical_counts</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>progress_files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">pattern=</span><span class="st">&quot;*.txt&quot;</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>historical_counts <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">section=</span><span class="fu">c</span>(</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Entire book&quot;</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Preface&quot;</span>, </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    file_list))</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (progress_file <span class="cf">in</span> progress_files) {</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  historical_count <span class="ot">&lt;-</span> <span class="fu">read_table</span>(</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">file=</span>progress_file,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_names=</span>progress_file,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">col_types=</span><span class="st">&quot;n&quot;</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  historical_counts <span class="sc">|&gt;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bind_cols</span>(historical_count) <span class="ot">-&gt;</span> historical_counts</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>n_dates <span class="ot">&lt;-</span> <span class="fu">length</span>(progress_files)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>n_dates) {</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  delta_counts <span class="ot">&lt;-</span> historical_counts[i<span class="sc">+</span><span class="dv">1</span>] <span class="sc">-</span> historical_counts[i]</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  historical_counts[ , <span class="fu">c</span>(<span class="dv">1</span>, i)] <span class="sc">|&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bind_cols</span>(<span class="fu">tibble</span>(delta_counts)) <span class="ot">-&gt;</span> improvement</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(improvement, <span class="at">n=</span><span class="dv">25</span>)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>n_dates <span class="ot">&lt;-</span> <span class="fu">length</span>(progress_files)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>n_dates) {</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  delta_counts <span class="ot">&lt;-</span> historical_counts[i<span class="sc">+</span><span class="dv">1</span>] <span class="sc">-</span> historical_counts[i]</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  historical_counts[ , <span class="fu">c</span>(<span class="dv">1</span>, i)] <span class="sc">|&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bind_cols</span>(<span class="fu">tibble</span>(delta_counts)) <span class="ot">-&gt;</span> improvement</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(improvement, <span class="at">n=</span><span class="dv">25</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 25 × 3
    section                                     `2025-05-26.txt` `2025-08-29.txt`
@@ -2652,6 +2683,34 @@ vertical-align: -.125em;
 22 20 Writing a results section.qmd                          60               34
 23 21 Writing a discussion section.qmd                     1098                0
 24 98 summary.qmd                                            13                0
+25 99 references.qmd                                         34                0
+# A tibble: 25 × 3
+   section                                     `2026-05-22.txt` `2026-05-25.txt`
+   &lt;chr&gt;                                                  &lt;dbl&gt;            &lt;dbl&gt;
+ 1 Entire book                                            27586              103
+ 2 Preface                                                  779               88
+ 3 01 Introduction.qmd                                     1588                0
+ 4 02 Picking a research topic.qmd                          556                0
+ 5 03 Selecting your research hypothesis.qmd                162                0
+ 6 04 Selecting your research design.qmd                     84                0
+ 7 05 Selecting your sample size.qmd                       1470                0
+ 8 06 Developing your pilot study.qmd                      2052                0
+ 9 07 Designing your questionnaire.qmd                      147                0
+10 08 Obtaining ethical approval for your stu…              791                0
+11 09 Setting up your data entry process.qmd               1726                0
+12 10 Running a descriptive data analysis.qmd              1063               15
+13 11 Running a linear regression analysis.qmd             2214                0
+14 12 Running a logistic regression analysis.…              106                0
+15 13 Running a multi-factor analysis of vari…             3858                0
+16 14 Running a survival data analysis.qmd                   87                0
+17 15 Running a non-linear regression analysi…               72                0
+18 16 Running a systematic overview.qmd                    3237                0
+19 17 Running a focus group.qmd                            1510                0
+20 18 Writing a literature review.qmd                      2359                0
+21 19 Writing a methods section.qmd                        2486                0
+22 20 Writing a results section.qmd                          94                0
+23 21 Writing a discussion section.qmd                     1098                0
+24 98 summary.qmd                                            13                0
 25 99 references.qmd                                         34                0</code></pre>
 </div>
 </div>
@@ -2659,32 +2718,32 @@ vertical-align: -.125em;
 <section id="sections-within-chapters" class="level2">
 <h2 class="anchored" data-anchor-id="sections-within-chapters">Sections within chapters</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (file_name <span class="cf">in</span> file_list) {</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;</span><span class="sc">\n\n</span><span class="st">&quot;</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(file_name)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  file_text <span class="ot">&lt;-</span> <span class="fu">read_lines</span>(<span class="at">file=</span><span class="fu">glue</span>(<span class="st">&quot;../chapters/{file_name}&quot;</span>)) </span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  file_text <span class="sc">|&gt;</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_subset</span>(<span class="at">pattern=</span><span class="st">&quot;##&quot;</span>) <span class="sc">|&gt;</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_replace</span>(<span class="st">&quot;## &quot;</span>, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">- &quot;</span>) <span class="ot">-&gt;</span> sections</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  sections <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">- Introduction&quot;</span>, sections)</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  file_text <span class="sc">|&gt;</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_which</span>(<span class="st">&quot;##&quot;</span>) <span class="ot">-&gt;</span> borders</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  start <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, borders<span class="dv">-1</span>)</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  stop <span class="ot">&lt;-</span> <span class="fu">c</span>(borders, <span class="fu">length</span>(file_text))</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  section_counts <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(start)) {</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    file_text[start[i]<span class="sc">:</span>stop[i]] <span class="sc">|&gt;</span></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>      <span class="fu">count_words</span>() <span class="sc">|&gt;</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">append</span>(section_counts) <span class="ot">-&gt;</span> section_counts</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">paste0</span>(sections, <span class="st">&quot;, &quot;</span>, section_counts))</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (file_name <span class="cf">in</span> file_list) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">&quot;</span><span class="sc">\n\n</span><span class="st">&quot;</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(file_name)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  file_text <span class="ot">&lt;-</span> <span class="fu">read_lines</span>(<span class="at">file=</span><span class="fu">glue</span>(<span class="st">&quot;../chapters/{file_name}&quot;</span>)) </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  file_text <span class="sc">|&gt;</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_subset</span>(<span class="at">pattern=</span><span class="st">&quot;##&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_replace</span>(<span class="st">&quot;## &quot;</span>, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">- &quot;</span>) <span class="ot">-&gt;</span> sections</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  sections <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">- Introduction&quot;</span>, sections)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  file_text <span class="sc">|&gt;</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_which</span>(<span class="st">&quot;##&quot;</span>) <span class="ot">-&gt;</span> borders</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  start <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, borders<span class="dv">-1</span>)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  stop <span class="ot">&lt;-</span> <span class="fu">c</span>(borders, <span class="fu">length</span>(file_text))</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  section_counts <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(start)) {</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    file_text[start[i]<span class="sc">:</span>stop[i]] <span class="sc">|&gt;</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>      <span class="fu">count_words</span>() <span class="sc">|&gt;</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">append</span>(section_counts) <span class="ot">-&gt;</span> section_counts</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">paste0</span>(sections, <span class="st">&quot;, &quot;</span>, section_counts))</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 
@@ -2762,7 +2821,7 @@ vertical-align: -.125em;
 - Step 2: Compute ranges and frequencies, 19 
 - Step 3: Examine relationships using crosstabs, boxplots, and/or scatterplots, 342 
 - The fly in the ointment: ordinal data, 286 
-- Altnerative is The fly in the ointment: hierarchical data, 256 
+- Altnerative is The fly in the ointment: hierarchical data, 271 
 - Bibliography, 119
 
 11 Running a linear regression analysis.qmd

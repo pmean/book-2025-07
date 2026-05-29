@@ -149,6 +149,22 @@
 
 \KOMAoption{captions}{tableheading}
 \makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
 \makeatletter
@@ -229,6 +245,12 @@ While this book is in progress, I will use the section of the preface to
 track my activity (or lack of activity). When the book is complete, the
 first section drops and I revert to a normal preface.
 
+On \textbf{2026-05-22}, I started work on Chapter 10 (Descriptive
+analysis). This is going to be a difficult chapter because easy concepts
+are the hardest to explain. It also will require changing the SPSS
+examples into R (and possibly Python). I now am back to a bit more than
+27 thousand words.
+
 On \textbf{2026-05-21}, I finished up Chapter 6 (Pilot studies) and most
 of Chapter 17 (Focus groups). I also cleaned out some extraneous text.
 The latter reduced my word count to about 26 thousand, but that's okay.
@@ -284,6 +306,26 @@ already in good form (chapters 1, 5, and 11). There is also a very
 little bit written for chapters 2 and 3. The total word count is just
 around 10 thousand, which is a jump from 7 thousand that the book had
 been stuck at for many months.
+
+Chapters that are a relatively complete first draft
+
+\begin{itemize}
+\tightlist
+\item
+  Chapter 1. Introduction
+\item
+  Chapter 5. Selecting your sample size
+\item
+  Chapter 6. Developing your pilot study
+\item
+  Chapter 16. Running a systematic overview
+\item
+  Chapter 18. Writing a literature review
+\item
+  Chapter 19. Writing a methods section
+\item
+  Chapter 21. Writing a discussion section
+\end{itemize}
 
 \textbf{The real preface starts here}
 
@@ -1599,26 +1641,55 @@ applied to data from a breast feeding study, using SPSS software.
 
 \section{Step 1: Know your count}\label{step-1-know-your-count}
 
-You need to get a feel for how much data you have. This includes the
-number of subjects in your study; and the number of data values that are
-missing. When you have a count of the number of subjects in your study,
-keep that in mind when you examine any statistical procedures. If the
-total sample size in any of these procedures is less than your count,
-you may have problems with an undetected missing value.
+You need to get a feel for how much data you have-how many rows and how
+many columns.
 
-This seems like a simple thing, but often there are subtle details that
-you can't ignore.
+This seems like a trivial thing, but it is not. You need to watch your
+count from the very beginning of any analysis because some of the work
+that you do along the way may cause attrition or may add new rows. If
+you think that your data has 80 rows, but it actually has 30 or 100, you
+might badly misinterpret the results.
+
+The \texttt{dim} function in R and the \texttt{shape} function in Python
+will produce a listing of the number of rows and columns.
+
+Note to myself: Change this to a callout
+(https://quarto.org/docs/authoring/callouts.html)
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Table 10-01a. Number of rows and columns in the Titanic data set using R
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{table\_10\_01}
+\FunctionTok{dim}\NormalTok{(ti)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
-   0.17   21.00   28.00   30.40   39.00   71.00     557 
+[1] 1313    5
 \end{verbatim}
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+Table 10-01b. Number of rows and columns in the Titanic data set using
+Python
+
+Table 10-01b. Missing value count via R
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ti.shape}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+(1313, 5)
+\end{verbatim}
+
+\end{tcolorbox}
 
 Pay very special attention to counts when you are dealing with clusters
 or repeated measurements. An example of clusters would be when you
@@ -1722,7 +1793,31 @@ data}\label{the-fly-in-the-ointment-ordinal-data}
 
 Add text.
 
+\section{Alternative is The fly in the ointment: hierarchical
+data}\label{alternative-is-the-fly-in-the-ointment-hierarchical-data}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ti}\SpecialCharTok{$}\NormalTok{Name }\SpecialCharTok{|\textgreater{}}
+  \FunctionTok{str\_remove}\NormalTok{(}\StringTok{",.*"}\NormalTok{) }\OtherTok{{-}\textgreater{}}\NormalTok{ family}
+
+\FunctionTok{tibble}\NormalTok{(}\AttributeTok{family=}\NormalTok{family) }\SpecialCharTok{|\textgreater{}}
+  \FunctionTok{count}\NormalTok{(family) }\SpecialCharTok{|\textgreater{}}
+  \FunctionTok{filter}\NormalTok{(n}\SpecialCharTok{\textgreater{}}\DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+# A tibble: 0 x 2
+# i 2 variables: family <chr>, n <int>
+\end{verbatim}
+
 \section{Bibliography}\label{bibliography-9}
+
+Vetter TR. Descriptive Statistics: Reporting the Answers to the 5 Basic
+Questions of Who, What, Why, When, Where, and a Sixth, So What? Anesth
+Analg. 2017 Nov;125(5):1797-1802. doi:
+\url{10.1213/ANE.0000000000002471}.
 
 Steps in a descriptive model. 2001-10-11. Available in
 \href{http://pmean.com/posts/steps-in-descriptive-model/}{html format}.
@@ -3946,6 +4041,10 @@ Principles of Biomedical Scientific Writing: Results. Int J Endocrinol
 Metab. 2019 Apr 24;17(2):e92113. doi:
 {[}10.5812/ijem.92113{]}{[}ref20-bahadoran-2019{]}. PMID: 31372173;
 PMCID: PMC6635678.
+
+Purdue University. Writing With Descriptive Statistics. Available in
+\href{https://owl.purdue.edu/owl/research_and_citation/using_research/writing_with_statistics/writing_with_descriptive_statistics.html}{html
+format}.
 
 \bookmarksetup{startatroot}
 

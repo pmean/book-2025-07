@@ -43,9 +43,14 @@ for (fn in file_list) {
   read_lines(glue("../chapters/{fn}")) |>
     count_words() -> ni
   n <- append(n, ni)
+  cat("\n", fn, ": ", ni, sep="")
 }
+cat("\n")
 n_total <- sum(n)
-paste0("-   ", file_list, ": ", n) |>
+
+paste0("-   ", file_list) |>
+  append("-   00 Index.qmd", after=0) |>
+  paste0(": ", format(n, big.mark=",")) |>
   paste0(collapse="\n") -> chapter_count
 write_lines(
   c(n_total, n), 
