@@ -21,18 +21,34 @@ This seems like a trivial thing, but it is not. You need to watch your count fro
 The `dim` function in R and the `shape` function in Python will produce a listing of the number of rows and columns.
 
 ```{r}
-#| label: setup-10
+#| label: ch10-setup-r
 #| echo: false
 #| message: false
 #| warning: false
 
 library(tidyverse)
-load("../data/chapter-10-output.RData")
+ti <- read.csv("../data/titanic.csv")
+
 ```
+
+```{python}
+#| label: ch10-setup-python
+#| echo: false
+#| message: false
+#| warning: false
+
+import numpy as np
+import pandas as pd
+
+ti = pd.read_csv("../data/titanic.csv")
+```
+
 
 Note to myself: Change this to a callout (https://quarto.org/docs/authoring/callouts.html)
 
-Table 10-01a. Number of rows and columns in the Titanic data set
+::: {.callout-tip}
+
+Table 10-01a. Number of rows and columns in the Titanic data set using R
 
 ```{r}
 #| label: ch10-count-r
@@ -40,16 +56,22 @@ Table 10-01a. Number of rows and columns in the Titanic data set
 dim(ti)
 ```
 
-Table 10-01b. Number of rows and columns in the Titanic data set
+:::
 
-Table 10-02. Missing value count via R
+::: {.callout-tip}
 
-```{r}
-#| label: table_10_01
-#| echo: false
+Table 10-01b. Number of rows and columns in the Titanic data set using Python
 
-table_10_01
+Table 10-01b. Missing value count via R
+
+```{python}
+#| label: ch-10-count-python
+
+ti.shape
+
 ```
+
+:::
 
 Pay very special attention to counts when you are dealing with clusters or repeated measurements. An example of clusters would be when you randomly select families of subjects. For this type of study, you should note both the number of families in the study and the number of family members in the study. An example of repeated measurements would be when you examine a patient several times. For this type of study, note both the total number of patients and the total number of exams.
 
@@ -108,7 +130,7 @@ As with delivery type, we we should be careful to adjust for mother’s age in a
 
 Add text.
 
-## Altnerative is The fly in the ointment: hierarchical data
+## Alternative is The fly in the ointment: hierarchical data
 
 ```{r}
 #| label: families
