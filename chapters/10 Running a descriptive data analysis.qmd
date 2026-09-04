@@ -26,6 +26,7 @@ The `dim` function in R and the `shape` function in Python will produce a listin
 #| message: false
 #| warning: false
 
+library(reticulate)
 library(tidyverse)
 ti <- read.csv("../data/titanic.csv")
 
@@ -39,6 +40,12 @@ ti <- read.csv("../data/titanic.csv")
 
 import numpy as np
 import pandas as pd
+import sys
+# import micropip as mp
+
+sys.version
+
+
 
 ti = pd.read_csv("../data/titanic.csv")
 ```
