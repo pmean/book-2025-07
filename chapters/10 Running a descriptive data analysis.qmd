@@ -80,6 +80,32 @@ ti.shape
 
 :::
 
+Missing values
+
+::: {.callout-tip}
+
+Table 10-02a. Number of rows and columns in the Titanic data set using R
+
+```{r}
+#| label: ch10-count-missing-r
+
+sum(is.na(ti$age))
+```
+
+:::
+
+::: {.callout-tip}
+
+Table 10-02b. Missing value count via Python
+
+```{python}
+#| label: ch-10-count-missing-python
+
+ti["age"].isna().sum()
+
+```
+
+
 Pay very special attention to counts when you are dealing with clusters or repeated measurements. An example of clusters would be when you randomly select families of subjects. For this type of study, you should note both the number of families in the study and the number of family members in the study. An example of repeated measurements would be when you examine a patient several times. For this type of study, note both the total number of patients and the total number of exams.
 
 ## Step 2: Compute ranges and frequencies
