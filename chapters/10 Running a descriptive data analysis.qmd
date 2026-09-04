@@ -131,31 +131,31 @@ This table shows that the patient population is almost exclusively white. Not on
 
 ## Step 3: Examine relationships using crosstabs, boxplots, and/or scatterplots
 
-ou should have a general idea of how one variable changes as another one changes. For two categorical variables, we can examine this using crosstabs. For two continuous variables, we can examine this using a scatterplot. For a relationship between a continuous and a categorical variable, we can use boxplots.
+You should have a general idea of how one variable changes as another one changes. For two categorical variables, we can examine this using crosstabs. For two continuous variables, we can examine this using a scatterplot. For a relationship between a continuous and a categorical variable, we can use boxplots.
 
 The following is a crosstabulation of feeding type versus delivery type. Notice that I have placed feeding type as the rows of the table.
 
- height=“202”}
+<!---insert table/graph here--->
 
 Sometimes these tables are easier to interpret with percentages. I selected the row percentages option to get the following table.
 
+<!---insert table/graph here--->
 
-
-We can see that there was a roughly 50-50 change for a C-section birth to find itself in the treatment or control group. In the vaginal birhts, however, there was a slightly greater tendency to be found in the control group. This is an imbalance which might cause problems with interpretation of the results.
+We can see that there was a roughly 50-50 change for a C-section birth to find itself in the treatment or control group. In the vaginal births, however, there was a slightly greater tendency to be found in the control group. This is an imbalance which might cause problems with interpretation of the results.
 
 Does delivery type also influence duration of breast feeding? The following box plot shows that c-section births tend to have longer durations than vaginal births, a somewhat surprising finding. Because delivery type is related to both feeding type and duration of breast feeding, we should be sure to examine delivery type as a potential confounding variable in any analysis.
 
- height=“256”}
+<!---insert table/graph here--->
 
 The mother’s age is an important factor in any breast feeding study. Here is a boxplot comparing ages in the two feeding groups.
 
- height=“256”}
+<!---insert table/graph here--->
 
 We see that the NG tube group has older mothers than the bottle group. Further statistical analysis shows that the average age is 29 in the NG tube group and 25 in the bottle group, a difference of 4 years.
 
 We also should examine the relationship between mother’s age and duration of breast feeding. The following scatterplot shows a slight tendency for older mothers to breast feed longer.
 
- height=“256”}
+<!---insert table/graph here--->
 
 As with delivery type, we we should be careful to adjust for mother’s age in any comparison of the two feeding groups.
 
