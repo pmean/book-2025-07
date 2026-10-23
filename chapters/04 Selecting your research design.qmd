@@ -2,24 +2,69 @@
 
 This chapter is based on a webpage I wrote in 2016.
 
-## Step 1. Decide if you can/should randomize
+You have a hypothesis. Now how do you design a study to test that hypothesis. Sometimes, the hypothesis itself will limit the types of research designs that you can use. More often, though, you will have some latitude. Knowing the advantages and disadvantages of various research designs will help you select the design that most effectively addresses your hypothesis. Here are some considerations.
 
-Insert text.
+You first consideration is whether you are testing a treatment or testing an exposure. A treatment is something you do to your patients with the hope that it will make things better. The key word here is "hope." You don't know for sure that your treatment will make things better relative to your comparison or control group. There are lots of research studies that start out with a lot of hope and end up in disappointment. Your new therapy is no different than a placebo. Or, horror of horrors, you new therapy makes things worse than a placebo. It happens, and you need to be ready for it.
 
-## Step 2. Consider the advantages/disadvantages of retrospective versus prospective research
+The point behind hope, though, is the initial belief is enough to justify certain research designs (especially randomization).
 
-Insert text.
+In contrast, an exposure is something that your patients endure that may or may not make things worse. You hope not, but you need to know. If an exposure is potentially harmful, you are often limited in what you can do, both from an ethical and a practical perspective.
 
-## Step 3. Think about the most efficient way to select subjects
+Now it is often tricky to decide whether something is a treatment or an exposure. If you are studying psychedelic drugs, are you studying them for their potential benefit to patients with chronic pain? Then you have a treatment in spite of all the pujblic service announcements you have watched in the past three decades.
+
+## Step 1. Consider the advantages/disadvantages of randomization
+
+Randomization is the flip of a coin, a roll of the die, or some other random device (usually a computer generated series of random numbers) that determines which subjects get which treatments. 
+
+You can randomize treatments, but you can't randomize exposures. You can't deliberately subject half of your patients to something that you have a reasonable fear might be harmful. There are a few limited exceptions such as when the potential harm is minor and reversible. In general though, do not randomize exposures.
+
+You may not wish to randomize treatments either. 
+
+## Step 2. Consider the advantages/disadvantages of retrospective research
+
+If you have committed yourself to randomization. You've ruled out retrospective data. Unless you have a time machine, you can only randomize propsective data. Insert text.
+
+## Step 3. Consider the advantages/disadvantages of longitudinal research
 
 Insert text.
 
 ## The fly in the ointment
 
-Insert text.
+You may have think that you have the perfect choice for your research design, but you may find that you can't get enough patients.
 
 ## Bibliography
 
 Steve Simon. So you’re thinking about a retrospective chart review. PMean blog, 2016-05-02. Available in [html format][ref04-simon-2004].
 
 [ref04-simon-2004]: http://blog.pmean.com/chart-review/
+
+Selection of Controls in Case-Control Studies: I. Principles. 
+Sholom Wacholder , Joseph K. McLaughlin , Debra T. Silverman , Jack S. Mandel
+American Journal of Epidemiology, Volume 135, Issue 9, 1 May 1992, Pages 1019–1028, doi: [10.1093/oxfordjournals.aje.a116396][ref-wacholder-1992]
+
+[ref-wacholder-1992]: https://doi.org/10.1093/oxfordjournals.aje.a116396
+
+
+
+
+Joshua S Kurtz, Neal A Patel, Julian L Gendreau,Chenyi Yang, Nolan Brown, Nick Bui, Bryce Picton, Mark Harris, Matthew Hatter, Ryan Beyer, Ronald Sahyouni, Luis Daniel Diaz-Aguilar, Joel Castellanos, Nathaniel Schuster, Mickey E Abraham. The Use of Psychedelics in the Treatment of Medical Conditions: An Analysis of Currently Registered Psychedelics Studies in the American Drug Trial Registry. Cureus, 2022-09-14, 14(9), e29167. doi: [10.7759/cureus.29167][ref-kurtz-2022]
+
+[ref-kurtz-2022]: https://doi.org/10.7759/cureus.29167
+
+Steve Simon. Some quasi-experimental alternatives to randomization. [The Monthly Mean] January/February 2012. Available in [html format][ref-simon-2012]
+
+[ref-simon-2022]: http://www.pmean.com/news/201201.html#1
+
+Simon SD. Experimentation Without Randomised Controls. J Oral Rehabil. 2025, 52(8), 1167-1174, doi: [10.1111/joor.13960][ref-simon-2025].
+
+[ref-simon-2025]: https://doi.org/10.1111/joor.13960
+
+Leibovici L. Effects of remote, retroactive intercessory prayer on outcomes in patients with bloodstream infection: randomised controlled trial. BMJ. 2001 Dec 22-29;323(7327):1450-1. doi: [10.1136/bmj.323.7327.1450][ref-leibovici-2001].
+
+[ref-leibovici-2025]: https://doi.org/10.1136/bmj.323.7327.1450
+
+Paternalism or partnership? Patients have grown up-and there’s no going back. Coulter A. Bmj 1999: 319(7212); 719-20. [Medline] [Full text] [PDF]
+
+Steve Simon. Research on therapies that have no known mechanism of action. P.Mean blog, 2004-11-04.
+
+http://pmean.com/posts/no-mechanism/

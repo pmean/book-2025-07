@@ -1,16 +1,30 @@
 # Writing a results section
 
-## Step 1:
+You've finished your data analysis. Congratulations! Now you have to find a way to describe this in the results section of your paper.
+
+## Step 1: Tell us about your patients
+
+One of the first questions that a reader is going to ask about your work is "How similar are these patients to the patients I see every day." To answer this question, you need a demographic profile. Tell us how old your average patient is and tell us the full range of ages. Tell us how many were male and how many were female. You might include, if you have it, the distribution of patients across various racial and ethnic groups. 
+
+There will be other important variables, depending on what you are studying. A study of pregnancy outcomes might note the number of previous pregnancies and the number of previous live births. A study of growth in children might note Tanner stage in addition to age. A study of nutrition might characterize where your patients live relative to their nearest grocery store.
+
+If you are comparing two groups (treatment versus control or exposed versus unexposed, for example), then you may wish to split your table into three columns, one for the first group, another for the second group, and the last for the two groups combined. This split is quite common for observational studies, but less frequent for randomized studies. 
+
+In randomized studies, it is often presumed that the randomization prevents any major differences between the two groups. You might make an exception if the groups are so small that you can't rely on the the law of large numbers to balance things out. You might also split the demogrpahics if you suspect that the physicians who are recruiting patients for you are manipulating the randomization process to try to steer their patients into a preferred group.
+
+[[Add references]]
+
+Hsu LM. Random sampling, randomization, and equivalence of contrasted groups in psychotherapy outcome research. J Consult Clin Psychol. 1989 Feb;57(1):131-7. doi: 10.1037//0022-006x.57.1.131. PMID: 2647799.
+
+This is your Table 1. Spend a paragraph or two describing the key features of the table. Round any means or percentages in your text. Too many numbers makes your text difficult to read. 
+
+## Step 2: Lay out your research questions in a logical order
 
 Add text.
 
-## Step 2:
+## Step 3: Choose between text, tables, or graphs
 
-Add text.
-
-## Step 3:
-
-Add text.
+Once you have a nice description of your patients, start to lay out the findings from your data analyses. 
 
 ## The fly in the ointment:
 

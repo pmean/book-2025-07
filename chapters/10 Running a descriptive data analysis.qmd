@@ -116,8 +116,6 @@ You should know what the maximum and minimum values are for all the important va
 
 Our outcome measure, the age when breast feeding was stopped is a continuous variable. Here is a table of statistics for this variable, including the minimum and maximum variables.
 
- height=“154”}
-
 At first glance, the maximum value (34 weeks) seems a bit large (the study followed infants for only 24 weeks after discharge). But when I talked to the nurses involved, they explained that the length of breast feeding included the time the infants were in the hospital.
 
 Also notice that the sample size for this table (82) is less than the total number of data points. This serves as a reminder that some of the data are missing for the age when breastfeeding was stopped
