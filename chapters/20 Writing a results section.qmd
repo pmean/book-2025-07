@@ -10,21 +10,29 @@ There will be other important variables, depending on what you are studying. A s
 
 If you are comparing two groups (treatment versus control or exposed versus unexposed, for example), then you may wish to split your table into three columns, one for the first group, another for the second group, and the last for the two groups combined. This split is quite common for observational studies, but less frequent for randomized studies. 
 
-In randomized studies, it is often presumed that the randomization prevents any major differences between the two groups. You might make an exception if the groups are so small that you can't rely on the the law of large numbers to balance things out. You might also split the demogrpahics if you suspect that the physicians who are recruiting patients for you are manipulating the randomization process to try to steer their patients into a preferred group.
+In randomized studies, it is often presumed that the randomization prevents any major differences between the two groups. You might make an exception if the groups are so small that you can't rely on the the law of large numbers to balance things out (Hsu 1989). You might also split the demogrpahics if you suspect that the physicians who are recruiting patients for you are manipulating the randomization process to try to steer their patients into a preferred group (Kennedy 2017).
 
-[[Add references]]
-
-Hsu LM. Random sampling, randomization, and equivalence of contrasted groups in psychotherapy outcome research. J Consult Clin Psychol. 1989 Feb;57(1):131-7. doi: 10.1037//0022-006x.57.1.131. PMID: 2647799.
-
-This is your Table 1. Spend a paragraph or two describing the key features of the table. Round any means or percentages in your text. Too many numbers makes your text difficult to read. 
+The table of demographics is your Table 1. Spend a paragraph or two describing the key features of the table. Round any means or percentages in your text. Too many numbers makes your text difficult to read. 
 
 ## Step 2: Lay out your research questions in a logical order
 
-Add text.
+You probably have more than one research question to address. Think about a logical ordering for these questions. This is not too different than the logical ordering of references in your literature review. 
+
+You want your questions to flow and flow could take on several different forms. It might start with the simplest question and flow through the other questions in complexity order to the last and most complicated question. 
+
+Your research questions might fit into several themes. For example, some of your hypotheses might involve physical measurements (blood pressure, oral temperature), others might represent biomarkers (serum cholesterol, hemoglobin a1c), and still others represent psychological states (measures of depression and anxiety). Talk about all the results in one theme, then move to the next and the next.
+
+Your research questions may fit into a hierarchy. You might have results for individual patients, results for clinics, and then results for entire hospital systems. Start at one end of the hierarchy and go to the other end.
+
+However you decide to organize your research questions, try to use transition sentences, so that each paragraph links directly or indirectly with each preceding paragraph. Words like "in addition" or "further" show similarities. Make transitions to new themes or hierarchies explicit.
 
 ## Step 3: Choose between text, tables, or graphs
 
-Once you have a nice description of your patients, start to lay out the findings from your data analyses. 
+Once you have a nice description of your patients, start to lay out the findings from your data analyses. You have to make a choice of where to place your numerical summaries, in the text, in a table, or in a graph.
+
+If you only have a few numeric summaries, a simple listing in the text works well. Include words that indicate size or magnitude. Try to avoid any recommendations. These are best reserved for the discussion section.
+
+Do not present many numerical summaries in your text. It makes your writing dense and difficult to read.
 
 ## The fly in the ointment:
 
@@ -34,8 +42,18 @@ Add text.
 
 Bahadoran Z, Mirmiran P, Zadeh-Vakili A, Hosseinpanah F, Ghasemi A. The Principles of Biomedical Scientific Writing: Results. Int J Endocrinol Metab. 2019 Apr 24;17(2):e92113. doi: [10.5812/ijem.92113][ref20-bahadoran-2019]. PMID: 31372173; PMCID: PMC6635678.
 
-Purdue University. Writing With Descriptive Statistics. Available in [html format][ref-purdue-nodate].
+Hsu LM. Random sampling, randomization, and equivalence of contrasted groups in psychotherapy outcome research. J Consult Clin Psychol. 1989 Feb;57(1):131-7. doi: [10.1037//0022-006x.57.1.131][ref20-hsu-1989]. PMID: 2647799.
 
-[ref-purdue-nodate]: https://owl.purdue.edu/owl/research_and_citation/using_research/writing_with_statistics/writing_with_descriptive_statistics.html
+Kennedy ADM, Torgerson DJ, Campbell MK, Grant AM. Subversion of allocation concealment in a randomised controlled trial: a historical case study. Trials. 2017 May 2;18(1):204. doi: [10.1186/s13063-017-1946-z][ref20-kennedy-2017]. PMID: 28464922; PMCID: PMC5414185.
 
-[ref-bahadoran-2019]: https://doi.org/10.5812/ijem.92113
+Thomas A. Lang, Michelle Secic,  How to report statistics in medicine, 2006, American College of Physicians, Philadelphia PA. 
+
+Purdue University. Writing With Descriptive Statistics. Available in [html format][ref20-purdue-nodate].
+
+[ref20-bahadoran-2019]: https://doi.org/10.5812/ijem.92113
+
+[ref20-hsu-1989]: https://doi.org/10.1037//0022-006x.57.1.131
+
+[ref20-kennedy-2017]: https://doi.org/10.1186/s13063-017-1946-z
+
+[ref20-purdue-nodate]: https://owl.purdue.edu/owl/research_and_citation/using_research/writing_with_statistics/writing_with_descriptive_statistics.html

@@ -2,13 +2,13 @@
 
 While this book is in progress, I will use the section of the preface to track my activity (or lack of activity). When the book is complete, the first section drops and I revert to a normal preface.
 
-On **2026-10-23**, I added section heads to chapter 20 (writing a results secttion) and added paragraphs to the second and third sections. Only 400 words total, but it pushes the total word count to closer to 29,000 words. 
+On **2026-10-30***, I added some more text to chapter 20 (writing a results section) and put in a few references. The word count is now over 29 thousand.
+
+On **2026-10-23**, I added section heads to chapter 20 (writing a results section) and added paragraphs to the second and third sections. Only 400 words total, but it pushes the total word count to closer to 29,000 words. 
 
 On **2026-10-02**, I added thirty words to chapter 4 (selecting your research design).
 
 On **2026-09-18**, I got a good start on chapter 4 (selecting your research design) and added a few paragraphs to chapter 3 (selecting your research hypothesis), putting in about 700 words total
-
-On **2026-10-23**, I added about 400 words to Chapter 20 (Writing a results section). It was mostly in the first section, but I did outline ideas for what the other two sections should be.
 
 On **2026-05-22**, I started work on Chapter 10 (Descriptive analysis). This is going to be a difficult chapter because easy concepts are the hardest to explain. It also will require changing the SPSS examples into R (and possibly Python). I now am back to a bit more than 27 thousand words.
 
